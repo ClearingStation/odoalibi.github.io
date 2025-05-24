@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdoAlibi - Automatic Vehicle Tracking for Tax Compliance</title>
+    <!-- Open Graph tags for social media previews -->
+    <meta property="og:image" content="https://www.clearingstation.ca/images/optimized/odo2.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="907">
+    <meta property="og:image:alt" content="Description of your preview image">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <!-- Twitter card image -->
+    <meta name="twitter:image" content="https://www.clearingstation.ca/images/optimized/odo2.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+      :root{--primary-color:#0070f3;--secondary-color:#ff4c4c;--dark-color:#1a202c;--light-color:#f8f9fa;--success-color:#38b2ac;--warning-color:#f6ad55;--font-main:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;--border-radius:10px}
+      *{margin:0;padding:0;box-sizing:border-box}
+      body{font-family:var(--font-main);line-height:1.5;color:var(--dark-color);background-color:white}
+      .container{max-width:1100px;margin:0 auto;padding:0 20px}
+      header{background-color:white;padding:20px 0;border-bottom:1px solid #eaeaea;text-align:center}
+      .logo{font-size:28px;font-weight:700;letter-spacing:-0.5px;color:var(--dark-color);text-decoration:none}
+      .logo span{color:var(--primary-color)}
+      .byline{font-size:14px;color:#666}
+      .german-section{height:80vh;min-height:500px;background-image:linear-gradient(to bottom, rgba(26, 32, 44, 0.4), rgba(26, 32, 44, 0.8)), url('images/optimized/porsche.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;position:relative}
+      .german-badge{background:rgba(255, 255, 255, 0.05);backdrop-filter:blur(2px);border:1px solid rgba(255, 255, 255, 0.1);padding:30px 60px;border-radius:12px;color:white;text-align:center;}
+      .odo-brand{font-size:48px;font-weight:700;letter-spacing:-0.5px;margin-bottom:10px}
+      .odo-brand span{color:var(--primary-color)}
+      .german-text{font-size:20px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#f0f4f8}
+      @media (max-width:768px){
+          .german-section{height:60vh;min-height:400px}
+          .german-badge{padding:20px 30px;margin:0 20px}
+          .odo-brand{font-size:32px}
+          .german-text{font-size:16px;letter-spacing:1px}
+      }
+      @media (max-width:480px){
+          .german-section{height:50vh;min-height:350px}
+          .odo-brand{font-size:28px}
+          .german-text{font-size:14px}
+      }
+      .hero{padding:80px 0 60px;text-align:center;background-color:white}
+      .hero h1{font-size:48px;font-weight:800;letter-spacing:-1px;margin-bottom:20px;color:var(--dark-color);line-height:1.2}
+      .hero p{font-size:24px;font-weight:400;margin:0 auto 40px;color:#4a5568;max-width:700px;line-height:1.4}
+      .btn,.cta-button{display:inline-block;background-color:var(--primary-color);color:white;padding:15px 32px;border-radius:8px;font-size:18px;font-weight:600;text-decoration:none;transition:transform 0.2s,background-color 0.3s;margin-top:10px}
+      .btn:hover,.cta-button:hover{background-color:#0051c2;transform:translateY(-2px)}
+      .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:40px 0}
+      .step{background:white;padding:40px 30px;border-radius:var(--border-radius);box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center}
+      .step img{width:100%;max-width:100%}
+      .step h3{font-size:20px;margin:15px 0 10px;color:var(--dark-color)}
+      .section-title{text-align:center;margin-bottom:50px;font-size:36px;font-weight:700;color:var(--dark-color)}
+      .benefits{padding:80px 0;background-color:white}
+      .benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-bottom:60px}
+      .benefit-item{background-color:#f0f7ff;padding:30px;border-radius:var(--border-radius);box-shadow:0 4px 12px rgba(0,0,0,0.05);text-align:center;transition:transform 0.3s}
+      .benefit-item:hover{transform:translateY(-5px)}
+      .benefit-icon{font-size:40px;margin-bottom:20px;color:var(--primary-color)}
+      .benefit-item h3{margin-bottom:15px;font-size:20px;font-weight:700;color:var(--dark-color)}
+      .benefit-item p{color:#4a5568}
+      .danger-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+      .danger-item{background-color:#fff5f5;padding:30px;border-radius:var(--border-radius);box-shadow:0 4px 12px rgba(0,0,0,0.05);text-align:center;border-left:4px solid var(--secondary-color);transition:transform 0.3s}
+      .danger-item:hover{transform:translateY(-5px)}
+      .danger-icon{font-size:40px;margin-bottom:20px;color:var(--secondary-color)}
+      .danger-item h3{margin-bottom:15px;font-size:20px;font-weight:700;color:var(--secondary-color)}
+      .danger-item p{color:#4a5568}
+      .tech-platform{padding:80px 0;background-color:#f7fafc;position:relative;overflow:hidden}
+      .tech-hero{display:flex;justify-content:space-between;align-items:center;margin:20px 0 60px;gap:60px}
+      .tech-hero-content{flex:1}
+      .tech-hero-image{flex:1;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.15)}
+      .tech-hero-image img{width:100%;height:auto;display:block;transform:scale(1.1);transition:transform 0.8s ease}
+      .tech-hero-image:hover img{transform:scale(1.05)}
+      .engineering-badge{display:inline-block;background:#0070f3;color:white;padding:8px 20px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:20px}
+      .tech-platform .section-title{text-align:left;font-size:36px;font-weight:700;color:var(--dark-color);margin-bottom:20px}
+      .section-subtitle{font-size:20px;color:#4a5568;line-height:1.5}
+      .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-bottom:60px}
+      .tech-card{background:white;border-radius:10px;padding:30px;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s,box-shadow 0.3s}
+      .tech-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+      .tech-icon{font-size:40px;margin-bottom:20px;color:#0070f3}
+      .tech-card h3{font-size:20px;font-weight:700;margin-bottom:15px;color:var(--dark-color)}
+      .tech-card p{color:#4a5568;margin-bottom:20px;line-height:1.5}
+      .tech-card ul{list-style:none;padding:0;margin:0}
+      .tech-card li{color:#666;font-size:14px;margin-bottom:8px;padding-left:20px;position:relative}
+      .tech-card li::before{content:'→';position:absolute;left:0;color:#0070f3}
+      .tech-specs{background:white;border-radius:10px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+      .specs-title{font-size:24px;font-weight:700;text-align:center;margin-bottom:30px;color:var(--dark-color)}
+      .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
+      .spec-item{text-align:center}
+      .spec-value{font-size:28px;font-weight:700;color:#0070f3;margin-bottom:8px}
+      .spec-label{font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px}
+      .video-demo{padding:80px 0;background-color:white}
+      .video-container{position:relative;width:100%;max-width:800px;margin:0 auto 30px;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--border-radius);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+      .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:var(--border-radius)}
+      .video-description{text-align:center;font-size:18px;color:#4a5568;max-width:700px;margin:0 auto;line-height:1.6}
+      .enterprise-stack{margin-top:60px}
+      .stack-title{font-size:24px;font-weight:700;text-align:center;margin-bottom:40px;color:var(--dark-color)}
+      .stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+      .stack-item{background:white;border-radius:10px;padding:30px;box-shadow:0 2px 8px rgba(0,0,0,0.05);text-align:center}
+      .stack-icon{font-size:32px;margin-bottom:15px}
+      .stack-item h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--dark-color)}
+      .stack-item p{font-size:14px;color:#666;line-height:1.5}
+      .cra-section{padding:80px 0;background-color:#f7fafc}
+      .cra-container{background-color:white;border-radius:var(--border-radius);padding:40px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+      .cra-header{display:flex;align-items:center;margin-bottom:30px}
+      .cra-icon{font-size:38px;margin-right:20px;color:var(--warning-color)}
+      .cra-header h3{font-size:24px;color:var(--dark-color);font-weight:700}
+      .requirements{margin-bottom:30px}
+      .requirements h4{font-size:20px;margin-bottom:15px;color:var(--dark-color)}
+      .requirement-list{list-style-type:none}
+      .requirement-list li{padding:12px 0;border-bottom:1px solid #edf2f7;display:flex;align-items:flex-start}
+      .requirement-list li:last-child{border-bottom:none}
+      .check-icon{color:var(--primary-color);margin-right:12px;font-size:18px;flex-shrink:0;margin-top:3px}
+      .advantage-section{padding:80px 0;background-color:white}
+      .advantage-list{max-width:800px;margin:0 auto;background-color:white;border-radius:var(--border-radius);padding:40px;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+      .advantage-item{display:flex;margin-bottom:25px;align-items:flex-start}
+      .advantage-item:last-child{margin-bottom:0}
+      .advantage-icon{font-size:22px;color:var(--primary-color);margin-right:15px;min-width:24px}
+      .advantage-content h4{font-size:18px;font-weight:700;margin-bottom:5px;color:var(--dark-color)}
+      .advantage-content p{color:#4a5568;font-size:16px}
+      .pre-order{padding:80px 0;background-color:#f0f7ff}
+      .form-container{max-width:600px;margin:0 auto;padding:30px;background-color:white;border-radius:var(--border-radius);box-shadow:0 4px 25px rgba(0,0,0,0.1)}
+      .price-box{background:#f0f7ff;padding:15px;border-radius:5px;margin:20px 0;border-left:4px solid #0070f3}
+      .form-group{margin-bottom:20px;text-align:left}
+      .form-group label{display:block;margin-bottom:8px;font-weight:600;font-size:16px;color:var(--dark-color)}
+      .form-group input{width:100%;padding:14px 16px;border:1px solid #e2e8f0;border-radius:8px;font-size:16px;transition:all 0.3s;font-family:var(--font-main)}
+      .form-group input:focus{border-color:var(--primary-color);outline:none;box-shadow:0 0 0 3px rgba(0,112,243,0.2)}
+      .submit-btn{width:100%;background-color:var(--primary-color);color:white;border:none;padding:16px 20px;border-radius:8px;font-size:18px;font-weight:600;cursor:pointer;transition:all 0.3s;text-align:center;letter-spacing:-0.2px}
+      .submit-btn:hover{background-color:#0051c2;transform:translateY(-2px)}
+      .submit-btn:active{transform:scale(0.98)}
+      .success-message{display:none;text-align:center;padding:30px;background-color:var(--success-color);color:white;border-radius:8px;margin-top:20px;font-weight:600;font-size:18px}
+      footer{background-color:var(--dark-color);color:white;padding:60px 0 40px;text-align:center}
+      footer a{color:white;text-decoration:none}
+      footer p{margin-bottom:16px;color:#cbd5e0;font-size:14px}
+      @media (max-width:1024px){
+          .tech-hero{flex-direction:column;text-align:center;gap:40px}
+          .tech-hero-content{text-align:center !important}
+          .tech-hero-content .section-title {text-align:center !important}
+          .tech-hero-image{max-width:600px;margin:0 auto}
+      }
+      @media (max-width:768px){
+          .hero h1{font-size:36px}
+          .hero p{font-size:18px}
+          .section-title{font-size:28px}
+          .steps,.benefit-grid,.danger-grid,.tech-grid,.stack-grid{grid-template-columns:1fr}
+          .form-container{padding:30px 20px}
+          .tech-platform{padding:60px 0}
+          .tech-platform .section-title{font-size:28px}
+          .section-subtitle{font-size:18px}
+          .tech-card{padding:25px}
+          .video-demo{padding:60px 0}
+          .video-description{font-size:16px;padding:0 20px}
+          .specs-grid{grid-template-columns:repeat(2,1fr)}
+      }
+      footer{background-image:linear-gradient(rgba(26, 32, 44, 0.32), rgba(26, 32, 44, 0.92)), url('images/optimized/bmw.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;color:#fff;padding:100px 0 60px;text-align:center;position:relative}
+      .expertise-section{background:rgba(255,255,255,0.1);border-radius:12px;padding:30px;margin:40px auto;max-width:900px;backdrop-filter:blur(10px)}
+      .expertise-title{font-size:24px;font-weight:700;margin-bottom:20px;color:#fff}
+      .expertise-description{font-size:16px;line-height:1.7;color:#f0f4f8}
+      .footer-content{position:relative;z-index:2}
+      .footer-title{font-size:32px;font-weight:700;margin-bottom:30px;line-height:1.3}
+      .footer-description{font-size:18px;line-height:1.8;margin-bottom:40px;max-width:800px;margin-left:auto;margin-right:auto;color:#cbd5e0}
+      .footer-description strong{color:white;font-weight:600}
+      .location-badge{display:inline-block;background:rgba(255,255,255,0.15);padding:10px 25px;border-radius:30px;font-size:16px;font-weight:600;margin-bottom:40px;backdrop-filter:blur(5px)}
+      .location-badge::before{content:'📍';margin-right:8px}
+      .review-section{display:flex;flex-direction:column;align-items:center;gap:20px}
+      .google-review-link{display:inline-flex;align-items:center;gap:12px;background:white;color:var(--dark-color);padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:600;transition:transform 0.3s, box-shadow 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+      .google-review-link:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+      .stars{color:#FFD700;font-size:24px;letter-spacing:2px}
+      .google-logo{width:20px;height:20px;margin-right:5px}
+      .footer-bottom{margin-top:50px;font-size:14px;color:#cbd5e0}
+      .footer-bottom a{color:#fff;text-decoration:none;font-weight:600}
+      .footer-bottom a:hover{text-decoration:underline}
+      @media (max-width:768px){
+          footer{padding:80px 0 40px}
+          .footer-title{font-size:24px}
+          .footer-description{font-size:16px;padding:0 20px}
+          .google-review-link{padding:12px 25px;font-size:14px}
+          .stars{font-size:20px}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#" class="logo">Odo<span>Alibi</span></a>
+        <div class="byline">by ClearingStation Ltd.</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Your vehicle's perfect alibi.</h1>
+        <p>An OBD-II device that automatically records every business mile you drive. Never worry about CRA vehicle use audits again.</p>
+        <a href="#pre-order" class="btn">Pre-order Now</a>
+      </div>
+    </section>
+    <section class="german-section">
+      <div class="german-badge">
+        <div class="odo-brand">Odo<span>Alibi</span></div>
+        <div class="german-text">Driven by German Software Engineering Excellence</div>
+      </div>
+    </section>
+    <div class="container">
+      <h2 class="section-title" style="margin-top: 80px">Replaces Your Vehicle Logbook in 3 Steps</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="images/optimized/1.jpg" alt="Get OBD-II Sensor">
+          <h3>1. Get our OBD-II Sensor</h3>
+          <p>A small sensor - no phone, battery or computer is needed.</p>
+        </div>
+        <div class="step">
+          <img src="images/optimized/2.jpg" alt="Plug into car">
+          <h3>2. Plug into your car</h3>
+          <p>Takes seconds to install with no tools needed.</p>
+        </div>
+        <div class="step">
+          <img src="images/optimized/3.jpg" alt="Track PVL">
+          <h3>3. Automatically track all PVL</h3>
+          <p>Every trip is recorded with precise data that you control.</p>
+        </div>
+      </div>
+    </div>
+    <section class="tech-platform">
+      <div class="container">
+        <div class="tech-hero">
+          <div class="tech-hero-image">
+            <img src="images/optimized/odo2.jpg" alt="OdoAlibi">
+          </div>
+          <div class="tech-hero-content">
+            <h2 class="section-title">Automated Vehicle Logbook</h2>
+            <p class="section-subtitle">Our professional-grade platform combines bank-level security with real-time tracking technology to deliver CRA-approved mileage documentation that protects your tax deductions against the #1 rejected documentation in audits: manual logbooks.</p>
+          </div>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">⚡</div>
+            <h3>Direct Vehicle Data Access</h3>
+            <p>Advanced OBD-II technology interfaces directly with your vehicle's computer to extract precise odometer readings</p>
+            <ul>
+              <li>Compatible with ALL vehicle types: gasoline, diesel, electric & hybrid</li>
+              <li>Direct CAN bus integration for error-free odometer readings</li>
+              <li>Adaptive protocol support most modern vehicles</li>
+              <li>Signatures prevent data tampering</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">🛰️</div>
+            <h3>Precision Location Tracking</h3>
+            <p>Advanced positioning systems record exact routes with address-level accuracy required for CRA compliance</p>
+            <ul>
+              <li>Multi-constellation satellite support</li>
+              <li>Inertial tracking</li>
+              <li>Generates complete trip documentation</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">🚗</div>
+            <h3>Zero Effort Operation</h3>
+            <p>Plug in once and forget - OdoAlibi requires absolutely no interaction, apps, or charging to track every business mile automatically</p>
+            <ul>
+              <li>No buttons to push before driving</li>
+              <li>No phone apps to open or maintain</li>
+              <li>No batteries or charging needed</li>
+              <li>Works silently 24/7 without any input</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tech-specs">
+          <h2 class="specs-title">Key Features & Specifications</h2>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <div class="spec-value">AES-256 encryption</div>
+              <div class="spec-label">Military-Grade Security</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-value">6-Year</div>
+              <div class="spec-label">Trip Records Storage</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-value">100%</div>
+              <div class="spec-label">Designed to meet CRA requirements</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--<section class="video-demo">
+      <div class="container">
+        <h2 class="section-title">Why We Built This</h2>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/V732u_fJMro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Watch how we go over what's now possible.</p>
+      </div>
+    </section>-->
+    <section>
+      <div class="container">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">🛡️</div>
+            <h3>Bulletproof Against CRA Audits</h3>
+            <p>Unlike manual logs or phone apps, our tamper-proof records include vehicle verification, real-time timestamps, and physical evidence that stands up in audits - giving you complete protection</p>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">⚡</div>
+            <h3>Never Miss a Deductible Mile</h3>
+            <p>Phone apps fail when batteries die or networks drop - our device captures 100% of trips with no phone, no charging, and no input needed, ensuring you claim every dollar you deserve</p>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">📊</div>
+            <h3>Exceeds CRA Requirements</h3>
+            <p>Our reports go beyond basic compliance by including destinations, business purpose, and route maps - more documentation than even a perfect manual logbook</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits">
+      <div class="container">
+        <h2 class="section-title">Why OdoAlibi?</h2>
+        <div class="benefit-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <h3>SAVE HOURS</h3>
+            <p>Eliminate tedious paperwork and manual recording. Save 4-6 hours every month.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <h3>AUDIT-PROOF</h3>
+            <p>Create tamper-proof records that satisfy CRA requirements during audits.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <h3>MAXIMIZE CLAIMS</h3>
+            <p>Capture every eligible business mile, typically increasing legitimate deductions by 15-20%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="section-title">The Dangers of Manual Logging</h2>
+        <div class="danger-grid" style="margin-bottom: 100px">
+          <div class="danger-item">
+            <div class="danger-icon">⚠️</div>
+            <h3>AUDIT RISK</h3>
+            <p>Manual logbooks are the #1 rejected documentation during CRA tax audits, putting thousands in deductions at risk.</p>
+          </div>
+          <div class="danger-item">
+            <div class="danger-icon">⚠️</div>
+            <h3>LEGAL TROUBLE</h3>
+            <p>Incomplete or error-filled logs can be viewed as intentional tax fraud, exposing you to serious legal consequences.</p>
+          </div>
+          <div class="danger-item">
+            <div class="danger-icon">⚠️</div>
+            <h3>WASTED TIME</h3>
+            <p>The average business owner wastes 4-6 hours monthly on manual mileage tracking that could be spent growing your business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cra-section">
+      <div class="container">
+        <h2 class="section-title">CRA Vehicle Use Requirements</h2>
+        <div class="cra-container">
+          <div class="cra-header">
+            <div class="cra-icon">📋</div>
+            <h3>What the CRA Requires</h3>
+          </div>
+          <div class="requirements">
+            <h4>For Business Vehicle Use</h4>
+            <ul class="requirement-list">
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Complete logbook recording all business trips with date, destination, purpose, and exact kilometers</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Total kilometers driven for business vs. personal use (percentage calculation required)</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Starting/ending odometer readings for each business trip</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Records must be kept for 6 years after filing</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Businesses can deduct expenses only for the business-use percentage</div>
+              </li>
+            </ul>
+          </div>
+          <div class="requirements">
+            <h4>For Personal Vehicle Used for Business</h4>
+            <ul class="requirement-list">
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Same detailed logbook requirements as business vehicles</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Must separate commuting (not deductible) from business travel (deductible)</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>CRA allows "simplified logbook" method after keeping a full logbook for one complete year</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Even with simplified method, you must track business mileage for a three-month sample period annually</div>
+              </li>
+            </ul>
+          </div>
+          <div class="requirements">
+            <h4>Penalties for Non-Compliance</h4>
+            <ul class="requirement-list">
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Denied deductions for all vehicle expenses</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Potential reassessment of previous tax years</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Interest charges on unpaid taxes</div>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <div>Penalties of up to 50% of understated tax in cases of gross negligence</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantage-section">
+      <div class="container">
+        <h2 class="section-title">Why OdoAlibi Beats Phone Apps</h2>
+        <div class="advantage-list">
+          <div class="advantage-item">
+            <div class="advantage-icon">→</div>
+            <div class="advantage-content">
+              <h4>DIRECT CONNECTION</h4>
+              <p>Pulls actual odometer data directly from your vehicle's computer, not GPS estimates that can be off by 5-10%</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-icon">→</div>
+            <div class="advantage-content">
+              <h4>NEVER FORGET</h4>
+              <p>Works automatically every time you drive, with no apps to open or buttons to push</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-icon">→</div>
+            <div class="advantage-content">
+              <h4>AUDIT-PROOF</h4>
+              <p>Creates tamper-proof records with vehicle-verified data that tax authorities respect and accept</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-icon">→</div>
+            <div class="advantage-content">
+              <h4>ALWAYS RELIABLE</h4>
+              <p>Works without phones, signal, or battery power - even in remote areas with little cell coverage</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-icon">→</div>
+            <div class="advantage-content">
+              <h4>PROFESSIONAL GRADE</h4>
+              <p>Shows serious commitment to compliance and proper record-keeping to tax authorities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="transparent-pricing">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <div class="pricing-container-single">
+          <div class="pricing-card-premium">
+            <div class="pricing-tag">Only For The First 50</div>
+            <div class="pricing-header-premium">
+              <h3 class="pricing-title-premium">OdoAlibi</h3>
+              <div class="pricing-price-group">
+                <div class="pricing-price-premium">$100 <span class="price-currency">CAD</span></div>
+                <div class="pricing-secondary">One-time device cost</div>
+              </div>
+              <div class="pricing-free">
+                <span class="free-badge">FREE</span>
+                <span class="free-text">First Year Data Plan</span>
+              </div>
+            </div>
+            <div class="pricing-details-premium">
+              <div class="pricing-included">
+                <h4>What's Included</h4>
+                <ul class="pricing-list-premium">
+                  <li><span class="check-premium">✓</span> OdoAlibi Sensor</li>
+                  <li><span class="check-premium">✓</span> First year data plan ($0 monthly fee)</li>
+                  <li><span class="check-premium">✓</span> ClearingStation web access</li>
+                  <li><span class="check-premium">✓</span> Real-time position tracking</li>
+                  <li><span class="check-premium">✓</span> CRA-compliant trip reports</li>
+                  <li><span class="check-premium">✓</span> 6+ years of secure data storage for every trip</li>
+                  <li><span class="check-premium">✓</span> Email & phone technical support</li>
+                </ul>
+              </div>
+
+              <div class="pricing-future">
+                <h4>After First Year</h4>
+                <div class="future-price">
+                  <span class="future-amount">$6</span>
+                  <span class="future-period">/month</span>
+                </div>
+                <p class="future-details">Includes all cellular data, cloud storage, software access, and ongoing support</p>
+                <p class="compare-note">Compare to other vehicle tracking services at $15-49/month that do not provide any CRA reporting features.</p>
+              </div>
+
+              <div class="pricing-notes-premium">
+                <p>• No contracts - cancel anytime</p>
+                <p>• No hidden fees or additional charges</p>
+                <p>• Not happy? 90 day money-back policy</p>
+                <p>• Limited time pricing for first 50 pre-orders only</p>
+              </div>
+            </div>
+            <div class="pricing-cta-premium">
+              <a href="#pre-order" class="cta-button-premium">Pre-order Now</a>
+              <p class="cta-guarantee">No payment required now. We'll contact you when production begins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .tech-specifications, .pricing-section {
+          padding: 80px 0;
+          background-color: #f7fafc;
+      }
+
+      .specs-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-bottom: 40px;
+      }
+
+      .spec-column {
+          flex: 1;
+          min-width: 300px;
+      }
+
+      .spec-group {
+          background: white;
+          border-radius: 10px;
+          padding: 25px;
+          margin-bottom: 25px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+
+      .spec-heading {
+          font-size: 20px;
+          font-weight: 700;
+          color: #1a202c;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #edf2f7;
+      }
+
+      .spec-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .spec-list li {
+          padding: 8px 0;
+          color: #4a5568;
+          font-size: 16px;
+      }
+
+      .spec-label {
+          font-weight: 600;
+          color: #2d3748;
+          margin-right: 5px;
+      }
+
+      .spec-note {
+          display: block;
+          margin-top: 15px;
+          font-size: 14px;
+          color: #e53e3e;
+          font-style: italic;
+      }
+
+      .limitation-notice {
+          background: #fff5f5;
+          border-radius: 10px;
+          padding: 20px;
+          display: flex;
+          align-items: flex-start;
+          margin-top: 20px;
+          border-left: 4px solid #fc8181;
+      }
+
+      .limitation-icon {
+          font-size: 24px;
+          color: #fc8181;
+          margin-right: 15px;
+          line-height: 1;
+      }
+
+      .limitation-content h4 {
+          margin: 0 0 10px;
+          font-size: 18px;
+          color: #e53e3e;
+      }
+
+      .limitation-content p {
+          margin: 0;
+          color: #4a5568;
+          line-height: 1.6;
+      }
+
+      /* Pricing Styles - Single Card */
+      .pricing-container-single {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 40px;
+      }
+
+      .pricing-card-premium {
+          background: white;
+          border-radius: 10px;
+          width: 100%;
+          max-width: 600px;
+          overflow: hidden;
+          box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+          position: relative;
+      }
+
+      .pricing-tag {
+          position: absolute;
+          top: 35px;
+          right: -55px;
+          background: #ff4c4c;
+          color: white;
+          padding: 5px 40px;
+          font-weight: 600;
+          transform: rotate(45deg);
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+          font-size: 14px;
+      }
+
+      .pricing-header-premium {
+          padding: 35px 30px;
+          background: linear-gradient(135deg, #0070f3, #0051c2);
+          text-align: center;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          color: white;
+      }
+
+      .pricing-title-premium {
+          margin: 0 0 20px;
+          font-size: 24px;
+          color: white;
+          font-weight: 700;
+      }
+
+      .pricing-price-group {
+          margin-bottom: 15px;
+      }
+
+      .pricing-price-premium {
+          font-size: 48px;
+          font-weight: 800;
+          margin-bottom: 5px;
+          line-height: 1;
+      }
+
+      .price-currency {
+          font-size: 24px;
+          vertical-align: super;
+          font-weight: 400;
+          margin-left: 5px;
+      }
+
+      .pricing-secondary {
+          font-size: 16px;
+          opacity: 0.9;
+      }
+
+      .pricing-free {
+          display: inline-block;
+          margin: 15px 0;
+          background: rgba(255,255,255,0.15);
+          padding: 10px 20px;
+          border-radius: 30px;
+          backdrop-filter: blur(5px);
+      }
+
+      .free-badge {
+          background: #38b2ac;
+          color: white;
+          padding: 3px 10px;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 14px;
+          margin-right: 8px;
+      }
+
+      .free-text {
+          font-weight: 600;
+      }
+
+      .pricing-savings {
+          font-size: 18px;
+          font-weight: 700;
+          color: #ffff80;
+          margin: 15px 0 0;
+      }
+
+      .pricing-details-premium {
+          padding: 30px;
+      }
+
+      .pricing-included {
+          margin-bottom: 30px;
+      }
+
+      .pricing-details-premium h4 {
+          margin: 0 0 20px;
+          font-size: 18px;
+          color: #2d3748;
+          font-weight: 700;
+          text-align: center;
+      }
+
+      .pricing-list-premium {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+
+      .pricing-list-premium li {
+          padding: 10px 0;
+          color: #4a5568;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+      }
+
+      .pricing-list-premium li:not(:last-child) {
+          border-bottom: 1px solid #f7fafc;
+      }
+
+      .check-premium {
+          color: #0070f3;
+          font-weight: bold;
+          margin-right: 12px;
+          font-size: 18px;
+      }
+
+      .pricing-future {
+          background: #f0f7ff;
+          padding: 25px;
+          border-radius: 10px;
+          text-align: center;
+          margin-bottom: 30px;
+      }
+
+      .future-price {
+          margin: 15px 0;
+      }
+
+      .future-amount {
+          font-size: 36px;
+          font-weight: 700;
+          color: #0070f3;
+      }
+
+      .future-period {
+          font-size: 18px;
+          color: #718096;
+          font-weight: 400;
+      }
+
+      .future-details {
+          font-size: 14px;
+          color: #4a5568;
+          margin: 0 auto;
+          max-width: 300px;
+      }
+
+      .compare-note {
+          font-size: 14px;
+          margin: 15px auto;
+          font-weight: 600;
+          color: #e53e3e;
+          max-width: 430px;
+      }
+
+      .pricing-notes-premium {
+          font-size: 14px;
+          color: #718096;
+          line-height: 1.5;
+      }
+
+      .pricing-notes-premium p {
+          margin-bottom: 8px;
+      }
+
+      .pricing-cta-premium {
+          padding: 0 30px 30px;
+          text-align: center;
+      }
+
+      .cta-button-premium {
+          display: block;
+          background-color: #0070f3;
+          color: white;
+          padding: 15px 32px;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: transform 0.2s, background-color 0.3s;
+          text-align: center;
+      }
+
+      .cta-button-premium:hover {
+          background-color: #0051c2;
+          transform: translateY(-2px);
+      }
+
+      .cta-guarantee {
+          font-size: 14px;
+          color: #718096;
+          margin-top: 15px;
+      }
+
+      @media (max-width: 768px) {
+          .specs-container {
+              flex-direction: column;
+          }
+
+          .pricing-card-premium {
+              width: 100%;
+              margin: 0 15px;
+          }
+
+          .pricing-header-premium {
+              padding: 30px 20px;
+          }
+
+          .pricing-price-premium {
+              font-size: 36px;
+          }
+
+          .pricing-title-premium {
+              font-size: 20px;
+          }
+
+          .pricing-details-premium {
+              padding: 20px;
+          }
+
+          .pricing-future {
+              padding: 20px;
+          }
+
+          .future-amount {
+              font-size: 28px;
+          }
+      }
+    </style>
+
+    <section id="pre-order" class="pre-order">
+      <div class="container">
+        <div class="form-container">
+        <h2 class="section-title" style="margin-bottom:30px">Pre-order OdoAlibi</h2>
+          <div style="display: flex; gap: 20px; align-items: center;">
+            <div style="text-align: center;"><img src="images/optimized/o.png" alt="OdoAlibi" style="width: 100%; max-width: 300px;" /></div>
+
+            <div class="price-box">
+              <h4 style="color:#0070f3;margin-bottom:10px">Limited Pre-Order Pricing:</h4>
+              <p><strong>Device:</strong> Only CAD $100 <br />(that's how much it roughly costs us to make them)</p>
+              <p style="margin-top:10px"><strong>Data Plan:</strong> 12 Months included</p>
+              <p style="font-size:14px">50 pre-orders are needed to begin production.</p>
+            </div>
+          </div>
+          <div id="form">
+            <div class="form-group">
+              <label for="firstname">Full Name</label>
+              <input type="text" id="firstname" required>
+            </div>
+            <div class="form-group">
+              <label for="phonenumber">Phone Number or Email</label>
+              <input type="text" id="phonenumber" required>
+            </div>
+            <button class="submit-btn" onclick="send()">Reserve Your OdoAlibi</button>
+            <p style="text-align:center;margin-top:15px;font-size:14px;color:#777">No payment required now. We'll contact you when production begins.</p>
+          </div>
+          <div id="success-message" class="success success-message">Thank you for pre-ordering OdoAlibi! Your reservation has been confirmed.</div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="tech-specifications">
+      <div class="container">
+        <h2 class="section-title">Technical Specifications</h2>
+        <div class="specs-container">
+          <div class="spec-column">
+            <div class="spec-group">
+              <h3 class="spec-heading">Hardware</h3>
+              <ul class="spec-list">
+                <li><span class="spec-label">Connection:</span> OBD-II port (J1962 connector)</li>
+                <li><span class="spec-label">Dimensions:</span> 1.85" × 1.61" × 0.71" (47mm × 41mm × 18mm)</li>
+                <li><span class="spec-label">Weight:</span> 2.12 oz (60g)</li>
+                <li><span class="spec-label">Power supply:</span> 12-24V DC vehicle power</li>
+                <li><span class="spec-label">Power consumption:</span> 50mA standby current at 12V</li>
+                <li><span class="spec-label">Operating temperature:</span> -4°F to 131°F (-20°C to 55°C)</li>
+                <li><span class="spec-label">Humidity tolerance:</span> 5% ~ 95% non-condensing</li>
+                <li><span class="spec-label">Built-in sensor:</span> 3D acceleration sensor</li>
+                <li><span class="spec-label">Power saving:</span> Intelligent sleep mode to extend operation</li>
+              </ul>
+            </div>
+
+            <div class="spec-group">
+              <h3 class="spec-heading">Connectivity</h3>
+              <ul class="spec-list">
+                <li><span class="spec-label">Cellular:</span> 4G FDD LTE (B1/B2/B3/B4/B5/B7/B8/B28/B66)</li>
+                <li><span class="spec-label">2G fallback:</span> 850/900/1800/1900MHz</li>
+                <li><span class="spec-label">SIM card:</span> Micro SIM (3FF)</li>
+                <li><span class="spec-label">GPS sensitivity:</span> -162dBm</li>
+                <li><span class="spec-label">Positioning accuracy:</span> 2.5m</li>
+                <li><span class="spec-label">Antennas:</span> Internal 4G & GPS (no external antennas)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="spec-column">
+            <div class="spec-group">
+              <h3 class="spec-heading">Software & Services</h3>
+              <ul class="spec-list">
+                <li><span class="spec-label">Access methods:</span> ClearingStation Web Login</li>
+                <li><span class="spec-label">Tracking features:</span> Real-time position, historical routes</li>
+                <li><span class="spec-label">Privacy features:</span> Turn off GPS, for mileage tracking only</li>
+                <li><span class="spec-label">Data export:</span> CRA Report PDF, PDF, CSV formats</li>
+                <li><span class="spec-label">Storage:</span> Secure cloud storage (6+ years)</li>
+              </ul>
+            </div>
+
+            <div class="spec-group">
+              <h3 class="spec-heading">Compatibility</h3>
+              <ul class="spec-list">
+                <li><span class="spec-label">Vehicle types:</span> Private cars, taxis, trucks, fleet vehicles</li>
+                <li><span class="spec-label">Power requirements:</span> Standard OBD-II port (12-24V)</li>
+                <li><span class="spec-label">Year models:</span> 1996+ for North American vehicles, 2001+ for European vehicles</li>
+                <li><span class="spec-label">Installation:</span> Plug-and-play, no wiring or tools required</li>
+                <li><span class="spec-label">Platform compatibility:</span> Works only with ClearingStation Accounting Web App</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="limitation-notice">
+          <div class="limitation-icon">ⓘ</div>
+          <div class="limitation-content">
+            <h4>Important Notes on Vehicle Compatibility</h4>
+            <p>While our device works with most OBD-II compatible vehicles, the specific data available varies by manufacturer and model. Our algorithms combine vehicle data signals with GPS and other sensors to ensure accurate mileage tracking even when direct odometer readings aren't available from the vehicle computer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <style>
+      .tech-specifications, .pricing-section {
+          padding: 80px 0;
+          background-color: #f7fafc;
+      }
+
+      .specs-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-bottom: 40px;
+      }
+
+      .spec-column {
+          flex: 1;
+          min-width: 300px;
+      }
+
+      .spec-group {
+          background: white;
+          border-radius: 10px;
+          padding: 25px;
+          margin-bottom: 25px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+
+      .spec-heading {
+          font-size: 20px;
+          font-weight: 700;
+          color: #1a202c;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #edf2f7;
+      }
+
+      .spec-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .spec-list li {
+          padding: 8px 0;
+          color: #4a5568;
+          font-size: 16px;
+      }
+
+      .spec-label {
+          font-weight: 600;
+          color: #2d3748;
+          margin-right: 5px;
+      }
+
+      .spec-note {
+          display: block;
+          margin-top: 15px;
+          font-size: 14px;
+          color: #e53e3e;
+          font-style: italic;
+      }
+
+      .limitation-notice {
+          background: #fff5f5;
+          border-radius: 10px;
+          padding: 20px;
+          display: flex;
+          align-items: flex-start;
+          margin-top: 20px;
+          border-left: 4px solid #fc8181;
+      }
+
+      .limitation-icon {
+          font-size: 24px;
+          color: #fc8181;
+          margin-right: 15px;
+          line-height: 1;
+      }
+
+      .limitation-content h4 {
+          margin: 0 0 10px;
+          font-size: 18px;
+          color: #e53e3e;
+      }
+
+      .limitation-content p {
+          margin: 0;
+          color: #4a5568;
+          line-height: 1.6;
+      }
+
+    </style>
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <h2 class="footer-title">Built by ClearingStation Ltd.</h2>
+      <p class="footer-description">
+        Our clients range from newly incorporated startups to established businesses. A high percentage of our clients saw significant growth in the last year. These businesses - spanning <strong>Software, Medical, Financial, Law, Mechanics,</strong> and <strong>Construction</strong> - chose us to drive their success. Now it's your turn. Join them by partnering with us.
+      </p>
+      <div class="expertise-section">
+        <h3 class="expertise-title">Backed by Proven Expertise</h3>
+        <p class="expertise-description">
+          ClearingStation brings over a decade of experience navigating complex financial regulations. With hands-on management of over 100 CRA audits, our team has become a trusted partner to medical practices, physicians, lawyers, financial advisors, and tech companies across Canada. We understand the unexpected challenges businesses face and have made it our mission to protect and guide our clients through every financial hurdle.
+        </p>
+      </div>
+      <div class="location-badge">We're proudly based in Manitoba, Canada</div>
+      <div class="review-section">
+        <a href="https://www.google.com/maps/place/ClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services/@49.8364592,-97.0304584,9z/data=!4m18!1m9!3m8!1s0x47f090c3808364f9:0x8f3ad3383674de4d!2sClearingStation+Ltd.+Bookkeeping+%26+Accounting+Services!8m2!3d49.8364592!4d-97.0304584!9m1!1b1!16s%2Fg%2F11whrtq1xt!3m7!1s0x47f090c3808364f9:0x8f3ad3383674de4d!8m2!3d49.8364592!4d-97.0304584!9m1!1b1!16s%2Fg%2F11whrtq1xt?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="google-review-link">
+          <svg class="google-logo" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          Read our reviews on Google Maps
+          <span class="stars">★★★★★</span>
+        </a>
+      </div>
+      <a style="margin-top: 50px; zoom: 1.3" href="#pre-order" class="btn">Pre-order OdoAlibi Now &raquo;</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ClearingStation Ltd. All rights reserved.</p>
+      <p>Developed by <a href="https://www.clearingstation.ca/">ClearingStation Ltd.</a> - Premier Financial Services & Tax Solutions for Business Owners</p>
+    </div>
+  </div>
+</footer>
+<script>
+  function send(){if(!document.getElementById('firstname').value||!document.getElementById('phonenumber').value){return;}const text='OdoAlibi Pre-Order:\n\nName: \n<b>'+document.getElementById('firstname').value+'</b>\n\nContact: \n<b>'+document.getElementById('phonenumber').value+'</b>';fetch('https://api.telegram.org/bot5540491934:AAF6BYfiI0-1PjQuVjYPGlCUN-EprNwxjuA/sendMessage?chat_id=-780709397&parse_mode=html&text='+encodeURIComponent(text));document.getElementById('form').style.display='none';document.getElementById('success-message').style.display='block';}
+</script>
+</body>
+</html>
