@@ -35,7 +35,7 @@
               <a href="index.htm" class="text-2xl font-bold text-blue-600">OdoAlibi</a>
             </div>
 
-            <!-- Navigation -->
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
               <div class="dropdown">
                 <button class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm flex items-center">
@@ -53,7 +53,6 @@
                           <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5821 4.64423L16.582 24.4042H17.8171V9.58423H26.4621L26.4621 24.4042L27.6971 24.4042V26.8742L16.582 26.8742L16.5821 26.8742H4.23207L4.23205 26.8742L2.99707 26.8742V24.4042L4.23205 24.4042L4.23207 4.64423H16.5821ZM11.6421 20.6992H9.17207V24.4042H11.6421V20.6992ZM22.7571 19.4642H20.2871V21.9342H22.7571V19.4642ZM22.7571 14.5242H20.2871V16.9942H22.7571V14.5242ZM11.6421 14.5242H9.17207V16.9942H11.6421V14.5242ZM11.6421 9.58423H9.17207V12.0542H11.6421V9.58423Z" fill="#0070F3"/>
                           </svg>
-
                         </div>
                       </div>
                       <div class="md:mt-4">
@@ -80,21 +79,131 @@
               </div>
               <a href="index.htm#integrations" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Partners</a>
               <a href="index.htm#key-features" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Solutions</a>
-              <a href="#" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Resources</a>
+              <a href="https://intercom.help/odoalibi/en" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Resources</a>
               <a href="pricing.htm" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Pricing</a>
             </nav>
           </div>
 
-          <!-- Auth buttons -->
-          <div class="flex items-center space-x-3">
+          <!-- Desktop Auth buttons -->
+          <div class="hidden md:flex items-center space-x-3">
             <button class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Login</button>
             <button
               class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors">
               Get Started
             </button>
           </div>
+
+          <!-- Mobile Hamburger Button -->
+          <button class="md:hidden flex flex-col items-center justify-center w-8 h-8 hamburger" id="mobile-menu-button">
+            <span class="hamburger-line line1 w-6 h-0.5 bg-gray-600 mb-1.5"></span>
+            <span class="hamburger-line line2 w-6 h-0.5 bg-gray-600 mb-1.5"></span>
+            <span class="hamburger-line line3 w-6 h-0.5 bg-gray-600"></span>
+          </button>
         </div>
       </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="md:hidden fixed h-screen inset-0 bg-black bg-opacity-50 z-40 mobile-menu-overlay" id="mobile-menu-overlay" style="display: none;"></div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden fixed top-0 left-0 w-80 h-full bg-white z-50 mobile-menu shadow-2xl" id="mobile-menu">
+        <div class="p-6 bg-white h-screen">
+          <!-- Mobile Menu Header -->
+          <div class="flex items-center justify-between mb-8">
+            <span class="text-2xl font-bold text-blue-600">OdoAlibi</span>
+            <button class="w-8 h-8 flex items-center justify-center" id="mobile-menu-close">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation Links -->
+          <nav class="space-y-6">
+            <!-- Products Section -->
+            <div>
+              <div class="text-gray-900 font-semibold text-lg mb-3">Products</div>
+              <div class="pl-4 space-y-3">
+                <a href="product_b2b.htm" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                    <svg width="16" height="16" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5821 4.64423L16.582 24.4042H17.8171V9.58423H26.4621L26.4621 24.4042L27.6971 24.4042V26.8742L16.582 26.8742L16.5821 26.8742H4.23207L4.23205 26.8742L2.99707 26.8742V24.4042L4.23205 24.4042L4.23207 4.64423H16.5821ZM11.6421 20.6992H9.17207V24.4042H11.6421V20.6992ZM22.7571 19.4642H20.2871V21.9342H22.7571V19.4642ZM22.7571 14.5242H20.2871V16.9942H22.7571V14.5242ZM11.6421 14.5242H9.17207V16.9942H11.6421V14.5242ZM11.6421 9.58423H9.17207V12.0542H11.6421V9.58423Z" fill="#0070F3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-medium">For Companies</div>
+                    <div class="text-sm text-gray-500">Business mileage reimbursements</div>
+                  </div>
+                </a>
+                <a href="product_b2c.htm" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                    <svg width="16" height="16" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.91" d="M14.7834 6.86719C13.7353 6.86719 12.7301 7.28356 11.9889 8.0247C11.2478 8.76585 10.8314 9.77105 10.8314 10.8192C10.8314 11.8673 11.2478 12.8725 11.9889 13.6137C12.7301 14.3548 13.7353 14.7712 14.7834 14.7712C15.3024 14.7712 15.8163 14.669 16.2958 14.4704C16.7753 14.2718 17.2109 13.9807 17.5779 13.6137C17.9449 13.2467 18.236 12.811 18.4346 12.3316C18.6332 11.8521 18.7354 11.3382 18.7354 10.8192C18.7354 10.3002 18.6332 9.7863 18.4346 9.30682C18.236 8.82734 17.9449 8.39168 17.5779 8.0247C17.2109 7.65772 16.7753 7.36662 16.2958 7.16802C15.8163 6.96941 15.3024 6.86719 14.7834 6.86719ZM18.3186 15.5913L14.8683 20.9886L11.3717 15.5952C8.17297 16.9526 6.05798 20.0489 5.95703 23.5223C8.12054 25.9956 11.2927 27.565 14.8394 27.565C18.3846 27.565 21.5564 25.9977 23.7198 23.5262C23.6242 20.0532 21.5146 16.9539 18.3186 15.5913Z" fill="#0070F3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-medium">For Individuals</div>
+                    <div class="text-sm text-gray-500">Personal mileage tracking</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Other Navigation Items -->
+            <a href="index.htm#integrations" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Partners</a>
+            <a href="index.htm#key-features" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Solutions</a>
+            <a href="https://intercom.help/odoalibi/en" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Resources</a>
+            <a href="pricing.htm" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Pricing</a>
+          </nav>
+
+          <!-- Mobile Auth Buttons -->
+          <div class="mt-8 pt-8 border-t border-gray-200 space-y-3">
+            <button class="w-full text-center text-gray-600 hover:text-gray-900 font-medium transition-colors py-3">Login</button>
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const hamburger = document.querySelector('.hamburger');
+
+        function openMobileMenu() {
+            mobileMenuOverlay.style.display = 'block';
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeMobileMenu() {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+      </script>
     </header>
 
     <!-- Main Content -->

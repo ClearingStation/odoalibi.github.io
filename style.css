@@ -10,6 +10,36 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+/* Mobile menu animation */
+.mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Hamburger animation */
+.hamburger-line {
+    transition: all 0.3s ease;
+}
+
+.hamburger.open .line1 {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open .line2 {
+    opacity: 0;
+}
+
+.hamburger.open .line3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 .gradient-bg {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%);
 }
