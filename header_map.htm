@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Trip Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: #f6f6f4;
+          min-height: 100vh;
+      }
+
+      .map-container {
+          width: 100%;
+          height: 100vh;
+          margin: 0;
+          border-radius: 0;
+          overflow: hidden;
+          box-shadow: none;
+          background: #ffffff;
+          position: relative;
+      }
+
+      #map {
+          height: 100%;
+          width: 100%;
+      }
+
+      .custom-marker {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          color: white;
+          font-weight: bold;
+      }
+
+      .direction-arrow {
+          width: 24px;
+          height: 24px;
+          background: #0070F3;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          color: white;
+          font-weight: bold;
+          display: none;
+      }
+
+      .business-icon {
+          background: #0070F3;
+      }
+
+      .home-icon {
+          background: #10b981;
+      }
+
+      .stop-icon {
+          background: #ff6b35;
+      }
+
+      /* Trip popup */
+      .trip-popup {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          padding: 5px;
+          border-radius: 13px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+          z-index: 2000;
+          max-width: 120px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          display: flex !important;
+          flex-direction: column;
+      }
+
+      .trip-popup.visible {
+          opacity: 1;
+      }
+
+      .trip-title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 12px;
+          display: none;
+      }
+
+      .trip-segment {
+          font-size: 14px;
+          color: #6d6d6d;
+          margin-bottom: 8px;
+          padding: 12px 16px;
+          border-radius: 12px;
+          background: #f8f9fa;
+          text-align: left;
+      }
+
+      .business-segment {
+          background: rgba(0, 112, 243, 0.1);
+          color: #0070F3;
+      }
+
+      .personal-segment {
+          background: rgba(16, 185, 129, 0.1);
+          color: #10b981;
+      }
+
+      .home-segment {
+          background: rgba(16, 185, 129, 0.1);
+          color: #10b981;
+      }
+
+      .tax-info {
+          font-size: 12px;
+          color: #6d6d6d;
+          margin: 12px 0;
+          font-style: italic;
+      }
+
+      .tax-savings {
+          font-size: 14px;
+          color: #0070F3;
+          font-weight: 600;
+          margin: 12px 0;
+      }
+
+      .close-popup {
+          background: linear-gradient(135deg, #0070F3, #10b981);
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 600;
+      }
+
+      .button-container {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin: 2px 0 4px 0;
+      }
+
+      .trip-button {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 5px 8px;
+          border: 2px solid #e5e7eb;
+          border-radius: 12px;
+          background: white;
+          color: #6d6d6d;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+      }
+
+      .trip-button:hover {
+          border-color: #d1d5db;
+          background: #f9fafb;
+      }
+
+      .trip-button.selected {
+          border-color: currentColor;
+          background: rgba(0, 0, 0, 0.05);
+      }
+
+      .business-button.selected {
+          border-color: #0070F3;
+          background: rgba(0, 112, 243, 0.1);
+          color: #0070F3;
+      }
+
+      .private-button.selected {
+          border-color: #6d6d6d;
+          background: rgba(109, 109, 109, 0.1);
+          color: #6d6d6d;
+      }
+
+      .button-icon {
+          font-size: 16px;
+      }
+
+      .auto-continue {
+          font-size: 12px;
+          color: #9ca3af;
+          text-align: center;
+          margin-top: 8px;
+          display: none !important;
+      }
+
+      #countdown {
+          font-weight: 600;
+          color: #6d6d6d;
+      }
+
+      /* Geofencing circle */
+      .geofence-circle {
+          border-radius: 50%;
+          background: rgba(0, 112, 243, 0.1);
+          border: 2px solid rgba(0, 112, 243, 0.3);
+          position: absolute;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          animation: sprout 1s ease-out forwards;
+      }
+
+      @keyframes sprout {
+          0% {
+              width: 0;
+              height: 0;
+              opacity: 0;
+          }
+          50% {
+              opacity: 1;
+          }
+          100% {
+              width: 100px;
+              height: 100px;
+              opacity: 0.6;
+          }
+      }
+
+      /* Custom zoom controls positioning - blue themed */
+      .leaflet-control-zoom {
+          border: none !important;
+          box-shadow: 0 2px 8px rgba(0, 112, 243, 0.25) !important;
+      }
+
+      .leaflet-control-zoom a {
+          background: rgba(255, 255, 255, 0.95) !important;
+          color: #0070F3 !important;
+          border: 1px solid rgba(0, 112, 243, 0.2) !important;
+          width: 32px !important;
+          height: 32px !important;
+          line-height: 30px !important;
+          border-radius: 6px !important;
+          font-size: 18px !important;
+          font-weight: bold !important;
+      }
+
+      .leaflet-control-zoom a:hover {
+          background: #0070F3 !important;
+          color: white !important;
+      }
+
+      /* Enhanced map styling - #0070F3 themed */
+      .leaflet-tile-pane {
+          filter: hue-rotate(200deg) saturate(1.2) brightness(0.9) contrast(1.3) sepia(0.3);
+      }
+
+      /* Override map background with #0070F3 theme */
+      .leaflet-container {
+          background: #0070F3 !important;
+      }
+
+      /* Apply blue theme overlay to the entire map */
+      .map-container::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, rgba(0, 112, 243, 0.15), rgba(0, 112, 243, 0.05));
+          pointer-events: none;
+          z-index: 400;
+      }
+
+      /* Remove map overlay for maximum visibility */
+      .map-overlay {
+          display: none;
+      }
+
+      .segment-label {
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: absolute; width: 100%; height: 100%; z-index: 999999"></div>
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-overlay"></div>
+
+      <!-- Trip Popup -->
+      <div class="trip-popup" id="tripPopup">
+        <div class="trip-title" id="popupTitle">Arrived</div>
+        <div class="trip-content" id="popupContent">
+          <div class="trip-segment" id="currentSegment">
+            <div class="segment-label" id="segmentLabel">STOP</div>
+            <div id="locationName">Client Meeting</div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="trip-button business-button" id="businessButton">
+            <span class="button-icon"><i class="fas fa-briefcase"></i></span>
+            <span class="button-text">Business</span>
+          </button>
+          <button class="trip-button private-button" id="privateButton">
+            <span class="button-icon"><i class="fas fa-user"></i></span>
+            <span class="button-text">Private</span>
+          </button>
+        </div>
+        <div class="auto-continue" id="autoContinue">Continuing automatically in <span id="countdown">3</span>s</div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+
+    <script>
+      // Initialize map
+      const map = L.map('map', {
+          zoomControl: false,
+          attributionControl: false,
+      }).setView([32.7467, -96.7970], 12);
+
+      // Use a more detailed tile layer with better street visibility
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: ''
+      }).addTo(map);
+
+      // Define mixed trip waypoints with significantly different return route
+      const waypoints = [
+          { coords: [32.7357, -96.8395], type: 'home', label: 'Home' },
+          { coords: [32.7767, -96.7970], type: 'business', label: 'Client Meeting' },
+          { coords: [32.7867, -96.7870], type: 'business', label: 'Lunch Meeting' },
+          { coords: [32.7100, -96.7600], type: 'personal', label: 'Grocery Store' },
+          { coords: [32.7357, -96.8395], type: 'home', label: 'Home' },
+      ];
+
+      let routeSegments = [];
+      let animationStarted = false;
+      let currentSegment = 0;
+      let tripCompleted = false;
+      let currentStopType = 'business';
+      let directionArrow = null;
+
+      // Function to calculate bearing between two points
+      function calculateBearing(lat1, lng1, lat2, lng2) {
+          const dLng = (lng2 - lng1) * Math.PI / 180;
+          const lat1Rad = lat1 * Math.PI / 180;
+          const lat2Rad = lat2 * Math.PI / 180;
+
+          const y = Math.sin(dLng) * Math.cos(lat2Rad);
+          const x = Math.cos(lat1Rad) * Math.sin(lat2Rad) - Math.sin(lat1Rad) * Math.cos(lat2Rad) * Math.cos(dLng);
+
+          const bearing = Math.atan2(y, x) * 180 / Math.PI;
+          return (bearing + 360) % 360;
+      }
+
+      // Function to create directional arrow
+      function createDirectionArrow() {
+          const startCoords = waypoints[0].coords;
+          const nextCoords = waypoints[1].coords;
+
+          const bearing = calculateBearing(startCoords[0], startCoords[1], nextCoords[0], nextCoords[1]);
+
+          const arrowIcon = L.divIcon({
+              className: 'direction-arrow',
+              html: `<div style="transform: rotate(${bearing}deg);">→</div>`,
+              iconSize: [24, 24],
+              iconAnchor: [12, 12]
+          });
+
+          directionArrow = L.marker(startCoords, { icon: arrowIcon }).addTo(map);
+      }
+
+      // Create custom marker icons
+      function createCustomIcon(type, label) {
+          let iconClass = 'custom-marker ';
+          let iconText = '';
+
+          switch(type) {
+          case 'business':
+              iconClass += 'business-icon';
+              iconText = '';
+              break;
+          case 'home':
+              iconClass += 'home-icon';
+              iconText = '';
+              break;
+          case 'personal':
+              iconClass += 'stop-icon';
+              iconText = '';
+              break;
+          default:
+              iconClass += 'stop-icon';
+              iconText = '•';
+          }
+
+          return L.divIcon({
+              className: iconClass,
+              html: iconText,
+              iconSize: [18, 18],
+              iconAnchor: [9, 9]
+          });
+      }
+
+      // Add markers for all waypoints
+      waypoints.forEach((waypoint, index) => {
+          if (index === 0) return; // Skip first waypoint, we'll add direction arrow instead
+
+          const icon = createCustomIcon(waypoint.type, waypoint.label);
+
+          // For the final home marker, use the original home coordinates for display
+          const displayCoords = (index === waypoints.length - 1) ? waypoints[0].coords : waypoint.coords;
+          const marker = L.marker(displayCoords, { icon: icon }).addTo(map);
+
+          // Add popup with location info
+          marker.bindPopup(`<b>${waypoint.label}</b><br/>${waypoint.type === 'business' ? 'Business' : waypoint.type === 'home' ? 'Home' : 'Personal'} Stop`);
+      });
+
+      // Add direction arrow at start
+      createDirectionArrow();
+
+      // Create routing control with all waypoints
+      const routingControl = L.Routing.control({
+          waypoints: waypoints.map(wp => L.latLng(wp.coords[0], wp.coords[1])),
+          routeWhileDragging: false,
+          createMarker: function() { return null; }, // Don't create default markers
+          lineOptions: {
+              styles: [{
+                  color: '#0070F3',
+                  weight: 4,
+                  opacity: 0,
+                  className: 'route-line'
+              }]
+          },
+          show: false,
+          addWaypoints: false,
+          draggableWaypoints: false,
+          fitSelectedRoutes: false
+      }).addTo(map);
+
+      // Animated route segments
+      let animatedRoutes = [];
+
+      // Function to animate route segments
+      function animateRouteSegment(coordinates, color, segmentIndex) {
+          const animatedCoords = [];
+          let currentIndex = 0;
+
+          const animatedRoute = L.polyline([], {
+              color: color,
+              weight: 4,
+              opacity: 0.9,
+              className: segmentIndex < 2 ? 'business-route' : 'personal-route'
+          }).addTo(map);
+
+          animatedRoutes.push(animatedRoute);
+
+          function addNextPoint() {
+              if (currentIndex < coordinates.length) {
+                  animatedCoords.push(coordinates[currentIndex]);
+                  animatedRoute.setLatLngs(animatedCoords);
+
+                  currentIndex++;
+                  setTimeout(addNextPoint, 8);
+              } else {
+                  // Segment completed - show geofencing and popup for destination
+                  const destinationIndex = segmentIndex + 1;
+
+                  // For the final segment, show geofencing at the original home location
+                  const geofenceCoords = (destinationIndex === waypoints.length - 1) ?
+                        waypoints[0].coords : waypoints[destinationIndex].coords;
+
+                  showGeofencing(geofenceCoords);
+
+                  setTimeout(() => {
+                      showDestinationPopup(destinationIndex, segmentIndex);
+                  }, 500);
+              }
+          }
+
+          addNextPoint();
+      }
+
+      // Function to continue to next segment
+      function continueToNextSegment(segmentIndex) {
+          if (segmentIndex < routeSegments.length - 1) {
+              currentSegment = segmentIndex + 1;
+              setTimeout(() => {
+                  animateNextSegment(currentSegment);
+              }, 300);
+          } else {
+              // All segments completed
+              tripCompleted = true;
+              setTimeout(() => {
+                  showTripCompletedPopup();
+              }, 500);
+          }
+      }
+
+      // Function to show destination popup
+      function showDestinationPopup(destinationIndex, segmentIndex) {
+          const destination = waypoints[destinationIndex];
+          const popup = document.getElementById('tripPopup');
+          const title = document.getElementById('popupTitle');
+          const content = document.getElementById('popupContent');
+          const currentSegment = document.getElementById('currentSegment');
+          const segmentLabel = document.getElementById('segmentLabel');
+          const locationName = document.getElementById('locationName');
+          const businessButton = document.getElementById('businessButton');
+          const privateButton = document.getElementById('privateButton');
+
+          // For final destination, use original home coordinates for popup positioning
+          const popupCoords = (destinationIndex === waypoints.length - 1) ?
+                waypoints[0].coords : destination.coords;
+
+          // Position popup above the point
+          const pointPixel = map.latLngToContainerPoint(popupCoords);
+          popup.style.left = pointPixel.x + 'px';
+          popup.style.top = (pointPixel.y - 40) + 'px'; // 40px above the point
+
+          // Set current stop type for auto-selection
+          if (destination.type === 'business') {
+              currentStopType = 'business';
+          } else if (destination.type === 'personal') {
+              currentStopType = 'private';
+          } else { // home
+              currentStopType = destination.label === 'Home' && destinationIndex === 0 ? 'private' : 'private';
+          }
+
+          // Set popup content based on destination type
+          if (destination.type === 'business') {
+              title.textContent = 'Business';
+              currentSegment.className = 'trip-segment business-segment';
+              segmentLabel.textContent = 'BUSINESS';
+              locationName.textContent = destination.label;
+          } else if (destination.type === 'personal') {
+              title.textContent = 'Personal';
+              currentSegment.className = 'trip-segment personal-segment';
+              segmentLabel.textContent = 'PERSONAL';
+              locationName.textContent = destination.label;
+          } else { // home
+              if (destinationIndex === waypoints.length - 1) {
+                  // Final destination - trip completed
+                  return;
+              }
+              title.textContent = 'Departure';
+              currentSegment.className = 'trip-segment home-segment';
+              segmentLabel.textContent = 'START';
+              locationName.textContent = destination.label;
+          }
+
+          // Start with buttons unselected
+          businessButton.classList.remove('selected');
+          privateButton.classList.remove('selected');
+
+          // Add button click handlers
+          businessButton.onclick = () => selectButton('business');
+          privateButton.onclick = () => selectButton('private');
+
+          popup.classList.add('visible');
+
+          // Auto-select after 1 second, then hide after 2 more seconds
+          setTimeout(() => {
+              updateButtonSelection();
+              setTimeout(() => {
+                  popup.classList.remove('visible');
+                  setTimeout(() => {
+                      continueToNextSegment(segmentIndex);
+                  }, 300);
+              }, 1000);
+          }, 1000);
+      }
+
+      // Function to update button selection
+      function updateButtonSelection() {
+          const businessButton = document.getElementById('businessButton');
+          const privateButton = document.getElementById('privateButton');
+
+          businessButton.classList.remove('selected');
+          privateButton.classList.remove('selected');
+
+          if (currentStopType === 'business') {
+              businessButton.classList.add('selected');
+          } else {
+              privateButton.classList.add('selected');
+          }
+      }
+
+      // Function to select button manually
+      function selectButton(type) {
+          currentStopType = type;
+          updateButtonSelection();
+      }
+
+      // Function to show trip completed popup
+      function showTripCompletedPopup() {
+          const popup = document.getElementById('tripPopup');
+          const title = document.getElementById('popupTitle');
+          const content = document.getElementById('popupContent');
+
+          // Position in center for trip completion
+          popup.style.left = '50%';
+          popup.style.top = '50%';
+          popup.style.transform = 'translate(-50%, -50%)';
+
+          title.textContent = 'Trip Complete';
+          content.innerHTML = `
+             <div class="trip-segment business-segment">
+                 <div class="segment-label">BUSINESS</div>
+                 Home → Meetings
+             </div>
+             <div class="trip-segment personal-segment">
+                 <div class="segment-label">PERSONAL</div>
+                 Grocery → Home
+             </div>
+             <div class="tax-savings">Tax Savings: $18.75</div>
+             <button class="close-popup" onclick="closePopup()">New Trip</button>
+         `;
+
+          // Hide the button container for final popup
+          const buttonContainer = popup.querySelector('.button-container');
+          if (buttonContainer) buttonContainer.style.display = 'none';
+
+          popup.classList.add('visible');
+      }
+
+      // Function to continue trip
+      function continueTrip(segmentIndex = null) {
+          const popup = document.getElementById('tripPopup');
+
+          // Clear any active countdown
+          clearCountdown();
+
+          popup.classList.remove('visible');
+
+          if (tripCompleted) {
+              closePopup();
+              return;
+          }
+
+          if (segmentIndex !== null) {
+              setTimeout(() => {
+                  continueToNextSegment(segmentIndex);
+              }, 300);
+          }
+      }
+
+      // Function to animate next segment
+      function animateNextSegment(segmentIndex) {
+          if (segmentIndex < routeSegments.length) {
+              const segment = routeSegments[segmentIndex];
+              const color = segmentIndex < 2 ? '#0070F3' : '#10b981'; // Business blue, Personal green
+              animateRouteSegment(segment.coordinates, color, segmentIndex);
+          }
+      }
+
+      // Function to show geofencing circle
+      function showGeofencing(coords) {
+          const pixel = map.latLngToContainerPoint(coords);
+
+          const circle = document.createElement('div');
+          circle.className = 'geofence-circle';
+          circle.style.left = pixel.x + 'px';
+          circle.style.top = pixel.y + 'px';
+          circle.style.zIndex = '1500';
+
+          document.querySelector('.map-container').appendChild(circle);
+
+          // Remove circle after animation
+          setTimeout(() => {
+              if (circle.parentNode) {
+                  circle.parentNode.removeChild(circle);
+              }
+          }, 1200);
+      }
+
+      // Function to show trip completion popup
+      function showTripPopup() {
+          showTripCompletedPopup();
+      }
+
+      // Function to close popup and restart
+      function closePopup() {
+          const popup = document.getElementById('tripPopup');
+          popup.classList.remove('visible');
+
+          // Reset trip state
+          tripCompleted = false;
+          currentSegment = 0;
+          currentStopType = 'business';
+
+          // Reset popup elements for next trip
+          setTimeout(() => {
+              const buttonContainer = popup.querySelector('.button-container');
+              if (buttonContainer) buttonContainer.style.display = 'flex';
+
+              // Reset popup positioning
+              popup.style.transform = 'translateX(-50%)';
+
+              // Clear all routes and restart
+              clearAllRoutes();
+              animationStarted = false;
+              routeSegments = [];
+
+              // Recreate direction arrow
+              createDirectionArrow();
+
+              setTimeout(startMixedTrip, 1000);
+          }, 300);
+      }
+
+      // Function to clear all routes
+      function clearAllRoutes() {
+          animatedRoutes.forEach(route => {
+              if (map.hasLayer(route)) {
+                  map.removeLayer(route);
+              }
+          });
+          animatedRoutes = [];
+
+          // Remove direction arrow
+          if (directionArrow && map.hasLayer(directionArrow)) {
+              map.removeLayer(directionArrow);
+              directionArrow = null;
+          }
+      }
+
+      // Function to start the mixed trip animation
+      function startMixedTrip() {
+          if (routeSegments.length > 0 && !animationStarted) {
+              animationStarted = true;
+              animateNextSegment(0);
+          }
+      }
+
+      // Handle route found event
+      routingControl.on('routesfound', function(e) {
+          const routes = e.routes;
+          const route = routes[0];
+
+          // Split route into segments between waypoints
+          const instructions = route.instructions;
+          let segmentStart = 0;
+
+          // Create segments between each waypoint
+          for (let i = 1; i < waypoints.length; i++) {
+              const segmentCoords = [];
+              let segmentEnd = segmentStart;
+
+              // Find coordinates for this segment
+              while (segmentEnd < route.coordinates.length - 1) {
+                  segmentCoords.push(route.coordinates[segmentEnd]);
+
+                  // Check if we've reached the next waypoint (approximate)
+                  const coord = route.coordinates[segmentEnd];
+                  const waypoint = waypoints[i].coords;
+                  const distance = Math.sqrt(
+                      Math.pow(coord.lat - waypoint[0], 2) +
+                          Math.pow(coord.lng - waypoint[1], 2)
+                  );
+
+                  if (distance < 0.001 || segmentEnd === route.coordinates.length - 1) {
+                      segmentCoords.push(route.coordinates[segmentEnd]);
+                      break;
+                  }
+                  segmentEnd++;
+              }
+
+              routeSegments.push({
+                  coordinates: segmentCoords,
+                  from: waypoints[i-1],
+                  to: waypoints[i]
+              });
+
+              segmentStart = segmentEnd;
+          }
+
+          // Hide the default route line
+          const container = routingControl.getContainer();
+          if (container) {
+              container.style.display = 'none';
+          }
+
+          // Start the mixed trip animation
+          setTimeout(() => {
+              startMixedTrip();
+          }, 500);
+      });
+
+      // Make functions global
+      window.closePopup = closePopup;
+      window.selectButton = selectButton;
+
+      // Hide the routing instructions panel
+      routingControl.on('routesfound', function(e) {
+          const container = routingControl.getContainer();
+          if (container) {
+              container.style.display = 'none';
+          }
+      });
+
+      // Add custom styling
+      const style = document.createElement('style');
+      style.textContent = `
+            .business-route {
+                filter: drop-shadow(0 2px 4px rgba(0, 112, 243, 0.3));
+            }
+            .personal-route {
+                filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+            }
+            .leaflet-routing-container {
+                display: none !important;
+            }
+     `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

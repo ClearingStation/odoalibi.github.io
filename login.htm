@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdoAlibi - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles */
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-delayed {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: -2s;
+        }
+
+        .floating-delayed-2 {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .social-btn {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-field {
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Carousel dots */
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: white;
+            width: 32px;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        /* Background circles */
+        .bg-circle {
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .wifi-signal {
+            border: 2px solid #ef4444;
+            border-radius: 50%;
+            animation: pulse-wifi 2s infinite;
+        }
+
+        @keyframes pulse-wifi {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex">
+    <!-- Left Side - Login Form -->
+    <div class="flex-1 bg-white flex flex-col max-w-md lg:max-w-lg">
+        <!-- Logo -->
+        <div class="pt-12 pl-12">
+            <h1 class="text-3xl font-semibold text-blue-600">OdoAlibi</h1>
+        </div>
+
+        <!-- Login Form Container -->
+        <div class="flex-1 flex items-center justify-center px-12">
+            <div class="w-full max-w-xs">
+                <h2 class="text-2xl text-gray-900 mb-12">Login</h2>
+
+                <!-- Social Login Buttons -->
+                <div class="space-y-4 mb-8">
+                    <button class="social-btn w-full flex items-center justify-center px-6 py-4 rounded-xl bg-white hover:bg-gray-50 text-gray-700">
+                        <svg class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        <span class="font-medium">Google</span>
+                    </button>
+
+                    <button class="social-btn w-full flex items-center justify-center px-6 py-4 rounded-xl bg-white hover:bg-gray-50 text-gray-700">
+                        <svg class="w-5 h-5 mr-3" fill="#1877F2" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        <span class="font-medium">Facebook</span>
+                    </button>
+                </div>
+
+                <!-- More Options -->
+                <div class="mb-8">
+                    <button class="flex w-full text-center items-center text-gray-500 hover:text-gray-700 transition-colors text-sm">
+                      <span>More Sign In options</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Divider -->
+                <div class="relative mb-8">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-4 bg-white text-gray-500">Or</span>
+                    </div>
+                </div>
+
+                <!-- Email/Password Form -->
+                <form class="space-y-6">
+                    <div>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="input-field w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-700"
+                            required
+                        >
+                    </div>
+
+                    <div class="relative">
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            class="input-field w-full px-4 py-4 pr-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-700"
+                            required
+                            id="password"
+                        >
+                        <button
+                            type="button"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            onclick="togglePassword()"
+                        >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="eye-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-blue-600 text-white py-4 px-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 text-lg"
+                    >
+                        Login
+                    </button>
+                </form>
+
+                <!-- Sign Up Link -->
+                <div class="mt-8 text-center">
+                    <span class="text-gray-500">Do not have a account? </span>
+                    <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">SignUp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="pb-8 pl-12">
+            <p class="text-gray-400 text-sm">© 2025 OdoAlibi. All Rights Reserved</p>
+        </div>
+    </div>
+
+    <!-- Right Side - Promotional Content -->
+    <div class="flex-1 gradient-bg relative overflow-hidden m-5 rounded-xl">
+
+        <!-- Content Container -->
+        <div class="flex items-center justify-center h-full p-16 relative z-10">
+            <div class="glass-card p-10 max-w-md w-full text-center">
+                <h3 class="text-2xl font-bold text-white mb-4 leading-tight">AI driven expense management</h3>
+                <p class="text-white/90 mb-12 leading-relaxed text-base">
+                    Advanced tracking combines GPS and inertial sensors for complete journey mapping.
+                </p>
+
+                <!-- Illustration Container -->
+                <div class="relative h-40 mb-12">
+                  <img alt="" src="images/login.png" class="h-full mx-auto"/>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center items-center space-x-2">
+                    <div class="carousel-dot active"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                </div>
+            </div>
+        </div>
+        <img alt="" src="images/decoration.png" class="absolute z-80 bottom-0 left-0"/>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eye-icon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                `;
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                `;
+            }
+        }
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Login form submitted');
+        });
+    </script>
+</body>
+</html>
