@@ -1,23 +1,10 @@
 {
   "name": "odoalibi-website",
   "version": "1.0.0",
-  "description": "OdoAlibi - The #1 Automatic Mileage Tracking App Suite",
-  "main": "index.htm",
+  "description": "Static HTML website for OdoAlibi",
   "scripts": {
-    "dev": "npx serve . -p 3000",
-    "start": "npx serve . -p 3000",
-    "build": "echo 'No build step needed for static site'",
-    "preview": "npx serve . -p 4173"
+    "dev": "npx serve . -p 3000"
   },
-  "keywords": [
-    "mileage",
-    "tracking",
-    "app",
-    "static",
-    "website"
-  ],
-  "author": "OdoAlibi",
-  "license": "ISC",
   "devDependencies": {
     "serve": "^14.2.1"
   }
