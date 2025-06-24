@@ -1,8 +1,8 @@
 source: /
 collections_config: {}
 paths:
-  static: ''
-  uploads: uploads
+  static: './'
+  uploads: images
 timezone: America/Winnipeg
 markdown:
   engine: commonmark
