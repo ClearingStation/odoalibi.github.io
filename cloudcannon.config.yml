@@ -1,9 +1,21 @@
 source: /
 collections_config: {}
-paths:
-  static: './'
-  uploads: images
 timezone: America/Winnipeg
+
+paths:
+  uploads: images
+  static: './'
+
+site:
+  title: OdoAlibi
+
+editor:
+  # Enable CloudCannon Visual Editor
+  inputs:
+    hero:
+      type: text
+    body:
+      type: html
+
 markdown:
   engine: commonmark
-  options: {}
