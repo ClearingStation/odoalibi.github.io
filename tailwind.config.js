@@ -1,0 +1,3 @@
+corePlugins: {
+  preflight: false,
+}
