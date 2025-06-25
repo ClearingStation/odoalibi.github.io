@@ -1,0 +1,11 @@
+{
+  "name": "odoalibi-website",
+  "version": "1.0.0",
+  "description": "Static HTML website for OdoAlibi",
+  "scripts": {
+    "dev": "npx serve . -p 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
