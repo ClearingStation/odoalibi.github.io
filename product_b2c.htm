@@ -27,7 +27,7 @@
     <body class="bg-white antialiased">
         <!-- Header -->
         <header class="relative bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
-      <div class="container mx-auto container-padding">
+      <div class="mx-auto container-padding">
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-8">
             <!-- Logo -->
@@ -166,51 +166,51 @@
         </div>
       </div>
       <script>
-       // Mobile menu functionality
-       const mobileMenuButton = document.getElementById('mobile-menu-button');
-       const mobileMenu = document.getElementById('mobile-menu');
-       const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-       const mobileMenuClose = document.getElementById('mobile-menu-close');
-       const hamburger = document.querySelector('.hamburger');
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const hamburger = document.querySelector('.hamburger');
 
-       function openMobileMenu() {
-           mobileMenuOverlay.style.display = 'block';
-           mobileMenu.classList.add('open');
-           hamburger.classList.add('open');
-           document.body.style.overflow = 'hidden'; // Prevent scrolling
-       }
+        function openMobileMenu() {
+            mobileMenuOverlay.style.display = 'block';
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
 
-       function closeMobileMenu() {
-           mobileMenuOverlay.style.display = 'none';
-           mobileMenu.classList.remove('open');
-           hamburger.classList.remove('open');
-           document.body.style.overflow = ''; // Restore scrolling
-       }
+        function closeMobileMenu() {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
 
-       mobileMenuButton.addEventListener('click', openMobileMenu);
-       mobileMenuClose.addEventListener('click', closeMobileMenu);
-       mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
 
-       // Close menu when clicking on navigation links
-       const mobileNavLinks = mobileMenu.querySelectorAll('a');
-       mobileNavLinks.forEach(link => {
-           link.addEventListener('click', closeMobileMenu);
-       });
+        // Close menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
-       // Close menu on escape key
-       document.addEventListener('keydown', function(e) {
-           if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-               closeMobileMenu();
-           }
-       });
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
       </script>
-        </header>
+    </header>
 
         <!-- Main Content -->
         <main class="relative overflow-hidden">
             <!-- Hero Section -->
             <section class="relative" style="background: linear-gradient(180deg, #FFFFFF 0%, #F1F7FF 100%);">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto container-padding">
                     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-20">
                         <!-- Left Content -->
                         <div class="text-left">
@@ -235,6 +235,7 @@
                             <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                                 The Smartest Way to Track Your
                                 <span style="color: #2563EB;">Miles, Expenses and Time</span>
+                                Effortlessly
                             </h1>
 
                             <!-- Subtitle -->
@@ -362,7 +363,7 @@
                     <!-- Features Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <!-- Feature 1: Automatic Time Tracking -->
-                        <div class="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow border border-gray-100 shadow">
+                        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
                             <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
                                 <svg width="22" height="28" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_679_5158)">
@@ -377,7 +378,7 @@
                         </div>
 
                         <!-- Feature 2: Increase Deductions -->
-                        <div class="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow border border-gray-100 shadow">
+                        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
                             <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
                                 <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_679_5170)">
@@ -392,7 +393,7 @@
                         </div>
 
                         <!-- Feature 3: IRS & CRA Ready Reports -->
-                        <div class="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow border border-gray-100 shadow">
+                        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
                             <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
                                 <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_679_5182)">
@@ -407,7 +408,7 @@
                         </div>
 
                         <!-- Feature 4: Perfect for Gig Drivers -->
-                        <div class="bg-white p-8 rounded-2xl hover:shadow-md transition-shadow border border-gray-100 shadow">
+                        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
                             <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
                                 <svg width="22" height="28" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_679_5194)">
@@ -426,7 +427,7 @@
 
             <!-- Advanced Tools Section -->
             <section class="py-20 lg:py-24" style="background-color: #F9FAFB;">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Section Header -->
                     <div class="text-center mb-16">
                         <!-- Badge -->
@@ -449,11 +450,12 @@
                     </div>
 
                     <!-- Main Content Grid -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="grid lg:grid-cols-2 gap-16 items-stretch">
                         <!-- Left Side - Feature List -->
-                        <div class="space-y-6">
+                        <div class="flex flex-col grid place-items-stretch gap-6">
                             <!-- Feature 1: AI-Powered Mileage Log -->
-                            <div class="flex items-start space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card active" style="background-color: #FFFFFF;" data-feature="mileage">
+                            <div class="flex items-center space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card active" style="background-color: #FFFFFF;" data-feature="mileage">
+                              <div class="flex gap-4">
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_679_3024)">
@@ -467,10 +469,12 @@
                                         Automatically captures GPS waypoints and calculates accurate mileage for each journey.
                                     </p>
                                 </div>
+                              </div>
                             </div>
 
                             <!-- Feature 2: AI-Powered Expense Management -->
-                            <div class="flex items-start space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card" style="background-color: #FFFFFF;" data-feature="expense">
+                            <div class="flex items-center space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card active" style="background-color: #FFFFFF;" data-feature="expense">
+                              <div class="flex gap-4">
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_679_3034)">
@@ -484,10 +488,12 @@
                                         Log fuel, tolls, parking, maintenance and client-related costs with receipt scanning.
                                     </p>
                                 </div>
+                              </div>
                             </div>
 
                             <!-- Feature 3: Time Tracker -->
-                            <div class="flex items-start space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card" style="background-color: #FFFFFF;" data-feature="time">
+                            <div class="flex items-center space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card active" style="background-color: #FFFFFF;" data-feature="time">
+                              <div class="flex gap-4">
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_679_3044)">
@@ -501,10 +507,12 @@
                                         Track billable hours with manual or automatic time logging tied to your trips.
                                     </p>
                                 </div>
+                              </div>
                             </div>
 
                             <!-- Feature 4: Tax Reports -->
-                            <div class="flex items-start space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card" style="background-color: #FFFFFF;" data-feature="tax">
+                            <div class="flex items-center space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer feature-card active" style="background-color: #FFFFFF;" data-feature="tax">
+                              <div class="flex gap-4">
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_679_3054)">
@@ -518,12 +526,13 @@
                                         Easily report and satisfy IRS and CRA tax requirement with a single click.
                                     </p>
                                 </div>
+                              </div>
                             </div>
                         </div>
 
                         <!-- Right Side - Dynamic Content -->
-                        <div class="relative shadow-lg rounded-xl overflow-hidden">
-                            <img alt="" src="images/ai_mileage_log.png"/>
+                        <div class="relative shadow-lg rounded-xl overflow-hidden h-full">
+                            <img class="absolute h-full w-full object-cover" alt="" src="images/ai_mileage_log.png"/>
                         </div>
                     </div>
 
@@ -678,7 +687,7 @@
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Section Header -->
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        <h2 class="text-4xl lg:text-4xl font-bold text-gray-900 mb-6">
                             Used by Gig Workers, Freelancers & Solo Business Owners
                         </h2>
                         <p class="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -803,11 +812,10 @@
 
             <!-- Compliance & Security Section -->
             <section class="py-20 lg:py-24 bg-white">
-                <div class="container mx-auto container-padding">
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <!-- Left Content -->
-                        <div>
-                            <!-- Badge -->
+              <div class="max-w-7xl mx-auto container-padding">
+                <div class="grid lg:grid-cols-3 gap-16 items-center">
+                  <div class="col-span-2">
+                    <!-- Badge -->
                             <div class="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-8">
                                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -824,85 +832,90 @@
                             <p class="text-xl text-gray-600 mb-12 leading-relaxed">
                                 Get maximum tax deductions with audit-proof records for every trip. Our platform is designed to meet IRS and CRA regulatory requirements.
                             </p>
-
-                            <!-- Features List -->
-                            <div class="space-y-8">
-                                <!-- Feature 1: IRS & CRA-compliant Mileage Logs -->
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <svg height="25" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_679_5267)">
-                                                <path d="M2.74127 4C1.63815 4 0.741272 4.89688 0.741272 6V18C0.741272 19.1031 1.63815 20 2.74127 20H10.7413C11.8444 20 12.7413 19.1031 12.7413 18V9H8.74127C8.18815 9 7.74127 8.55312 7.74127 8V4H2.74127ZM8.74127 4V8H12.7413L8.74127 4ZM3.24127 6H5.24127C5.51627 6 5.74127 6.225 5.74127 6.5C5.74127 6.775 5.51627 7 5.24127 7H3.24127C2.96627 7 2.74127 6.775 2.74127 6.5C2.74127 6.225 2.96627 6 3.24127 6ZM3.24127 8H5.24127C5.51627 8 5.74127 8.225 5.74127 8.5C5.74127 8.775 5.51627 9 5.24127 9H3.24127C2.96627 9 2.74127 8.775 2.74127 8.5C2.74127 8.225 2.96627 8 3.24127 8ZM3.74127 11H9.74127C10.2944 11 10.7413 11.4469 10.7413 12V14C10.7413 14.5531 10.2944 15 9.74127 15H3.74127C3.18815 15 2.74127 14.5531 2.74127 14V12C2.74127 11.4469 3.18815 11 3.74127 11ZM3.74127 12V14H9.74127V12H3.74127ZM8.24127 17H10.2413C10.5163 17 10.7413 17.225 10.7413 17.5C10.7413 17.775 10.5163 18 10.2413 18H8.24127C7.96627 18 7.74127 17.775 7.74127 17.5C7.74127 17.225 7.96627 17 8.24127 17Z" fill="#16A34A"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-xl font-regualr text-gray-900 mb-2">IRS and CRA-compliant Mileage Logs</h3>
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            Generate logs that meet all tax authority requirements for business mileage deductions and reimbursements.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 2: Audit-safe Data Export -->
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <svg height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_679_5276)">
-                                                <path d="M0.178772 6C0.178772 4.89688 1.07565 4 2.17877 4H7.17877V8C7.17877 8.55312 7.62565 9 8.17877 9H12.1788V13H6.92877C6.51315 13 6.17877 13.3344 6.17877 13.75C6.17877 14.1656 6.51315 14.5 6.92877 14.5H12.1788V18C12.1788 19.1031 11.2819 20 10.1788 20H2.17877C1.07565 20 0.178772 19.1031 0.178772 18V6ZM12.1788 14.5V13H15.6194L14.4006 11.7812C14.1069 11.4875 14.1069 11.0125 14.4006 10.7219C14.6944 10.4313 15.1694 10.4281 15.46 10.7219L17.96 13.2219C18.2538 13.5156 18.2538 13.9906 17.96 14.2812L15.46 16.7812C15.1663 17.075 14.6913 17.075 14.4006 16.7812C14.11 16.4875 14.1069 16.0125 14.4006 15.7219L15.6194 14.5031H12.1788V14.5ZM12.1788 8H8.17877V4L12.1788 8Z" fill="#2563EB"/>
-                                            </g>
-                                        </svg>
-
-                                    </div>
-                                    <div>
-                                        <h3 class="text-xl font-regular text-gray-900 mb-2">Audit-safe Data Export</h3>
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            Export detailed records in standard formats for accounting, audits, or tax filings with complete trip history.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 3: Smart Trip Categorization -->
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <svg height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_679_5285)">
-                                                <path d="M6.24127 4C4.93502 4 3.82252 4.83438 3.41315 6H2.24127C1.13815 6 0.241272 6.89687 0.241272 8V18C0.241272 19.1031 1.13815 20 2.24127 20H10.2413C11.3444 20 12.2413 19.1031 12.2413 18V8C12.2413 6.89687 11.3444 6 10.2413 6H9.0694C8.66002 4.83438 7.54752 4 6.24127 4ZM6.24127 6C6.50649 6 6.76084 6.10536 6.94838 6.29289C7.13591 6.48043 7.24127 6.73478 7.24127 7C7.24127 7.26522 7.13591 7.51957 6.94838 7.70711C6.76084 7.89464 6.50649 8 6.24127 8C5.97606 8 5.7217 7.89464 5.53417 7.70711C5.34663 7.51957 5.24127 7.26522 5.24127 7C5.24127 6.73478 5.34663 6.48043 5.53417 6.29289C5.7217 6.10536 5.97606 6 6.24127 6ZM9.77252 12.5312L5.77252 16.5312C5.47877 16.825 5.00377 16.825 4.71315 16.5312L2.71002 14.5312C2.41627 14.2375 2.41627 13.7625 2.71002 13.4719C3.00377 13.1813 3.47877 13.1781 3.7694 13.4719L5.23815 14.9406L8.71002 11.4688C9.00377 11.175 9.47877 11.175 9.7694 11.4688C10.06 11.7625 10.0631 12.2375 9.7694 12.5281L9.77252 12.5312Z" fill="#9333EA"/>
-                                            </g>
-                                        </svg>
-
-                                    </div>
-                                    <div>
-                                        <h3 class="text-xl font-regular text-gray-900 mb-2">Smart Trip Categorization</h3>
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            Set personal rules to classify medical or business trips so you never miss a deduction.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Feature 4: Personal Tax Dashboard -->
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <svg height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_679_5294)">
-                                                <path d="M0.553772 12C0.553772 9.87827 1.39663 7.84344 2.89692 6.34315C4.39721 4.84285 6.43204 4 8.55377 4C10.6755 4 12.7103 4.84285 14.2106 6.34315C15.7109 7.84344 16.5538 9.87827 16.5538 12C16.5538 14.1217 15.7109 16.1566 14.2106 17.6569C12.7103 19.1571 10.6755 20 8.55377 20C6.43204 20 4.39721 19.1571 2.89692 17.6569C1.39663 16.1566 0.553772 14.1217 0.553772 12ZM9.55377 7C9.55377 6.73478 9.44841 6.48043 9.26088 6.29289C9.07334 6.10536 8.81899 6 8.55377 6C8.28856 6 8.0342 6.10536 7.84667 6.29289C7.65913 6.48043 7.55377 6.73478 7.55377 7C7.55377 7.26522 7.65913 7.51957 7.84667 7.70711C8.0342 7.89464 8.28856 8 8.55377 8C8.81899 8 9.07334 7.89464 9.26088 7.70711C9.44841 7.51957 9.55377 7.26522 9.55377 7ZM8.55377 17C9.6569 17 10.5538 16.1031 10.5538 15C10.5538 14.4563 10.3381 13.9656 9.98815 13.6062L11.9913 9.05312C12.1569 8.675 11.985 8.23125 11.6069 8.06563C11.2288 7.9 10.785 8.07187 10.6194 8.45L8.61315 13C8.5944 13 8.57252 13 8.55377 13C7.45065 13 6.55377 13.8969 6.55377 15C6.55377 16.1031 7.45065 17 8.55377 17ZM6.05377 8.5C6.05377 8.23478 5.94841 7.98043 5.76088 7.79289C5.57334 7.60536 5.31899 7.5 5.05377 7.5C4.78856 7.5 4.5342 7.60536 4.34667 7.79289C4.15913 7.98043 4.05377 8.23478 4.05377 8.5C4.05377 8.76522 4.15913 9.01957 4.34667 9.20711C4.5342 9.39464 4.78856 9.5 5.05377 9.5C5.31899 9.5 5.57334 9.39464 5.76088 9.20711C5.94841 9.01957 6.05377 8.76522 6.05377 8.5ZM3.55377 13C3.81899 13 4.07334 12.8946 4.26088 12.7071C4.44842 12.5196 4.55377 12.2652 4.55377 12C4.55377 11.7348 4.44842 11.4804 4.26088 11.2929C4.07334 11.1054 3.81899 11 3.55377 11C3.28856 11 3.0342 11.1054 2.84667 11.2929C2.65913 11.4804 2.55377 11.7348 2.55377 12C2.55377 12.2652 2.65913 12.5196 2.84667 12.7071C3.0342 12.8946 3.28856 13 3.55377 13ZM14.5538 12C14.5538 11.7348 14.4484 11.4804 14.2609 11.2929C14.0733 11.1054 13.819 11 13.5538 11C13.2886 11 13.0342 11.1054 12.8467 11.2929C12.6591 11.4804 12.5538 11.7348 12.5538 12C12.5538 12.2652 12.6591 12.5196 12.8467 12.7071C13.0342 12.8946 13.2886 13 13.5538 13C13.819 13 14.0733 12.8946 14.2609 12.7071C14.4484 12.5196 14.5538 12.2652 14.5538 12Z" fill="#D97706"/>
-                                            </g>
-                                        </svg>
-
-                                    </div>
-                                    <div>
-                                        <h3 class="text-xl font-regular text-gray-900 mb-2">Personal Tax Dashboard</h3>
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            See exactly how much you'll save at tax time with real-time deduction and reimbursement tracking and year-end summaries.
-                                        </p>
-                                    </div>
-                                </div>
+                  </div>
+                  <div>&nbsp;</div>
+                </div>
+                    <div class="grid lg:grid-cols-2 items-stretch gap-16">
+                        <!-- Left Content -->
+                        <div>
+                          <!-- Features List -->
+                          <div class="gap-8 flex flex-col grid items-stretch h-full">
+                            <!-- Feature 1: IRS & CRA-compliant Mileage Logs -->
+                            <div class="flex items-start space-x-4">
+                              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg height="25" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_679_5267)">
+                                    <path d="M2.74127 4C1.63815 4 0.741272 4.89688 0.741272 6V18C0.741272 19.1031 1.63815 20 2.74127 20H10.7413C11.8444 20 12.7413 19.1031 12.7413 18V9H8.74127C8.18815 9 7.74127 8.55312 7.74127 8V4H2.74127ZM8.74127 4V8H12.7413L8.74127 4ZM3.24127 6H5.24127C5.51627 6 5.74127 6.225 5.74127 6.5C5.74127 6.775 5.51627 7 5.24127 7H3.24127C2.96627 7 2.74127 6.775 2.74127 6.5C2.74127 6.225 2.96627 6 3.24127 6ZM3.24127 8H5.24127C5.51627 8 5.74127 8.225 5.74127 8.5C5.74127 8.775 5.51627 9 5.24127 9H3.24127C2.96627 9 2.74127 8.775 2.74127 8.5C2.74127 8.225 2.96627 8 3.24127 8ZM3.74127 11H9.74127C10.2944 11 10.7413 11.4469 10.7413 12V14C10.7413 14.5531 10.2944 15 9.74127 15H3.74127C3.18815 15 2.74127 14.5531 2.74127 14V12C2.74127 11.4469 3.18815 11 3.74127 11ZM3.74127 12V14H9.74127V12H3.74127ZM8.24127 17H10.2413C10.5163 17 10.7413 17.225 10.7413 17.5C10.7413 17.775 10.5163 18 10.2413 18H8.24127C7.96627 18 7.74127 17.775 7.74127 17.5C7.74127 17.225 7.96627 17 8.24127 17Z" fill="#16A34A"/>
+                                  </g>
+                                </svg>
+                              </div>
+                              <div>
+                                <h3 class="text-xl font-regualr text-gray-900 mb-2">IRS and CRA-compliant Mileage Logs</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                  Generate logs that meet all tax authority requirements for business mileage deductions and reimbursements.
+                                </p>
+                              </div>
                             </div>
+
+                            <!-- Feature 2: Audit-safe Data Export -->
+                            <div class="flex items-start space-x-4">
+                              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_679_5276)">
+                                    <path d="M0.178772 6C0.178772 4.89688 1.07565 4 2.17877 4H7.17877V8C7.17877 8.55312 7.62565 9 8.17877 9H12.1788V13H6.92877C6.51315 13 6.17877 13.3344 6.17877 13.75C6.17877 14.1656 6.51315 14.5 6.92877 14.5H12.1788V18C12.1788 19.1031 11.2819 20 10.1788 20H2.17877C1.07565 20 0.178772 19.1031 0.178772 18V6ZM12.1788 14.5V13H15.6194L14.4006 11.7812C14.1069 11.4875 14.1069 11.0125 14.4006 10.7219C14.6944 10.4313 15.1694 10.4281 15.46 10.7219L17.96 13.2219C18.2538 13.5156 18.2538 13.9906 17.96 14.2812L15.46 16.7812C15.1663 17.075 14.6913 17.075 14.4006 16.7812C14.11 16.4875 14.1069 16.0125 14.4006 15.7219L15.6194 14.5031H12.1788V14.5ZM12.1788 8H8.17877V4L12.1788 8Z" fill="#2563EB"/>
+                                  </g>
+                                </svg>
+
+                              </div>
+                              <div>
+                                <h3 class="text-xl font-regular text-gray-900 mb-2">Audit-safe Data Export</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                  Export detailed records in standard formats for accounting, audits, or tax filings with complete trip history.
+                                </p>
+                              </div>
+                            </div>
+
+                            <!-- Feature 3: Smart Trip Categorization -->
+                            <div class="flex items-start space-x-4">
+                              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_679_5285)">
+                                    <path d="M6.24127 4C4.93502 4 3.82252 4.83438 3.41315 6H2.24127C1.13815 6 0.241272 6.89687 0.241272 8V18C0.241272 19.1031 1.13815 20 2.24127 20H10.2413C11.3444 20 12.2413 19.1031 12.2413 18V8C12.2413 6.89687 11.3444 6 10.2413 6H9.0694C8.66002 4.83438 7.54752 4 6.24127 4ZM6.24127 6C6.50649 6 6.76084 6.10536 6.94838 6.29289C7.13591 6.48043 7.24127 6.73478 7.24127 7C7.24127 7.26522 7.13591 7.51957 6.94838 7.70711C6.76084 7.89464 6.50649 8 6.24127 8C5.97606 8 5.7217 7.89464 5.53417 7.70711C5.34663 7.51957 5.24127 7.26522 5.24127 7C5.24127 6.73478 5.34663 6.48043 5.53417 6.29289C5.7217 6.10536 5.97606 6 6.24127 6ZM9.77252 12.5312L5.77252 16.5312C5.47877 16.825 5.00377 16.825 4.71315 16.5312L2.71002 14.5312C2.41627 14.2375 2.41627 13.7625 2.71002 13.4719C3.00377 13.1813 3.47877 13.1781 3.7694 13.4719L5.23815 14.9406L8.71002 11.4688C9.00377 11.175 9.47877 11.175 9.7694 11.4688C10.06 11.7625 10.0631 12.2375 9.7694 12.5281L9.77252 12.5312Z" fill="#9333EA"/>
+                                  </g>
+                                </svg>
+
+                              </div>
+                              <div>
+                                <h3 class="text-xl font-regular text-gray-900 mb-2">Smart Trip Categorization</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                  Set personal rules to classify medical or business trips so you never miss a deduction.
+                                </p>
+                              </div>
+                            </div>
+
+                            <!-- Feature 4: Personal Tax Dashboard -->
+                            <div class="flex items-start space-x-4">
+                              <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_679_5294)">
+                                    <path d="M0.553772 12C0.553772 9.87827 1.39663 7.84344 2.89692 6.34315C4.39721 4.84285 6.43204 4 8.55377 4C10.6755 4 12.7103 4.84285 14.2106 6.34315C15.7109 7.84344 16.5538 9.87827 16.5538 12C16.5538 14.1217 15.7109 16.1566 14.2106 17.6569C12.7103 19.1571 10.6755 20 8.55377 20C6.43204 20 4.39721 19.1571 2.89692 17.6569C1.39663 16.1566 0.553772 14.1217 0.553772 12ZM9.55377 7C9.55377 6.73478 9.44841 6.48043 9.26088 6.29289C9.07334 6.10536 8.81899 6 8.55377 6C8.28856 6 8.0342 6.10536 7.84667 6.29289C7.65913 6.48043 7.55377 6.73478 7.55377 7C7.55377 7.26522 7.65913 7.51957 7.84667 7.70711C8.0342 7.89464 8.28856 8 8.55377 8C8.81899 8 9.07334 7.89464 9.26088 7.70711C9.44841 7.51957 9.55377 7.26522 9.55377 7ZM8.55377 17C9.6569 17 10.5538 16.1031 10.5538 15C10.5538 14.4563 10.3381 13.9656 9.98815 13.6062L11.9913 9.05312C12.1569 8.675 11.985 8.23125 11.6069 8.06563C11.2288 7.9 10.785 8.07187 10.6194 8.45L8.61315 13C8.5944 13 8.57252 13 8.55377 13C7.45065 13 6.55377 13.8969 6.55377 15C6.55377 16.1031 7.45065 17 8.55377 17ZM6.05377 8.5C6.05377 8.23478 5.94841 7.98043 5.76088 7.79289C5.57334 7.60536 5.31899 7.5 5.05377 7.5C4.78856 7.5 4.5342 7.60536 4.34667 7.79289C4.15913 7.98043 4.05377 8.23478 4.05377 8.5C4.05377 8.76522 4.15913 9.01957 4.34667 9.20711C4.5342 9.39464 4.78856 9.5 5.05377 9.5C5.31899 9.5 5.57334 9.39464 5.76088 9.20711C5.94841 9.01957 6.05377 8.76522 6.05377 8.5ZM3.55377 13C3.81899 13 4.07334 12.8946 4.26088 12.7071C4.44842 12.5196 4.55377 12.2652 4.55377 12C4.55377 11.7348 4.44842 11.4804 4.26088 11.2929C4.07334 11.1054 3.81899 11 3.55377 11C3.28856 11 3.0342 11.1054 2.84667 11.2929C2.65913 11.4804 2.55377 11.7348 2.55377 12C2.55377 12.2652 2.65913 12.5196 2.84667 12.7071C3.0342 12.8946 3.28856 13 3.55377 13ZM14.5538 12C14.5538 11.7348 14.4484 11.4804 14.2609 11.2929C14.0733 11.1054 13.819 11 13.5538 11C13.2886 11 13.0342 11.1054 12.8467 11.2929C12.6591 11.4804 12.5538 11.7348 12.5538 12C12.5538 12.2652 12.6591 12.5196 12.8467 12.7071C13.0342 12.8946 13.2886 13 13.5538 13C13.819 13 14.0733 12.8946 14.2609 12.7071C14.4484 12.5196 14.5538 12.2652 14.5538 12Z" fill="#D97706"/>
+                                  </g>
+                                </svg>
+
+                              </div>
+                              <div>
+                                <h3 class="text-xl font-regular text-gray-900 mb-2">Personal Tax Dashboard</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                  See exactly how much you'll save at tax time with real-time deduction and reimbursement tracking and year-end summaries.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
 
                         <!-- Right Content - Professional Image -->
                         <div class="relative">
-                            <div class="rounded-3xl overflow-hidden shadow-2xl lg:mt-28">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl">
                                 <img src="images/accountant.png"
                                      alt="Professional man working at desk with papers and laptop"
                                      class="w-full h-auto">
@@ -920,7 +933,7 @@
             </section>
 
             <!-- Pricing Section -->
-            <div class="p-20">
+            <div class="p-10 lg:p-20">
                 <div class="bg-[#0070F30D] from-blue-50 to-blue-100 relative overflow-hidden rounded-3xl">
                     <!-- Decorative circles -->
                     <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-300/40 rounded-full opacity-50"></div>
@@ -950,7 +963,7 @@
                             <!-- See Pricing Button -->
                             <a
                               href="pricing.htm"
-                              class="btn-gradient">
+                              class="btn-gradient px-12">
                               See Pricing
                             </a>
                         </div>
@@ -1192,7 +1205,7 @@
                       <a href="signup.htm" class="btn">
                         Get Started for Free
                       </a>
-                      <a href="demo.htm" class="btn-outlined mr-10">
+                      <a href="demo.htm" class="btn-outlined mr-14">
                         Book a Demo
                       </a>
                     </div>
@@ -1215,7 +1228,7 @@
                     <!-- Testimonials Grid -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
                         <!-- Testimonial 1: Sarah Johnson -->
-                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                             <div>
                                 <!-- Stars -->
                                 <div class="flex items-center mb-6">
@@ -1254,7 +1267,7 @@
                         </div>
 
                         <!-- Testimonial 2: Margret Flaming -->
-                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                             <div>
                                 <!-- Stars -->
                                 <div class="flex items-center mb-6">
@@ -1293,7 +1306,7 @@
                         </div>
 
                         <!-- Testimonial 3: Alicia Rodriguez -->
-                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                        <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                             <div>
                                 <!-- Stars (4.5 stars) -->
                                 <div class="flex items-center mb-6">

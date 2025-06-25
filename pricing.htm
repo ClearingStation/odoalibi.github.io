@@ -212,7 +212,7 @@
 <body class="bg-white antialiased">
     <!-- Header -->
     <header class="relative bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
-      <div class="container mx-auto container-padding">
+      <div class="mx-auto container-padding">
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-8">
             <!-- Logo -->
@@ -442,7 +442,7 @@
 
                 <!-- Single User View -->
                 <div id="singleUserView" class="pricing-view hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         <!-- Free Plan -->
                         <div class="bg-white border border-gray-200 rounded-2xl p-8 relative">
                             <div class="mb-8">
@@ -474,13 +474,13 @@
                                     <span class="text-gray-700">Standard Tax Reports</span>
                                 </div>
                             </div>
-                            <button class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            <a href="signup.htm" class="btn">
                                 Signup for free
-                            </button>
+                            </a>
                         </div>
 
                         <!-- Premium Plan -->
-                        <div class="bg-blue-600 rounded-2xl p-8 relative text-white">
+                        <div class="bg-blue-600 rounded-2xl col-span-2 p-8 relative text-white">
                             <div class="mb-8">
                                 <h3 class="text-2xl font-bold mb-2">Premium</h3>
                                 <p class="text-blue-100 mb-6">Limitless possibilities</p>
@@ -532,9 +532,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="w-full bg-white text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                            <a href="signup.htm" class="btn-inversed">
                                 Signup for free
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -577,7 +577,7 @@
                             <button class="w-full p-6 text-left hover:bg-gray-50 transition-colors product-toggle" data-product="mileage">
                                 <div class="grid grid-cols-4 gap-8 items-center">
                                     <div class="col-span-2">
-                                        <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
                                             Mileage
                                         </h4>
                                         <p class="text-gray-600">Perfect for business travellers, salespeople, and anyone who needs to track their miles.</p>
@@ -608,16 +608,16 @@
                                     <!-- Features populated by JavaScript -->
                                 </div>
                                 <div class="grid grid-cols-3 gap-8 p-6">
-                                    <div></div>
+                                  <div></div>
+                                  <div class="text-center">
+                                    <a href="product_b2b.htm#key-features" class="btn-gradient">
+                                      Learn More
+                                    </a>
+                                  </div>
                                     <div class="text-center">
-                                        <button class="bg-blue-600 bg-gradient text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                    <div class="text-center">
-                                        <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                                            Book a Demo
-                                        </button>
+                                      <a href="demo.htm" class="btn-outlined">
+                                        Book a Demo
+                                      </a>
                                     </div>
                                 </div>
                             </div>
@@ -628,7 +628,7 @@
                             <button class="w-full p-6 text-left hover:bg-gray-50 transition-colors product-toggle" data-product="expense">
                                 <div class="grid grid-cols-4 gap-8 items-center">
                                     <div class="col-span-2">
-                                        <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
                                             Expense
                                         </h4>
                                         <p class="text-gray-600">Manage all your business expenses in one place with AI-powered receipt scanning.</p>
@@ -661,14 +661,14 @@
                                 <div class="grid grid-cols-3 gap-8 p-6">
                                     <div></div>
                                     <div class="text-center">
-                                        <button class="bg-blue-600 bg-gradient text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                                            Learn More
-                                        </button>
+                                      <a href="product_b2b.htm#key-features" class="btn-gradient">
+                                        Learn More
+                                      </a>
                                     </div>
                                     <div class="text-center">
-                                        <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                                            Book a Demo
-                                        </button>
+                                      <a href="demo.htm" class="btn">
+                                        Book a Demo
+                                      </a>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +679,7 @@
                             <div class="p-6">
                                 <div class="grid grid-cols-4 gap-8 items-center">
                                     <div class="col-span-2">
-                                        <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
                                             Time
                                             <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs ml-2">Coming Soon</span>
                                         </h4>
@@ -697,7 +697,7 @@
                     </div>
 
                     <!-- Flex Plan Section -->
-                    <div class="bg-blue-50 rounded-2xl p-12 max-w-6xl mx-auto">
+                    <div class="bg-blue-50 rounded-2xl p-12 mx-auto">
                         <div class="mb-12">
                             <h3 class="text-3xl font-bold text-gray-900 mb-3">
                                 Want to mix and match? Try our <span class="text-blue-600 color-gradient">Flex Plan!</span>
@@ -775,9 +775,9 @@
                                         <em>Limited Time: <span class="text-blue-600 font-semibold">Save 25% on our Combo Offer with Annual Plans</span> - Ends this June!</em>
                                     </p>
                                     <div class="text-right">
-                                        <button class="whitespace-nowrap bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+                                        <a href="signup.htm" class="btn">
                                             Let's Get Started
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

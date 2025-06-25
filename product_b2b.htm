@@ -27,7 +27,7 @@
   <body class="bg-white antialiased">
     <!-- Header -->
     <header class="relative bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
-      <div class="container mx-auto container-padding">
+      <div class="mx-auto container-padding">
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-8">
             <!-- Logo -->
@@ -210,7 +210,7 @@
     <main class="relative overflow-hidden">
       <!-- Hero Section -->
       <section class="relative" style="background: linear-gradient(180deg, #FFFFFF 0%, #F1F7FF 100%);">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container-padding mx-auto">
           <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-20">
             <!-- Left Content -->
             <div class="text-left">
@@ -480,9 +480,9 @@
           </div>
 
           <!-- Main Content Grid -->
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid lg:grid-cols-2 gap-16 items-stretched">
             <!-- Left Side - Feature List -->
-            <div class="space-y-6">
+            <div class="flex flex-col grid place-items-stretch gap-6">
               <!-- Feature 1: AI-Powered Mileage Log -->
               <div class="flex items-start space-x-4 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 cursor-pointer" style="background-color: #FFFFFF;">
                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -553,13 +553,11 @@
             </div>
 
             <!-- Right Side - Photo -->
-            <div class="relative">
-              <div class="relative rounded-3xl overflow-hidden shadow-xl">
+            <div class="relative shadow-lg rounded-xl overflow-hidden h-full">
                 <img src="images/advanced_tools.png"
                      alt="Person using OdoAlibi dashboard"
-                     class="h-full object-cover"/>
+                     class="absolute h-full w-full object-cover"/>
               </div>
-            </div>
           </div>
 
           <!-- CTA Button -->
@@ -723,10 +721,10 @@
             </div>
 
             <!-- Right Side - Recent Trips (1/3 width) -->
-            <div class="bg-white rounded-xl shadow-lg p-6">
-              <h3 class="text-md font-regular text-gray-900 mb-6">Recent Trips</h3>
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col place-content-between">
 
               <div class="space-y-4">
+                  <h3 class="text-md font-regular text-gray-900 mb-2">Recent Trips</h3>
                 <!-- Trip 1 -->
                 <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                   <div class="flex justify-between items-start mb-3">
@@ -804,12 +802,12 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
                 <!-- View All Trips Link -->
-                <div class="text-center p-3 border rounded-lg">
+                <div class="text-center p-3 border rounded-lg justify-self-end">
                   <a href="#" class="text-gray-900 cursor-default font-regular block -mt-0 text-xs">View All Trips</a>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -989,8 +987,8 @@
           <!-- Roles Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Sales Rep -->
-            <div style="background-color: #FFFFFF;" class="rounded-2xl p-6 shadow-sm flex flex-col place-content-between">
-              <div>
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+              <div class="flex flex-col">
                 <!-- Icon -->
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                   <svg width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1008,7 +1006,11 @@
                   Easily track business mileage on the road and submit expenses, fast-tracking reimbursements processes.
                 </p>
 
-                <!-- Features -->
+
+              </div>
+
+              <div class="justify-self-end">
+                  <!-- Features -->
                 <div class="space-y-3 mb-6">
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1028,25 +1030,24 @@
                   </div>
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_547_325)">
-                        <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
-                      </g>
+                        <g clip-path="url(#clip0_547_325)">
+                            <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
+                        </g>
                     </svg>
                     Client visit tracking
                   </div>
                 </div>
-              </div>
-
               <!-- Image -->
-              <div class="h-48 rounded-xl overflow-hidden">
-                <img src="images/roles1.png"
-                     alt="Sales Rep using mobile app" class="w-full h-full object-cover">
+                <div class="h-48 rounded-xl overflow-hidden">
+                    <img src="images/roles1.png"
+                         alt="Sales Rep using mobile app" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
 
             <!-- Manager -->
-            <div style="background-color: #FFFFFF;" class="rounded-2xl p-6 shadow-sm flex flex-col place-content-between">
-              <div>
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col">
                 <!-- Icon -->
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                   <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1063,8 +1064,10 @@
                 <p class="text-gray-600 mb-6 leading-relaxed">
                   Gain real-time visibility into trip activity, expense claims, and team hours with comprehensive dashboards.
                 </p>
+              </div>
 
-                <!-- Features -->
+              <div class="justify-self-end">
+                  <!-- Features -->
                 <div class="space-y-3 mb-6">
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1084,25 +1087,25 @@
                   </div>
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_547_325)">
-                        <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
-                      </g>
+                        <g clip-path="url(#clip0_547_325)">
+                            <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
+                        </g>
                     </svg>
                     Performance insights
                   </div>
                 </div>
-              </div>
 
               <!-- Image -->
-              <div class="h-48 rounded-xl overflow-hidden">
-                <img src="images/roles2.png"
-                     alt="Manager viewing dashboard on tablet" class="w-full h-full object-cover">
+                <div class="h-48 rounded-xl overflow-hidden">
+                    <img src="images/roles2.png"
+                         alt="Manager viewing dashboard on tablet" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
 
             <!-- Executive -->
-            <div style="background-color: #FFFFFF;" class="rounded-2xl p-6 shadow-sm flex flex-col place-content-between">
-              <div>
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+              <div class="flex flex-col">
                 <!-- Icon -->
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1117,8 +1120,10 @@
                 <p class="text-gray-600 mb-6 leading-relaxed">
                   Monitor team performance, compliance status, and reduce operational waste with executive-level reporting.
                 </p>
+              </div>
 
-                <!-- Features -->
+              <div class="justify-self-end">
+                  <!-- Features -->
                 <div class="space-y-3 mb-6">
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1138,25 +1143,25 @@
                   </div>
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_547_325)">
-                        <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
-                      </g>
+                        <g clip-path="url(#clip0_547_325)">
+                            <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
+                        </g>
                     </svg>
                     Operational insights
                   </div>
                 </div>
-              </div>
+                              <!-- Image -->
+                <div class="h-48 rounded-xl overflow-hidden">
+                    <img src="images/roles3.png"
+                         alt="Executive viewing analytics dashboard" class="w-full h-full object-cover">
+                </div>
 
-              <!-- Image -->
-              <div class="h-48 rounded-xl overflow-hidden">
-                <img src="images/roles3.png"
-                     alt="Executive viewing analytics dashboard" class="w-full h-full object-cover">
               </div>
             </div>
 
             <!-- CFO / Accountant -->
-            <div style="background-color: #FFFFFF;" class="rounded-2xl p-6 shadow-sm flex flex-col place-content-between">
-              <div>
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                <div class="flex flex-col">
                 <!-- Icon -->
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                   <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1174,7 +1179,10 @@
                   Export IRS/CRA-ready reports for reimbursements, audits, or tax deductions with complete accuracy.
                 </p>
 
-                <!-- Features -->
+              </div>
+
+              <div class="justify-self-end">
+                  <!-- Features -->
                 <div class="space-y-3 mb-6">
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1194,27 +1202,28 @@
                   </div>
                   <div class="flex items-center text-sm text-gray-600">
                     <svg class="mr-2" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_547_325)">
-                        <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
-                      </g>
+                        <g clip-path="url(#clip0_547_325)">
+                            <path d="M13.7062 3.29395C14.0968 3.68457 14.0968 4.31895 13.7062 4.70957L5.70615 12.7096C5.31553 13.1002 4.68115 13.1002 4.29053 12.7096L0.290527 8.70957C-0.100098 8.31895 -0.100098 7.68457 0.290527 7.29395C0.681152 6.90332 1.31553 6.90332 1.70615 7.29395L4.9999 10.5846L12.2937 3.29395C12.6843 2.90332 13.3187 2.90332 13.7093 3.29395H13.7062Z" fill="#22C55E"/>
+                        </g>
                     </svg>
                     Accounting integrations
                   </div>
                 </div>
+                              <!-- Image -->
+                <div class="h-48 rounded-xl overflow-hidden">
+                    <img src="images/roles4.png"
+                         alt="CFO reviewing financial reports" class="w-full h-full object-cover">
+                </div>
+
               </div>
 
-              <!-- Image -->
-              <div class="h-48 rounded-xl overflow-hidden">
-                <img src="images/roles4.png"
-                     alt="CFO reviewing financial reports" class="w-full h-full object-cover">
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Pricing Section -->
-      <div class="p-20">
+      <div class="p-10 lg:p-20">
         <div class="bg-[#0070F30D] from-blue-50 to-blue-100 relative overflow-hidden rounded-3xl">
           <!-- Decorative circles -->
           <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-300/40 rounded-full opacity-50"></div>
@@ -1244,7 +1253,7 @@
               <!-- See Pricing Button -->
               <a
                 href="pricing.htm"
-                class="btn-gradient">
+                class="btn-gradient px-12">
                 See Pricing
               </a>
             </div>
@@ -1486,7 +1495,7 @@
             <a href="signup.htm" class="btn">
               Let's Get Started
             </a>
-            <a href="demo.htm" class="btn-outlined">
+            <a href="demo.htm" class="btn-outlined mr-6">
               Book a Demo
             </a>
           </div>
@@ -1509,7 +1518,7 @@
           <!-- Testimonials Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
             <!-- Testimonial 1: Sarah Johnson -->
-            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div>
                 <!-- Stars -->
                 <div class="flex items-center mb-6">
@@ -1548,7 +1557,7 @@
             </div>
 
             <!-- Testimonial 2: Michael Chen -->
-            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div>
                 <!-- Stars -->
                 <div class="flex items-center mb-6">
@@ -1587,7 +1596,7 @@
             </div>
 
             <!-- Testimonial 3: Alicia Rodriguez -->
-            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+            <div style="background-color: #FFFFFF;" class="p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div>
                 <!-- Stars (4.5 stars) -->
                 <div class="flex items-center mb-6">

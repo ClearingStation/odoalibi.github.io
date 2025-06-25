@@ -28,7 +28,7 @@
   <body class="bg-white antialiased">
     <!-- Header -->
     <header class="relative bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
-      <div class="container mx-auto container-padding">
+      <div class="mx-auto container-padding">
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-8">
             <!-- Logo -->
@@ -212,7 +212,7 @@
 
       <!-- Hero Section -->
       <div style="background: linear-gradient(180deg, #FFFFFF 0%, #D2E9FF 100%);">
-        <div class="container mx-auto container-padding pt-16 pb-24" >
+        <div class="mx-auto container-padding pt-16 pb-24" >
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <!-- Left Content -->
             <div class="space-y-8">
@@ -352,47 +352,27 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 cursor-default">
             <!-- ADP Logo -->
             <div
-              class="bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
-              <div class="text-center">
-                <div class="text-5xl font-black text-red-500 tracking-wider">
-                  ADP
-                </div>
-              </div>
+              class="max-h-32 bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
+              <div class="bg-adp scale-[0.3]">&nbsp;</div>
             </div>
 
             <!-- QuickBooks Logo -->
             <div
-              class="bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
+              class="max-h-32 bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
               <div class="text-center">
                 <div class="flex items-center justify-center space-x-3">
-                  <div class="relative">
-                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                      <span class="text-white font-bold text-lg">qb</span>
-                    </div>
-                  </div>
-                  <div class="text-left">
-                    <div class="text-xs font-semibold text-gray-700 uppercase tracking-wide">INTUIT</div>
-                    <div class="text-xl font-bold text-green-600">quickbooks</div>
-                  </div>
+                  <div class="bg-quickbooks scale-[0.5]">&nbsp;</div>
                 </div>
               </div>
             </div>
 
             <!-- Salesforce Logo -->
             <div
-              class="bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
+              class="max-h-32 bg-white backdrop-blur-lg border border-gray-100 rounded-3xl py-8 flex items-center justify-center transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-3 hover:shadow-black/5 card-shadow-soft">
               <div class="text-center">
                 <div class="flex items-center justify-center space-x-3">
                   <!-- Salesforce Cloud Icon -->
-                  <div class="relative">
-                    <svg class="w-12 h-12 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
-                      <path
-                        d="M8.5 6.5c0-1.7 1.3-3 3-3s3 1.3 3 3c1.7 0 3 1.3 3 3 0 .4-.1.8-.2 1.2 1.2.4 2.2 1.5 2.2 2.8 0 1.7-1.3 3-3 3H8c-2.2 0-4-1.8-4-4 0-1.8 1.2-3.4 2.8-3.8.1-.4.2-.8.2-1.2z" />
-                    </svg>
-                  </div>
-                  <div class="text-xl font-bold text-blue-500">
-                    salesforce
-                  </div>
+                  <div class="bg-salesforce scale-[0.3]"></div>
                 </div>
               </div>
             </div>
@@ -501,7 +481,7 @@
           <div class="text-center mt-16">
             <a
               href="demo.htm"
-              class="btn-gradient">
+              class="btn-gradient px-12">
               Book a Demo
             </a>
           </div>
@@ -629,103 +609,106 @@
           </div>
 
           <!-- Comparison Cards -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
 
             <!-- OdoAlibi Card (Left) -->
-            <div class="relative bg-white rounded-3xl p-8 shadow-lg border border-blue-200">
-              <!-- Recommended Badge -->
-              <div class="absolute -top-3 -right-2 transform ">
-                <span class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold tracking-wide shadow-lg">
-                  RECOMMENDED
-                </span>
-              </div>
-
-              <!-- Header -->
-              <div class="flex items-center mb-8 pt-4">
-                <div class="w-16 h-16 bg-blue-600 bg-gradient rounded-full flex items-center justify-center mr-5">
-                  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M28.6584 12.7471H27.408L24.1916 5.5108C24.0461 5.18341 23.8087 4.90525 23.5082 4.71002C23.2078 4.5148 22.8572 4.41089 22.4989 4.41089H8.88313C8.52483 4.41089 8.17423 4.5148 7.87379 4.71002C7.57335 4.90525 7.33597 5.18341 7.19042 5.5108L3.97404 12.7471H2.72361C2.47795 12.7471 2.24236 12.8447 2.06865 13.0184C1.89495 13.1921 1.79736 13.4277 1.79736 13.6733C1.79736 13.919 1.89495 14.1546 2.06865 14.3283C2.24236 14.502 2.47795 14.5996 2.72361 14.5996H3.64985V23.862C3.64985 24.3533 3.84502 24.8245 4.19243 25.1719C4.53984 25.5193 5.01103 25.7145 5.50234 25.7145H8.28107C8.77238 25.7145 9.24357 25.5193 9.59097 25.1719C9.93838 24.8245 10.1336 24.3533 10.1336 23.862V22.0095H21.2485V23.862C21.2485 24.3533 21.4437 24.8245 21.7911 25.1719C22.1385 25.5193 22.6097 25.7145 23.101 25.7145H25.8797C26.371 25.7145 26.8422 25.5193 27.1896 25.1719C27.537 24.8245 27.7322 24.3533 27.7322 23.862V14.5996H28.6584C28.9041 14.5996 29.1397 14.502 29.3134 14.3283C29.4871 14.1546 29.5847 13.919 29.5847 13.6733C29.5847 13.4277 29.4871 13.1921 29.3134 13.0184C29.1397 12.8447 28.9041 12.7471 28.6584 12.7471ZM8.88313 6.26338H22.4989L25.3807 12.7471H6.00135L8.88313 6.26338ZM8.28107 23.862H5.50234V22.0095H8.28107V23.862ZM23.101 23.862V22.0095H25.8797V23.862H23.101ZM25.8797 20.157H5.50234V14.5996H25.8797V20.157ZM7.35483 17.3783C7.35483 17.1326 7.45241 16.897 7.62612 16.7233C7.79982 16.5496 8.03541 16.4521 8.28107 16.4521H10.1336C10.3792 16.4521 10.6148 16.5496 10.7885 16.7233C10.9622 16.897 11.0598 17.1326 11.0598 17.3783C11.0598 17.624 10.9622 17.8595 10.7885 18.0333C10.6148 18.207 10.3792 18.3045 10.1336 18.3045H8.28107C8.03541 18.3045 7.79982 18.207 7.62612 18.0333C7.45241 17.8595 7.35483 17.624 7.35483 17.3783ZM20.3222 17.3783C20.3222 17.1326 20.4198 16.897 20.5935 16.7233C20.7672 16.5496 21.0028 16.4521 21.2485 16.4521H23.101C23.3466 16.4521 23.5822 16.5496 23.7559 16.7233C23.9296 16.897 24.0272 17.1326 24.0272 17.3783C24.0272 17.624 23.9296 17.8595 23.7559 18.0333C23.5822 18.207 23.3466 18.3045 23.101 18.3045H21.2485C21.0028 18.3045 20.7672 18.207 20.5935 18.0333C20.4198 17.8595 20.3222 17.624 20.3222 17.3783Z" fill="white"/>
-                  </svg>
-
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900">OdoAlibi</h3>
-              </div>
-
-              <!-- Features -->
-              <div class="space-y-5">
-                <!-- AI-Powered Mileage Logs -->
-                <div class="flex items-start">
-                  <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">AI-Powered Mileage Logs</h4>
-                    <p class="text-gray-600 text-sm">Automatic trip detection with precise GPS tracking for accurate
-                      mileage logs</p>
-                  </div>
+            <div class="border-gradient">
+              <div class="gradient-bg"></div>
+              <div class="z-10 relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
+                <!-- Recommended Badge -->
+                <div class="absolute -top-3 -right-2 transform ">
+                  <span class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold tracking-wide shadow-lg">
+                    RECOMMENDED
+                  </span>
                 </div>
 
-                <!-- AI-Powered Expense Management -->
-                <div class="flex items-start">
-                  <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                <!-- Header -->
+                <div class="flex items-center mb-8">
+                  <div class="w-16 h-16 bg-blue-600 bg-gradient rounded-full flex items-center justify-center mr-5">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M28.6584 12.7471H27.408L24.1916 5.5108C24.0461 5.18341 23.8087 4.90525 23.5082 4.71002C23.2078 4.5148 22.8572 4.41089 22.4989 4.41089H8.88313C8.52483 4.41089 8.17423 4.5148 7.87379 4.71002C7.57335 4.90525 7.33597 5.18341 7.19042 5.5108L3.97404 12.7471H2.72361C2.47795 12.7471 2.24236 12.8447 2.06865 13.0184C1.89495 13.1921 1.79736 13.4277 1.79736 13.6733C1.79736 13.919 1.89495 14.1546 2.06865 14.3283C2.24236 14.502 2.47795 14.5996 2.72361 14.5996H3.64985V23.862C3.64985 24.3533 3.84502 24.8245 4.19243 25.1719C4.53984 25.5193 5.01103 25.7145 5.50234 25.7145H8.28107C8.77238 25.7145 9.24357 25.5193 9.59097 25.1719C9.93838 24.8245 10.1336 24.3533 10.1336 23.862V22.0095H21.2485V23.862C21.2485 24.3533 21.4437 24.8245 21.7911 25.1719C22.1385 25.5193 22.6097 25.7145 23.101 25.7145H25.8797C26.371 25.7145 26.8422 25.5193 27.1896 25.1719C27.537 24.8245 27.7322 24.3533 27.7322 23.862V14.5996H28.6584C28.9041 14.5996 29.1397 14.502 29.3134 14.3283C29.4871 14.1546 29.5847 13.919 29.5847 13.6733C29.5847 13.4277 29.4871 13.1921 29.3134 13.0184C29.1397 12.8447 28.9041 12.7471 28.6584 12.7471ZM8.88313 6.26338H22.4989L25.3807 12.7471H6.00135L8.88313 6.26338ZM8.28107 23.862H5.50234V22.0095H8.28107V23.862ZM23.101 23.862V22.0095H25.8797V23.862H23.101ZM25.8797 20.157H5.50234V14.5996H25.8797V20.157ZM7.35483 17.3783C7.35483 17.1326 7.45241 16.897 7.62612 16.7233C7.79982 16.5496 8.03541 16.4521 8.28107 16.4521H10.1336C10.3792 16.4521 10.6148 16.5496 10.7885 16.7233C10.9622 16.897 11.0598 17.1326 11.0598 17.3783C11.0598 17.624 10.9622 17.8595 10.7885 18.0333C10.6148 18.207 10.3792 18.3045 10.1336 18.3045H8.28107C8.03541 18.3045 7.79982 18.207 7.62612 18.0333C7.45241 17.8595 7.35483 17.624 7.35483 17.3783ZM20.3222 17.3783C20.3222 17.1326 20.4198 16.897 20.5935 16.7233C20.7672 16.5496 21.0028 16.4521 21.2485 16.4521H23.101C23.3466 16.4521 23.5822 16.5496 23.7559 16.7233C23.9296 16.897 24.0272 17.1326 24.0272 17.3783C24.0272 17.624 23.9296 17.8595 23.7559 18.0333C23.5822 18.207 23.3466 18.3045 23.101 18.3045H21.2485C21.0028 18.3045 20.7672 18.207 20.5935 18.0333C20.4198 17.8595 20.3222 17.624 20.3222 17.3783Z" fill="white"/>
                     </svg>
+
                   </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">AI-Powered Expense Management</h4>
-                    <p class="text-gray-600 text-sm">Capture receipts, track fuel costs, tolls, and business expenses on
-                      the go.</p>
-                  </div>
+                  <h3 class="text-2xl font-semibold text-gray-600">OdoAlibi</h3>
                 </div>
 
-                <!-- Works Offline -->
-                <div class="flex items-start">
-                  <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
+                <!-- Features -->
+                <div class="flex flex-col gap-5">
+                  <!-- AI-Powered Mileage Logs -->
+                  <div class="flex items-start min-h-[80px]">
+                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">AI-Powered Mileage Logs</h4>
+                      <p class="text-gray-600 text-sm">Automatic trip detection with precise GPS tracking for accurate
+                        mileage logs</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Works Offline</h4>
-                    <p class="text-gray-600 text-sm">Logs trips even without cell service or when your phone is off</p>
-                  </div>
-                </div>
 
-                <!-- Zero Interaction -->
-                <div class="flex items-start">
-                  <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
+                  <!-- AI-Powered Expense Management -->
+                  <div class="flex items-start min-h-[80px]">
+                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">AI-Powered Expense Management</h4>
+                      <p class="text-gray-600 text-sm">Capture receipts, track fuel costs, tolls, and business expenses on
+                        the go.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Zero Interaction</h4>
-                    <p class="text-gray-600 text-sm">No need to start/stop tracking or categorize trips manually</p>
+
+                  <!-- Works Offline -->
+                  <div class="flex items-start min-h-[80px]">
+                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Works Offline</h4>
+                      <p class="text-gray-600 text-sm">Logs trips even without cell service or when your phone is off</p>
+                    </div>
+                  </div>
+
+                  <!-- Zero Interaction -->
+                  <div class="flex items-start min-h-[80px]">
+                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Zero Interaction</h4>
+                      <p class="text-gray-600 text-sm">No need to start/stop tracking or categorize trips manually</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Other Apps Card (Right) -->
-            <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition">
               <!-- Header -->
-              <div class="flex items-center mb-8 pt-4">
+              <div class="flex items-center mb-8">
                 <div class="w-16 h-16 bg-[#E4E4E4] rounded-full flex items-center justify-center mr-5">
                   <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.8458 2.61499H9.73088C8.99391 2.61499 8.28713 2.90775 7.76602 3.42886C7.24491 3.94997 6.95215 4.65676 6.95215 5.39372V25.7711C6.95215 26.508 7.24491 27.2148 7.76602 27.7359C8.28713 28.2571 8.99391 28.5498 9.73088 28.5498H20.8458C21.5828 28.5498 22.2895 28.2571 22.8107 27.7359C23.3318 27.2148 23.6245 26.508 23.6245 25.7711V5.39372C23.6245 4.65676 23.3318 3.94997 22.8107 3.42886C22.2895 2.90775 21.5828 2.61499 20.8458 2.61499ZM21.772 25.7711C21.772 26.0167 21.6745 26.2523 21.5008 26.426C21.3271 26.5997 21.0915 26.6973 20.8458 26.6973H9.73088C9.48522 26.6973 9.24963 26.5997 9.07593 26.426C8.90222 26.2523 8.80464 26.0167 8.80464 25.7711V5.39372C8.80464 5.14807 8.90222 4.91247 9.07593 4.73877C9.24963 4.56506 9.48522 4.46748 9.73088 4.46748H20.8458C21.0915 4.46748 21.3271 4.56506 21.5008 4.73877C21.6745 4.91247 21.772 5.14807 21.772 5.39372V25.7711ZM19.9196 7.24621C19.9196 7.49186 19.822 7.72746 19.6483 7.90116C19.4746 8.07487 19.239 8.17245 18.9933 8.17245H11.5834C11.3377 8.17245 11.1021 8.07487 10.9284 7.90116C10.7547 7.72746 10.6571 7.49186 10.6571 7.24621C10.6571 7.00055 10.7547 6.76496 10.9284 6.59126C11.1021 6.41755 11.3377 6.31996 11.5834 6.31996H18.9933C19.239 6.31996 19.4746 6.41755 19.6483 6.59126C19.822 6.76496 19.9196 7.00055 19.9196 7.24621Z" fill="black"/>
                   </svg>
 
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900">Other Apps</h3>
+                <h3 class="text-2xl font-semibold text-gray-600">Other Apps</h3>
               </div>
 
               <!-- Limitations -->
-              <div class="space-y-5">
+              <div class="flex flex-col gap-5">
                 <!-- GPS Only -->
-                <div class="flex items-start">
+                <div class="flex items-start min-h-[80px]">
                   <div class="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -738,7 +721,7 @@
                 </div>
 
                 <!-- Manual Sorting -->
-                <div class="flex items-start">
+                <div class="flex items-start min-h-[80px]">
                   <div class="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -752,7 +735,7 @@
                 </div>
 
                 <!-- Requires Cell Service -->
-                <div class="flex items-start">
+                <div class="flex items-start min-h-[80px]">
                   <div class="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -765,7 +748,7 @@
                 </div>
 
                 <!-- Limited Customization -->
-                <div class="flex items-start">
+                <div class="flex items-start min-h-[80px]">
                   <div class="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -817,7 +800,7 @@
                 </div>
               </div>
               <button
-                class="btn-gradient">
+                class="btn-gradient px-12">
                 Learn More
               </button>
             </div>
@@ -831,7 +814,7 @@
       </div>
 
       <!-- Pricing Section -->
-      <div class="p-20">
+      <div class="p-10 lg:p-20">
         <div class="bg-[#0070F30D] from-blue-50 to-blue-100 relative overflow-hidden rounded-3xl">
           <!-- Decorative circles -->
           <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-300/40 rounded-full opacity-50"></div>
@@ -861,7 +844,7 @@
               <!-- See Pricing Button -->
               <a
                 href="pricing.htm"
-                class="btn-gradient">
+                class="btn-gradient px-12">
                 See Pricing
               </a>
             </div>

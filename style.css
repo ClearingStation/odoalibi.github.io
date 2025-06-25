@@ -286,111 +286,191 @@ body {
 /* Gradient Buttons */
 .btn-gradient {
     display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  background: linear-gradient(274deg, #0D6BF3 0.1%, #6C41ED 100%);
-  box-shadow: 0px 5.03px 7.54px 0px #0070F333, 0px 2.01px 3.02px 0px #0070F333;
-  transition: all 0.2s ease;
-  transform: translateY(0);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(274deg, #0D6BF3 0.1%, #6C41ED 100%);
+    box-shadow: 0px 5.03px 7.54px 0px #0070F333, 0px 2.01px 3.02px 0px #0070F333;
+    transition: all 0.3s ease;
+    transform: translateY(0);
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(93.96deg, #0D6BF3 0%, #6C41ED 100.7%);
-  box-shadow: 0px 6px 10px 0px #0070F340, 0px 3px 5px 0px #0070F340;
-  transform: translateY(-2px);
+    background: linear-gradient(93.96deg, #0D6BF3 0%, #6C41ED 100.7%);
+    box-shadow: 0px 6px 10px 0px #0070F340, 0px 3px 5px 0px #0070F340;
+    transform: translateY(-2px);
 }
 
 .btn-gradient:active {
-  background: linear-gradient(93.96deg, #0D6BF3 0%, #6C41ED 100.7%);
-  border: 1px solid;
-  border-image: linear-gradient(90deg, rgba(0, 35, 101, 0.47) 0%, rgba(15, 0, 110, 0.47) 100%) 1;
-  box-shadow: 0px 2.01px 3.02px 0px #003E8691;
-  transform: translateY(0);
+    background: linear-gradient(93.96deg, #0D6BF3 0%, #6C41ED 100.7%);
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(0, 35, 101, 0.47) 0%, rgba(15, 0, 110, 0.47) 100%) 1;
+    box-shadow: 0px 2.01px 3.02px 0px #003E8691;
+    transform: translateY(0);
 }
 
 .btn-gradient:disabled {
-  background: #C8C8C8;
-  color: #888;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: translateY(0);
+    background: #C8C8C8;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 /* Solid Buttons */
 .btn {
     display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #0D6BF3;
-  box-shadow: 0px 4.62px 6.94px 0px #0070F333, 0px 1.85px 2.77px 0px #0070F333;
-  transition: all 0.2s ease;
-  transform: translateY(0);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #0D6BF3;
+    box-shadow: 0px 4.62px 6.94px 0px #0070F333, 0px 1.85px 2.77px 0px #0070F333;
+    transition: all 0.2s ease;
+    transform: translateY(0);
 }
 
 .btn:hover {
-  background-color: #004FAA;
-  box-shadow: 0px 6px 9px 0px #0070F340, 0px 3px 4px 0px #0070F340;
-  transform: translateY(-2px);
+    background-color: #004FAA;
+    box-shadow: 0px 6px 9px 0px #0070F340, 0px 3px 4px 0px #0070F340;
+    transform: translateY(-2px);
 }
 
 .btn:active {
-  background-color: #004FAA;
-  box-shadow: 0px 3px 5px 0px #0070F330, 0px 1px 2px 0px #0070F330;
-  transform: translateY(0);
+    background-color: #004FAA;
+    box-shadow: 0px 3px 5px 0px #0070F330, 0px 1px 2px 0px #0070F330;
+    transform: translateY(0);
 }
 
 .btn:disabled {
-  background-color: #C8C8C8;
-  color: #888;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: translateY(0);
+    background-color: #C8C8C8;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
+}
+/* Inverted Button */
+.btn-inversed {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid #0070F3;
+    background-color: #ffffff;
+    color: #0070F3;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px 0px #0070F333, 0px 2px 3px 0px #0070F333;
+    transition: all 0.2s ease;
+    transform: translateY(0);
+}
+
+.btn-inversed:hover {
+    border-color: #004FAA;
+    background-color: #f8faff;
+    color: #004FAA;
+    box-shadow: 0px 6px 9px 0px #0070F340, 0px 3px 4px 0px #0070F340;
+    transform: translateY(-2px);
+}
+
+.btn-inversed:active {
+    border-color: #004FAA;
+    background-color: #f0f6ff;
+    color: #004FAA;
+    box-shadow: 0px 3px 5px 0px #0070F330, 0px 1px 2px 0px #0070F330;
+    transform: translateY(0);
+}
+
+.btn-inversed:disabled {
+    border-color: #C8C8C8;
+    background-color: #f5f5f5;
+    color: #C8C8C8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 /* Outlined Buttons */
 .btn-outlined {
     display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: 1px solid #0070F3;
-  background-color: transparent;
-  color: #0070F3;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0px 2px 4px 0px #0070F320;
-  transition: all 0.2s ease;
-  transform: translateY(0);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid #0070F3;
+    background-color: transparent;
+    color: #0070F3;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px #0070F320;
+    transition: all 0.2s ease;
+    transform: translateY(0);
 }
 
 .btn-outlined:hover {
-  border-color: #004FAA;
-  color: #004FAA;
-  background-color: rgba(0, 112, 243, 0.05);
-  box-shadow: 0px 4px 8px 0px #0070F330;
-  transform: translateY(-2px);
+    border-color: #004FAA;
+    color: #004FAA;
+    background-color: rgba(0, 112, 243, 0.05);
+    box-shadow: 0px 4px 8px 0px #0070F330;
+    transform: translateY(-2px);
 }
 
 .btn-outlined:active {
-  border-color: #004FAA;
-  color: #004FAA;
-  background-color: rgba(0, 79, 170, 0.1);
-  box-shadow: 0px 1px 3px 0px #0070F325;
-  transform: translateY(0);
+    border-color: #004FAA;
+    color: #004FAA;
+    background-color: rgba(0, 79, 170, 0.1);
+    box-shadow: 0px 1px 3px 0px #0070F325;
+    transform: translateY(0);
 }
 
 .btn-outlined:disabled {
-  border-color: #C8C8C8;
-  color: #C8C8C8;
-  background-color: transparent;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: translateY(0);
+    border-color: #C8C8C8;
+    color: #C8C8C8;
+    background-color: transparent;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Gradient Border */
+.border-gradient {
+    position: relative;
+    background: white;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 1.5rem !important;
+    z-index: 1;
+}
+
+.border-gradient:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 0;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(128.23deg, #0070F3 1.94%, #6B00C8 99.13%);
+}
+
+/* SPRITES */
+.bg-salesforce {
+    width: 300px;
+    height: 210px;
+    background: url('images/partners_sprites.png') -10px -10px;
+}
+.bg-quickbooks {
+    width: 300px;
+    height: 77px;
+    background: url('images/partners_sprites.png') -10px -240px;
+}
+.bg-adp {
+    width: 300px;
+    height: 204px;
+    background: url('images/partners_sprites.png') -330px -10px;
 }
