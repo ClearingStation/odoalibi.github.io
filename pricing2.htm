@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OdoAlibi - The #1 Automatic Mileage Tracking App Suite</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body class="bg-white antialiased">
+        <!-- Header -->
+        <header class="relative bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+            <div class="mx-auto container-padding">
+                <div class="flex items-center justify-between py-4">
+                    <div class="flex items-center gap-8">
+                        <!-- Logo -->
+                        <div class="flex items-center">
+                            <a href="index.htm" class="text-2xl font-bold text-blue-600">OdoAlibi</a>
+                        </div>
+
+                        <!-- Desktop Navigation -->
+                        <nav class="hidden md:flex space-x-8">
+                            <div class="dropdown">
+                                <button class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm flex items-center">
+                                    Products
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-content">
+                                    <div class="grid grid-cols-2 gap-3 p-3">
+                                        <!-- Companies -->
+                                        <a class="dropdown-item" href="product_b2b.htm">
+                                            <div class="md:flex md:flex-col sm:space-x-8 md:space-x-0">
+                                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5821 4.64423L16.582 24.4042H17.8171V9.58423H26.4621L26.4621 24.4042L27.6971 24.4042V26.8742L16.582 26.8742L16.5821 26.8742H4.23207L4.23205 26.8742L2.99707 26.8742V24.4042L4.23205 24.4042L4.23207 4.64423H16.5821ZM11.6421 20.6992H9.17207V24.4042H11.6421V20.6992ZM22.7571 19.4642H20.2871V21.9342H22.7571V19.4642ZM22.7571 14.5242H20.2871V16.9942H22.7571V14.5242ZM11.6421 14.5242H9.17207V16.9942H11.6421V14.5242ZM11.6421 9.58423H9.17207V12.0542H11.6421V9.58423Z" fill="#0070F3"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="md:mt-4">
+                                                <h4 class="font-semibold text-gray-900 mb-2">Mileage for Companies</h4>
+                                                <p class="text-gray-600 text-sm">Simplify mileage reimbursements for your business</p>
+                                            </div>
+                                        </a>
+                                        <!-- Individuals -->
+                                        <a class="dropdown-item" href="product_b2c.htm">
+                                            <div class="md:flex md:flex-col sm:space-x-8 md:space-x-0">
+                                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.91" d="M14.7834 6.86719C13.7353 6.86719 12.7301 7.28356 11.9889 8.0247C11.2478 8.76585 10.8314 9.77105 10.8314 10.8192C10.8314 11.8673 11.2478 12.8725 11.9889 13.6137C12.7301 14.3548 13.7353 14.7712 14.7834 14.7712C15.3024 14.7712 15.8163 14.669 16.2958 14.4704C16.7753 14.2718 17.2109 13.9807 17.5779 13.6137C17.9449 13.2467 18.236 12.811 18.4346 12.3316C18.6332 11.8521 18.7354 11.3382 18.7354 10.8192C18.7354 10.3002 18.6332 9.7863 18.4346 9.30682C18.236 8.82734 17.9449 8.39168 17.5779 8.0247C17.2109 7.65772 16.7753 7.36662 16.2958 7.16802C15.8163 6.96941 15.3024 6.86719 14.7834 6.86719ZM18.3186 15.5913L14.8683 20.9886L11.3717 15.5952C8.17297 16.9526 6.05798 20.0489 5.95703 23.5223C8.12054 25.9956 11.2927 27.565 14.8394 27.565C18.3846 27.565 21.5564 25.9977 23.7198 23.5262C23.6242 20.0532 21.5146 16.9539 18.3186 15.5913Z" fill="#0070F3"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="md:mt-4">
+                                                    <h4 class="font-semibold text-gray-900 mb-2">Mileage for Individuals</h4>
+                                                    <p class="text-gray-600 text-sm">Maximize your tax deductions with automatic mileage tracking</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.htm#integrations" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Partners</a>
+                            <a href="index.htm#key-features" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Solutions</a>
+                            <a href="https://intercom.help/odoalibi/en" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Resources</a>
+                            <a href="pricing.htm" class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Pricing</a>
+                        </nav>
+                    </div>
+
+                    <!-- Desktop Auth buttons -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <button class="text-gray-600 hover:text-gray-900 font-medium transition-colors text-sm">Login</button>
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button class="md:hidden flex flex-col items-center justify-center w-8 h-8 hamburger" id="mobile-menu-button">
+                        <span class="hamburger-line line1 w-6 h-0.5 bg-gray-600 mb-1.5"></span>
+                        <span class="hamburger-line line2 w-6 h-0.5 bg-gray-600 mb-1.5"></span>
+                        <span class="hamburger-line line3 w-6 h-0.5 bg-gray-600"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div class="md:hidden fixed h-screen inset-0 bg-black bg-opacity-50 z-40 mobile-menu-overlay" id="mobile-menu-overlay" style="display: none;"></div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden fixed top-0 left-0 w-80 h-full bg-white z-50 mobile-menu shadow-2xl" id="mobile-menu">
+                <div class="p-6 bg-white h-screen">
+                    <!-- Mobile Menu Header -->
+                    <div class="flex items-center justify-between mb-8">
+                        <span class="text-2xl font-bold text-blue-600">OdoAlibi</span>
+                        <button class="w-8 h-8 flex items-center justify-center" id="mobile-menu-close">
+                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Navigation Links -->
+                    <nav class="space-y-6">
+                        <!-- Products Section -->
+                        <div>
+                            <div class="text-gray-900 font-semibold text-lg mb-3">Products</div>
+                            <div class="pl-4 space-y-3">
+                                <a href="product_b2b.htm" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                        <svg width="16" height="16" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5821 4.64423L16.582 24.4042H17.8171V9.58423H26.4621L26.4621 24.4042L27.6971 24.4042V26.8742L16.582 26.8742L16.5821 26.8742H4.23207L4.23205 26.8742L2.99707 26.8742V24.4042L4.23205 24.4042L4.23207 4.64423H16.5821ZM11.6421 20.6992H9.17207V24.4042H11.6421V20.6992ZM22.7571 19.4642H20.2871V21.9342H22.7571V19.4642ZM22.7571 14.5242H20.2871V16.9942H22.7571V14.5242ZM11.6421 14.5242H9.17207V16.9942H11.6421V14.5242ZM11.6421 9.58423H9.17207V12.0542H11.6421V9.58423Z" fill="#0070F3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium">For Companies</div>
+                                        <div class="text-sm text-gray-500">Business mileage reimbursements</div>
+                                    </div>
+                                </a>
+                                <a href="product_b2c.htm" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                        <svg width="16" height="16" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.91" d="M14.7834 6.86719C13.7353 6.86719 12.7301 7.28356 11.9889 8.0247C11.2478 8.76585 10.8314 9.77105 10.8314 10.8192C10.8314 11.8673 11.2478 12.8725 11.9889 13.6137C12.7301 14.3548 13.7353 14.7712 14.7834 14.7712C15.3024 14.7712 15.8163 14.669 16.2958 14.4704C16.7753 14.2718 17.2109 13.9807 17.5779 13.6137C17.9449 13.2467 18.236 12.811 18.4346 12.3316C18.6332 11.8521 18.7354 11.3382 18.7354 10.8192C18.7354 10.3002 18.6332 9.7863 18.4346 9.30682C18.236 8.82734 17.9449 8.39168 17.5779 8.0247C17.2109 7.65772 16.7753 7.36662 16.2958 7.16802C15.8163 6.96941 15.3024 6.86719 14.7834 6.86719ZM18.3186 15.5913L14.8683 20.9886L11.3717 15.5952C8.17297 16.9526 6.05798 20.0489 5.95703 23.5223C8.12054 25.9956 11.2927 27.565 14.8394 27.565C18.3846 27.565 21.5564 25.9977 23.7198 23.5262C23.6242 20.0532 21.5146 16.9539 18.3186 15.5913Z" fill="#0070F3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium">For Individuals</div>
+                                        <div class="text-sm text-gray-500">Personal mileage tracking</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Other Navigation Items -->
+                        <a href="index.htm#integrations" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Partners</a>
+                        <a href="index.htm#key-features" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Solutions</a>
+                        <a href="https://intercom.help/odoalibi/en" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Resources</a>
+                        <a href="pricing.htm" class="block text-gray-600 hover:text-blue-600 font-medium transition-colors text-lg">Pricing</a>
+                    </nav>
+
+                    <!-- Mobile Auth Buttons -->
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-3">
+                        <button class="w-full text-center text-gray-600 hover:text-gray-900 font-medium transition-colors py-3">Login</button>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <script>
+             // Mobile menu functionality
+             const mobileMenuButton = document.getElementById('mobile-menu-button');
+             const mobileMenu = document.getElementById('mobile-menu');
+             const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+             const mobileMenuClose = document.getElementById('mobile-menu-close');
+             const hamburger = document.querySelector('.hamburger');
+
+             function openMobileMenu() {
+                 mobileMenuOverlay.style.display = 'block';
+                 mobileMenu.classList.add('open');
+                 hamburger.classList.add('open');
+                 document.body.style.overflow = 'hidden'; // Prevent scrolling
+             }
+
+             function closeMobileMenu() {
+                 mobileMenuOverlay.style.display = 'none';
+                 mobileMenu.classList.remove('open');
+                 hamburger.classList.remove('open');
+                 document.body.style.overflow = ''; // Restore scrolling
+             }
+
+             mobileMenuButton.addEventListener('click', openMobileMenu);
+             mobileMenuClose.addEventListener('click', closeMobileMenu);
+             mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+             // Close menu when clicking on navigation links
+             const mobileNavLinks = mobileMenu.querySelectorAll('a');
+             mobileNavLinks.forEach(link => {
+                 link.addEventListener('click', closeMobileMenu);
+             });
+
+             // Close menu on escape key
+             document.addEventListener('keydown', function(e) {
+                 if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                     closeMobileMenu();
+                 }
+             });
+            </script>
+        </header>
+
+        <!-- Main Content -->
+        <main class="relative overflow-hidden">
+            <section class="py-20 lg:py-24 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Header -->
+                    <div class="text-center mb-16">
+                        <div class="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                            <svg class="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8419 1.82422C13.7205 1.70136 13.5758 1.6039 13.4163 1.5375C13.2568 1.47111 13.0857 1.43712 12.9129 1.4375H9.31147C9.07523 1.43794 8.84868 1.53153 8.68101 1.69795L1.4813 8.89619C1.23563 9.14237 1.09766 9.47595 1.09766 9.82373C1.09766 10.1715 1.23563 10.5051 1.4813 10.7513L4.90903 14.179C5.15527 14.4248 5.48896 14.5628 5.83686 14.5628C6.18477 14.5628 6.51846 14.4248 6.7647 14.179L13.9615 6.98369C14.1282 6.81628 14.2221 6.58981 14.2228 6.35352V2.75C14.2239 2.57815 14.1907 2.40779 14.1254 2.24886C14.06 2.08992 13.9636 1.94558 13.8419 1.82422ZM11.4103 5.1875C11.2249 5.1875 11.0436 5.13252 10.8895 5.02951C10.7353 4.92649 10.6151 4.78007 10.5442 4.60877C10.4732 4.43746 10.4546 4.24896 10.4908 4.06711C10.527 3.88525 10.6163 3.7182 10.7474 3.58709C10.8785 3.45598 11.0455 3.36669 11.2274 3.33052C11.4093 3.29434 11.5978 3.31291 11.7691 3.38387C11.9404 3.45482 12.0868 3.57499 12.1898 3.72916C12.2928 3.88333 12.3478 4.06458 12.3478 4.25C12.3478 4.49864 12.249 4.7371 12.0732 4.91292C11.8974 5.08873 11.6589 5.1875 11.4103 5.1875Z" fill="#0070F3"/>
+                            </svg>
+                            OdoAlibi Mileage, Expense and Time Tracking
+                        </div>
+
+                        <h2 class="text-4xl lg:text-5xl font-bold text-blue-600 mb-8">Plans & Pricing</h2>
+
+                        <!-- Controls -->
+                        <div class="pricing-controls md:grid lg:grid-cols-3 md:grid-cols-2 items-center lg:space-x-8 mb-8 flex place-content-between">
+                            <div class="sm:hidden lg:block">&nbsp;</div>
+
+                            <div class="border p-1 rounded-xl w-full md:w-auto" style="border-color: #8B8B8B">
+                                <div class="user-type-container text-center">
+                                    <div class="user-type-slider multi" id="userTypeSlider"></div>
+                                    <button id="singleUserBtn" class="toggle-button w-full">Single User</button>
+                                    <button id="multiUserBtn" class="toggle-button active w-full">Multi User</button>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end items-center space-x-1">
+                                <div class="billing-toggle-container mt-5 md:mt-0 scale-[1.2] md:scale-[1]">
+                                    <div class="billing-toggle-slider annual" id="billingSlider"></div>
+                                    <button id="monthlyBtn" class="billing-toggle-btn">
+                                        Monthly
+                                    </button>
+                                    <button id="annuallyBtn" class="billing-toggle-btn active">
+                                        Annually
+                                    </button>
+                                </div>
+                                <div class="info-tooltip hidden md:block">
+                                    <svg class="info-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.3663 14.4527C11.3663 14.6359 11.312 14.8149 11.2102 14.9673C11.1084 15.1196 10.9638 15.2383 10.7945 15.3084C10.6253 15.3785 10.439 15.3969 10.2593 15.3611C10.0797 15.3254 9.91463 15.2372 9.78509 15.1076C9.65555 14.9781 9.56734 14.813 9.5316 14.6334C9.49586 14.4537 9.5142 14.2675 9.58431 14.0982C9.65441 13.929 9.77313 13.7843 9.92545 13.6825C10.0778 13.5807 10.2569 13.5264 10.44 13.5264C10.6857 13.5264 10.9213 13.624 11.095 13.7977C11.2687 13.9714 11.3663 14.207 11.3663 14.4527ZM10.44 6.11647C8.7373 6.11647 7.35257 7.36304 7.35257 8.8952V9.20395C7.35257 9.36772 7.41762 9.52478 7.53343 9.64059C7.64923 9.75639 7.80629 9.82145 7.97006 9.82145C8.13383 9.82145 8.29089 9.75639 8.4067 9.64059C8.5225 9.52478 8.58756 9.36772 8.58756 9.20395V8.8952C8.58756 8.04615 9.41886 7.35146 10.44 7.35146C11.4612 7.35146 12.2925 8.04615 12.2925 8.8952C12.2925 9.74426 11.4612 10.4389 10.44 10.4389C10.2763 10.4389 10.1192 10.504 10.0034 10.6198C9.88761 10.7356 9.82255 10.8927 9.82255 11.0564V11.6739C9.82255 11.8377 9.88761 11.9948 10.0034 12.1106C10.1192 12.2264 10.2763 12.2914 10.44 12.2914C10.6038 12.2914 10.7609 12.2264 10.8767 12.1106C10.9925 11.9948 11.0575 11.8377 11.0575 11.6739V11.6184C12.4654 11.3598 13.5275 10.2367 13.5275 8.8952C13.5275 7.36304 12.1428 6.11647 10.44 6.11647ZM18.4675 10.4389C18.4675 12.0266 17.9967 13.5786 17.1146 14.8988C16.2326 16.2189 14.9788 17.2478 13.512 17.8553C12.0452 18.4629 10.4311 18.6219 8.87397 18.3121C7.3168 18.0024 5.88644 17.2379 4.76379 16.1152C3.64113 14.9925 2.87659 13.5622 2.56685 12.005C2.25711 10.4478 2.41608 8.8338 3.02365 7.36697C3.63123 5.90015 4.66013 4.64643 5.98024 3.76437C7.30034 2.8823 8.85237 2.4115 10.44 2.4115C12.5684 2.41375 14.6089 3.26021 16.1138 4.76517C17.6188 6.27012 18.4652 8.31062 18.4675 10.4389ZM17.2325 10.4389C17.2325 9.09552 16.8341 7.78227 16.0878 6.66526C15.3414 5.54825 14.2806 4.67764 13.0394 4.16354C11.7982 3.64943 10.4325 3.51492 9.1149 3.77701C7.7973 4.03909 6.587 4.68601 5.63706 5.63595C4.68711 6.5859 4.0402 7.7962 3.77811 9.1138C3.51602 10.4314 3.65053 11.7971 4.16464 13.0383C4.67874 14.2795 5.54935 15.3403 6.66636 16.0867C7.78337 16.833 9.09663 17.2314 10.44 17.2314C12.2409 17.2294 13.9674 16.5131 15.2408 15.2397C16.5142 13.9663 17.2305 12.2398 17.2325 10.4389Z" fill="#242424"/>
+                                    </svg>
+                                    <div class="tooltip-content min-w-60">
+                                        Save up to 20% with annual billing and get the combo discount!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single User View -->
+                    <div id="singleUserView" class="pricing-view hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            <!-- Free Plan -->
+                            <div class="bg-white border border-gray-200 rounded-2xl p-8 relative">
+                                <div class="mb-8">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+                                    <p class="text-gray-600 mb-6">Perfect for getting started</p>
+                                    <div class="mb-6">
+                                        <span class="text-4xl font-bold text-gray-900">$0</span>
+                                        <span class="text-gray-600 ml-2">/month</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mb-8">Try it as long as you like</p>
+                                </div>
+                                <div class="space-y-4 mb-8">
+                                    <div class="flex items-center">
+                                        <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-gray-700">Limited Analytics</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-gray-700">30 Trips per Month</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-gray-700">Standard Tax Reports</span>
+                                    </div>
+                                </div>
+                                <a href="signup.htm" class="btn px-12">
+                                    Signup for free
+                                </a>
+                            </div>
+
+                            <!-- Premium Plan -->
+                            <div class="bg-blue-600 rounded-2xl lg:col-span-2 p-8 relative text-white">
+                                <div class="mb-8">
+                                    <h3 class="text-2xl font-bold mb-2">Premium</h3>
+                                    <p class="text-blue-100 mb-6">Limitless possibilities</p>
+                                    <div class="mb-6">
+                                        <span class="text-4xl font-bold">$<span id="premiumPrice">4</span></span>
+                                        <span class="text-blue-100 ml-2">/month</span>
+                                    </div>
+                                    <p class="text-sm text-blue-100 mb-8">15-Day Free Trial. No Credit Card Required. Cancel Anytime</p>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                                    <div class="space-y-4">
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">Unlimited Trips</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">Unlimited Analytics</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">Access to Integrations</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">AI Receipt Capture</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">AI Trip Classification</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-blue-100">Advance Tax Reports</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="signup.htm" class="btn-inversed px-12">
+                                    Signup for free
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Multi User View -->
+                    <div id="multiUserView" class="pricing-view max-w-7xl mx-auto">
+                        <!-- Product Headers -->
+                        <div class="p-6 hidden md:block">
+                            <div class="grid grid-cols-[2fr_1fr_1fr_2px_1fr_40px] gap-8 items-center">
+                                <div class="text-left col-span-2">
+                                    <h3 class="text-2xl font-bold text-gray-900">Product</h3>
+                                </div>
+                                <div class="flex gap-2">
+                                    <h3 class="text-2xl text-center w-full font-bold text-gray-900">
+                                        Teams
+                                        <div class="info-tooltip absolute ml-1">
+                                            <svg class="info-icon" width="21" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.8732 3.42151C12.4917 3.42151 10.1636 4.12771 8.18349 5.45081C6.20333 6.77391 4.65998 8.65448 3.74862 10.8547C2.83725 13.055 2.59879 15.476 3.0634 17.8118C3.52802 20.1475 4.67483 22.2931 6.35881 23.9771C8.0428 25.6611 10.1883 26.8079 12.5241 27.2725C14.8598 27.7371 17.2809 27.4986 19.4812 26.5873C21.6814 25.6759 23.562 24.1325 24.8851 22.1524C26.2082 20.1722 26.9144 17.8442 26.9144 15.4627C26.911 12.2702 25.6413 9.20943 23.3839 6.95201C21.1264 4.69458 18.0657 3.42488 14.8732 3.42151ZM14.8732 25.6514C12.8581 25.6514 10.8882 25.0538 9.21268 23.9343C7.53716 22.8147 6.23125 21.2235 5.46009 19.3617C4.68893 17.5 4.48716 15.4514 4.8803 13.475C5.27343 11.4986 6.24381 9.6831 7.66872 8.25819C9.09363 6.83328 10.9091 5.8629 12.8855 5.46977C14.8619 5.07664 16.9105 5.27841 18.7722 6.04956C20.634 6.82072 22.2252 8.12663 23.3448 9.80215C24.4643 11.4777 25.0619 13.4475 25.0619 15.4627C25.0588 18.1639 23.9844 20.7537 22.0743 22.6638C20.1642 24.5739 17.5745 25.6483 14.8732 25.6514ZM16.7257 21.0201C16.7257 21.2658 16.6281 21.5014 16.4544 21.6751C16.2807 21.8488 16.0451 21.9464 15.7994 21.9464C15.3081 21.9464 14.8369 21.7512 14.4895 21.4038C14.1421 21.0564 13.947 20.5852 13.947 20.0939V15.4627C13.7013 15.4627 13.4657 15.3651 13.292 15.1914C13.1183 15.0177 13.0207 14.7821 13.0207 14.5364C13.0207 14.2908 13.1183 14.0552 13.292 13.8815C13.4657 13.7078 13.7013 13.6102 13.947 13.6102C14.4383 13.6102 14.9095 13.8054 15.2569 14.1528C15.6043 14.5002 15.7994 14.9714 15.7994 15.4627V20.0939C16.0451 20.0939 16.2807 20.1915 16.4544 20.3652C16.6281 20.5389 16.7257 20.7745 16.7257 21.0201ZM13.0207 10.3683C13.0207 10.0935 13.1022 9.82493 13.2549 9.59645C13.4075 9.36797 13.6245 9.18989 13.8784 9.08473C14.1323 8.97957 14.4116 8.95206 14.6811 9.00567C14.9506 9.05928 15.1982 9.1916 15.3925 9.38591C15.5868 9.58021 15.7191 9.82777 15.7728 10.0973C15.8264 10.3668 15.7988 10.6461 15.6937 10.9C15.5885 11.1539 15.4105 11.3709 15.182 11.5236C14.9535 11.6762 14.6849 11.7577 14.4101 11.7577C14.0416 11.7577 13.6882 11.6113 13.4277 11.3508C13.1671 11.0902 13.0207 10.7368 13.0207 10.3683Z" fill="#B2B2B2"/>
+                                            </svg>
+                                            <div class="tooltip-content min-w-60" style="font-weight: initial !important; line-height: initial !important;">
+                                                Great for small businesses and departments within larger organizations.
+                                            </div>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="flex gap-2">
+                                    <h3 class="text-2xl text-center w-full font-bold text-gray-900">
+                                        Enterprise
+                                        <div class="info-tooltip absolute ml-1">
+                                            <svg class="info-icon" width="21" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.8732 3.42151C12.4917 3.42151 10.1636 4.12771 8.18349 5.45081C6.20333 6.77391 4.65998 8.65448 3.74862 10.8547C2.83725 13.055 2.59879 15.476 3.0634 17.8118C3.52802 20.1475 4.67483 22.2931 6.35881 23.9771C8.0428 25.6611 10.1883 26.8079 12.5241 27.2725C14.8598 27.7371 17.2809 27.4986 19.4812 26.5873C21.6814 25.6759 23.562 24.1325 24.8851 22.1524C26.2082 20.1722 26.9144 17.8442 26.9144 15.4627C26.911 12.2702 25.6413 9.20943 23.3839 6.95201C21.1264 4.69458 18.0657 3.42488 14.8732 3.42151ZM14.8732 25.6514C12.8581 25.6514 10.8882 25.0538 9.21268 23.9343C7.53716 22.8147 6.23125 21.2235 5.46009 19.3617C4.68893 17.5 4.48716 15.4514 4.8803 13.475C5.27343 11.4986 6.24381 9.6831 7.66872 8.25819C9.09363 6.83328 10.9091 5.8629 12.8855 5.46977C14.8619 5.07664 16.9105 5.27841 18.7722 6.04956C20.634 6.82072 22.2252 8.12663 23.3448 9.80215C24.4643 11.4777 25.0619 13.4475 25.0619 15.4627C25.0588 18.1639 23.9844 20.7537 22.0743 22.6638C20.1642 24.5739 17.5745 25.6483 14.8732 25.6514ZM16.7257 21.0201C16.7257 21.2658 16.6281 21.5014 16.4544 21.6751C16.2807 21.8488 16.0451 21.9464 15.7994 21.9464C15.3081 21.9464 14.8369 21.7512 14.4895 21.4038C14.1421 21.0564 13.947 20.5852 13.947 20.0939V15.4627C13.7013 15.4627 13.4657 15.3651 13.292 15.1914C13.1183 15.0177 13.0207 14.7821 13.0207 14.5364C13.0207 14.2908 13.1183 14.0552 13.292 13.8815C13.4657 13.7078 13.7013 13.6102 13.947 13.6102C14.4383 13.6102 14.9095 13.8054 15.2569 14.1528C15.6043 14.5002 15.7994 14.9714 15.7994 15.4627V20.0939C16.0451 20.0939 16.2807 20.1915 16.4544 20.3652C16.6281 20.5389 16.7257 20.7745 16.7257 21.0201ZM13.0207 10.3683C13.0207 10.0935 13.1022 9.82493 13.2549 9.59645C13.4075 9.36797 13.6245 9.18989 13.8784 9.08473C14.1323 8.97957 14.4116 8.95206 14.6811 9.00567C14.9506 9.05928 15.1982 9.1916 15.3925 9.38591C15.5868 9.58021 15.7191 9.82777 15.7728 10.0973C15.8264 10.3668 15.7988 10.6461 15.6937 10.9C15.5885 11.1539 15.4105 11.3709 15.182 11.5236C14.9535 11.6762 14.6849 11.7577 14.4101 11.7577C14.0416 11.7577 13.6882 11.6113 13.4277 11.3508C13.1671 11.0902 13.0207 10.7368 13.0207 10.3683Z" fill="#B2B2B2"/>
+                                            </svg>
+                                            <div class="tooltip-content min-w-60" style="font-weight: initial !important; line-height: initial !important;">
+                                                Our most secure, customizable, and fully integrated solution for mid-to-large businesses.
+                                            </div>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div>&nbsp;</div>
+                            </div>
+                        </div>
+
+                        <!-- Product Cards -->
+                        <div class="space-y-6 mb-16">
+                            <!-- Mileage Product -->
+                            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                <button class="w-full p-6 text-left hover:bg-gray-50 transition-colors product-toggle" data-product="mileage">
+                                    <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-[2fr_1fr_1fr_2px_1fr_40px] md:gap-8 md:items-center">
+                                        <!-- Top section: Title + Icon (mobile: 2 columns, desktop: maintains grid position) -->
+                                        <div class="grid grid-cols-[1fr_40px] gap-4 items-start md:contents">
+                                            <div class="md:col-span-2">
+                                                <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
+                                                    Mileage
+                                                </h4>
+                                                <p class="text-gray-600">Perfect for business travellers, salespeople, and anyone who needs to track their miles.</p>
+                                            </div>
+
+                                            <div class="md:hidden">
+                                                <svg width="25" viewBox="0 0 29 29" class="transform transition-transform expand-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.2469 3.32666C11.9876 3.32666 9.77904 3.99662 7.90052 5.25181C6.02199 6.507 4.55786 8.29105 3.69327 10.3784C2.82868 12.4657 2.60246 14.7625 3.04323 16.9783C3.48399 19.1942 4.57194 21.2296 6.1695 22.8272C7.76705 24.4247 9.80246 25.5127 12.0183 25.9534C14.2342 26.3942 16.531 26.168 18.6183 25.3034C20.7056 24.4388 22.4897 22.9747 23.7449 21.0962C25.0001 19.2176 25.67 17.0091 25.67 14.7498C25.6668 11.7212 24.4623 8.81751 22.3207 6.67595C20.1792 4.53439 17.2755 3.32986 14.2469 3.32666ZM14.2469 24.4155C12.3352 24.4155 10.4664 23.8486 8.87688 22.7866C7.28736 21.7245 6.04848 20.2149 5.3169 18.4487C4.58532 16.6825 4.39391 14.7391 4.76687 12.8641C5.13982 10.9891 6.06039 9.26687 7.41217 7.91509C8.76395 6.56332 10.4862 5.64274 12.3612 5.26979C14.2362 4.89684 16.1796 5.08825 17.9458 5.81983C19.712 6.5514 21.2216 7.79028 22.2836 9.3798C23.3457 10.9693 23.9126 12.8381 23.9126 14.7498C23.9097 17.3124 22.8904 19.7692 21.0784 21.5813C19.2663 23.3933 16.8095 24.4126 14.2469 24.4155ZM19.2621 12.3707C19.3438 12.4523 19.4086 12.5492 19.4528 12.6559C19.497 12.7626 19.5198 12.8769 19.5198 12.9924C19.5198 13.1079 19.497 13.2222 19.4528 13.3289C19.4086 13.4356 19.3438 13.5325 19.2621 13.6141L14.8686 18.0076C14.7869 18.0893 14.69 18.1541 14.5834 18.1983C14.4767 18.2425 14.3623 18.2653 14.2469 18.2653C14.1314 18.2653 14.0171 18.2425 13.9104 18.1983C13.8037 18.1541 13.7068 18.0893 13.6252 18.0076L9.23168 13.6141C9.0668 13.4492 8.97417 13.2256 8.97417 12.9924C8.97417 12.7592 9.0668 12.5356 9.23168 12.3707C9.39656 12.2058 9.62018 12.1132 9.85336 12.1132C10.0865 12.1132 10.3102 12.2058 10.475 12.3707L14.2469 16.1436L18.0187 12.3707C18.1003 12.289 18.1972 12.2242 18.3039 12.18C18.4106 12.1358 18.5249 12.113 18.6404 12.113C18.7559 12.113 18.8702 12.1358 18.9769 12.18C19.0836 12.2242 19.1805 12.289 19.2621 12.3707Z" fill="black"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bottom section: Pricing columns (mobile: stacked, desktop: maintains grid position) -->
+                                        <div class="grid grid-cols-[1fr_2px_1fr] gap-4 md:contents">
+                                            <div>
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Teams
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-900 text-center">
+                                                    <sup class="align-super text-sm">$</sup>
+                                                    <span id="mileageTeamsPrice">6</span>
+                                                    <span class="text-sm text-gray-500 font-normal">/user/mo</span>
+                                                </div>
+                                            </div>
+                                            <div class="bg-gray-200 h-20">&nbsp;</div>
+                                            <div>
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Enterprise
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-900 text-center">
+                                                    <sup class="align-super text-sm">$</sup>
+                                                    <span id="mileageEnterprisePrice">10</span>
+                                                    <span class="text-sm text-gray-500 font-normal">/user/mo</span>
+                                                </div>
+                                            </div>
+                                            <div class="hidden md:block">
+                                                <svg width="25" viewBox="0 0 29 29" class="transform transition-transform expand-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.2469 3.32666C11.9876 3.32666 9.77904 3.99662 7.90052 5.25181C6.02199 6.507 4.55786 8.29105 3.69327 10.3784C2.82868 12.4657 2.60246 14.7625 3.04323 16.9783C3.48399 19.1942 4.57194 21.2296 6.1695 22.8272C7.76705 24.4247 9.80246 25.5127 12.0183 25.9534C14.2342 26.3942 16.531 26.168 18.6183 25.3034C20.7056 24.4388 22.4897 22.9747 23.7449 21.0962C25.0001 19.2176 25.67 17.0091 25.67 14.7498C25.6668 11.7212 24.4623 8.81751 22.3207 6.67595C20.1792 4.53439 17.2755 3.32986 14.2469 3.32666ZM14.2469 24.4155C12.3352 24.4155 10.4664 23.8486 8.87688 22.7866C7.28736 21.7245 6.04848 20.2149 5.3169 18.4487C4.58532 16.6825 4.39391 14.7391 4.76687 12.8641C5.13982 10.9891 6.06039 9.26687 7.41217 7.91509C8.76395 6.56332 10.4862 5.64274 12.3612 5.26979C14.2362 4.89684 16.1796 5.08825 17.9458 5.81983C19.712 6.5514 21.2216 7.79028 22.2836 9.3798C23.3457 10.9693 23.9126 12.8381 23.9126 14.7498C23.9097 17.3124 22.8904 19.7692 21.0784 21.5813C19.2663 23.3933 16.8095 24.4126 14.2469 24.4155ZM19.2621 12.3707C19.3438 12.4523 19.4086 12.5492 19.4528 12.6559C19.497 12.7626 19.5198 12.8769 19.5198 12.9924C19.5198 13.1079 19.497 13.2222 19.4528 13.3289C19.4086 13.4356 19.3438 13.5325 19.2621 13.6141L14.8686 18.0076C14.7869 18.0893 14.69 18.1541 14.5834 18.1983C14.4767 18.2425 14.3623 18.2653 14.2469 18.2653C14.1314 18.2653 14.0171 18.2425 13.9104 18.1983C13.8037 18.1541 13.7068 18.0893 13.6252 18.0076L9.23168 13.6141C9.0668 13.4492 8.97417 13.2256 8.97417 12.9924C8.97417 12.7592 9.0668 12.5356 9.23168 12.3707C9.39656 12.2058 9.62018 12.1132 9.85336 12.1132C10.0865 12.1132 10.3102 12.2058 10.475 12.3707L14.2469 16.1436L18.0187 12.3707C18.1003 12.289 18.1972 12.2242 18.3039 12.18C18.4106 12.1358 18.5249 12.113 18.6404 12.113C18.7559 12.113 18.8702 12.1358 18.9769 12.18C19.0836 12.2242 19.1805 12.289 19.2621 12.3707Z" fill="black"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                                <!-- Mileage Features (Collapsible) -->
+                                <div id="mileageFeatures" class="product-content hidden border-t border-gray-200">
+                                    <div class="p-6 space-y-3" id="mileageFeaturesList">
+                                        <!-- Features populated by JavaScript -->
+                                    </div>
+                                    <div class="flex gap-12 py-10 place-content-center">
+                                        <div class="text-center">
+                                            <a href="product_b2b.htm#key-features" class="btn px-12">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="demo.htm" class="btn-outlined">
+                                                Book a Demo
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Expense Product -->
+                            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                <button class="w-full p-6 text-left hover:bg-gray-50 transition-colors product-toggle" data-product="expense">
+                                    <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-[2fr_1fr_1fr_2px_1fr_40px] md:gap-8 md:items-center">
+                                        <!-- Top section: Title + Icon (mobile: 2 columns, desktop: maintains grid position) -->
+                                        <div class="grid grid-cols-[1fr_40px] gap-4 items-start md:contents">
+                                            <div class="md:col-span-2">
+                                                <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
+                                                    Expense
+                                                </h4>
+                                                <p class="text-gray-600">Manage all your business expenses in one place with AI-powered receipt scanning.</p>
+                                            </div>
+
+                                            <div class="md:hidden">
+                                                <svg width="25" viewBox="0 0 29 29" class="transform transition-transform expand-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.2469 3.32666C11.9876 3.32666 9.77904 3.99662 7.90052 5.25181C6.02199 6.507 4.55786 8.29105 3.69327 10.3784C2.82868 12.4657 2.60246 14.7625 3.04323 16.9783C3.48399 19.1942 4.57194 21.2296 6.1695 22.8272C7.76705 24.4247 9.80246 25.5127 12.0183 25.9534C14.2342 26.3942 16.531 26.168 18.6183 25.3034C20.7056 24.4388 22.4897 22.9747 23.7449 21.0962C25.0001 19.2176 25.67 17.0091 25.67 14.7498C25.6668 11.7212 24.4623 8.81751 22.3207 6.67595C20.1792 4.53439 17.2755 3.32986 14.2469 3.32666ZM14.2469 24.4155C12.3352 24.4155 10.4664 23.8486 8.87688 22.7866C7.28736 21.7245 6.04848 20.2149 5.3169 18.4487C4.58532 16.6825 4.39391 14.7391 4.76687 12.8641C5.13982 10.9891 6.06039 9.26687 7.41217 7.91509C8.76395 6.56332 10.4862 5.64274 12.3612 5.26979C14.2362 4.89684 16.1796 5.08825 17.9458 5.81983C19.712 6.5514 21.2216 7.79028 22.2836 9.3798C23.3457 10.9693 23.9126 12.8381 23.9126 14.7498C23.9097 17.3124 22.8904 19.7692 21.0784 21.5813C19.2663 23.3933 16.8095 24.4126 14.2469 24.4155ZM19.2621 12.3707C19.3438 12.4523 19.4086 12.5492 19.4528 12.6559C19.497 12.7626 19.5198 12.8769 19.5198 12.9924C19.5198 13.1079 19.497 13.2222 19.4528 13.3289C19.4086 13.4356 19.3438 13.5325 19.2621 13.6141L14.8686 18.0076C14.7869 18.0893 14.69 18.1541 14.5834 18.1983C14.4767 18.2425 14.3623 18.2653 14.2469 18.2653C14.1314 18.2653 14.0171 18.2425 13.9104 18.1983C13.8037 18.1541 13.7068 18.0893 13.6252 18.0076L9.23168 13.6141C9.0668 13.4492 8.97417 13.2256 8.97417 12.9924C8.97417 12.7592 9.0668 12.5356 9.23168 12.3707C9.39656 12.2058 9.62018 12.1132 9.85336 12.1132C10.0865 12.1132 10.3102 12.2058 10.475 12.3707L14.2469 16.1436L18.0187 12.3707C18.1003 12.289 18.1972 12.2242 18.3039 12.18C18.4106 12.1358 18.5249 12.113 18.6404 12.113C18.7559 12.113 18.8702 12.1358 18.9769 12.18C19.0836 12.2242 19.1805 12.289 19.2621 12.3707Z" fill="black"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bottom section: Pricing columns (mobile: stacked, desktop: maintains grid position) -->
+                                        <div class="grid grid-cols-[1fr_2px_1fr] gap-4 md:contents">
+                                            <div>
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Teams
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-900 text-center">
+                                                    <sup class="align-super text-sm">$</sup>
+                                                    <span id="expenseTeamsPrice">3</span>
+                                                    <span class="text-sm text-gray-500 font-normal">/user/mo</span>
+                                                </div>
+                                            </div>
+                                            <div class="bg-gray-200 h-20">&nbsp;</div>
+                                            <div>
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Enterprise
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-900 text-center">
+                                                    <sup class="align-super text-sm">$</sup>
+                                                    <span id="expenseEnterprisePrice">5</span>
+                                                    <span class="text-sm text-gray-500 font-normal">/user/mo</span>
+                                                </div>
+                                            </div>
+                                            <div class="hidden md:block">
+                                                <svg width="25" viewBox="0 0 29 29" class="transform transition-transform expand-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.2469 3.32666C11.9876 3.32666 9.77904 3.99662 7.90052 5.25181C6.02199 6.507 4.55786 8.29105 3.69327 10.3784C2.82868 12.4657 2.60246 14.7625 3.04323 16.9783C3.48399 19.1942 4.57194 21.2296 6.1695 22.8272C7.76705 24.4247 9.80246 25.5127 12.0183 25.9534C14.2342 26.3942 16.531 26.168 18.6183 25.3034C20.7056 24.4388 22.4897 22.9747 23.7449 21.0962C25.0001 19.2176 25.67 17.0091 25.67 14.7498C25.6668 11.7212 24.4623 8.81751 22.3207 6.67595C20.1792 4.53439 17.2755 3.32986 14.2469 3.32666ZM14.2469 24.4155C12.3352 24.4155 10.4664 23.8486 8.87688 22.7866C7.28736 21.7245 6.04848 20.2149 5.3169 18.4487C4.58532 16.6825 4.39391 14.7391 4.76687 12.8641C5.13982 10.9891 6.06039 9.26687 7.41217 7.91509C8.76395 6.56332 10.4862 5.64274 12.3612 5.26979C14.2362 4.89684 16.1796 5.08825 17.9458 5.81983C19.712 6.5514 21.2216 7.79028 22.2836 9.3798C23.3457 10.9693 23.9126 12.8381 23.9126 14.7498C23.9097 17.3124 22.8904 19.7692 21.0784 21.5813C19.2663 23.3933 16.8095 24.4126 14.2469 24.4155ZM19.2621 12.3707C19.3438 12.4523 19.4086 12.5492 19.4528 12.6559C19.497 12.7626 19.5198 12.8769 19.5198 12.9924C19.5198 13.1079 19.497 13.2222 19.4528 13.3289C19.4086 13.4356 19.3438 13.5325 19.2621 13.6141L14.8686 18.0076C14.7869 18.0893 14.69 18.1541 14.5834 18.1983C14.4767 18.2425 14.3623 18.2653 14.2469 18.2653C14.1314 18.2653 14.0171 18.2425 13.9104 18.1983C13.8037 18.1541 13.7068 18.0893 13.6252 18.0076L9.23168 13.6141C9.0668 13.4492 8.97417 13.2256 8.97417 12.9924C8.97417 12.7592 9.0668 12.5356 9.23168 12.3707C9.39656 12.2058 9.62018 12.1132 9.85336 12.1132C10.0865 12.1132 10.3102 12.2058 10.475 12.3707L14.2469 16.1436L18.0187 12.3707C18.1003 12.289 18.1972 12.2242 18.3039 12.18C18.4106 12.1358 18.5249 12.113 18.6404 12.113C18.7559 12.113 18.8702 12.1358 18.9769 12.18C19.0836 12.2242 19.1805 12.289 19.2621 12.3707Z" fill="black"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <!-- Time Product -->
+                            <div class="bg-gray-50 border border-gray-200 rounded-2xl">
+                                <div class="w-full p-6 text-left hover:bg-gray-50 transition-colors product-toggle">
+                                    <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-[2fr_1fr_1fr_2px_1fr_40px] md:gap-8 md:items-center">
+                                        <!-- top section: title + icon -->
+                                        <div class="grid grid-cols-[1fr_40px] gap-4 items-start md:contents">
+                                            <div class="md:col-span-2">
+                                                <h4 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">
+                                                    Time
+                                                </h4>
+                                                <p class="text-gray-600">Track billable hours and work time automatically with detailed reports.</p>
+                                            </div>
+
+                                            <div class="md:hidden">
+                                                <svg width="25" viewBox="0 0 29 29" class="transform transition-transform expand-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.2469 3.32666C11.9876 3.32666 9.77904 3.99662 7.90052 5.25181C6.02199 6.507 4.55786 8.29105 3.69327 10.3784C2.82868 12.4657 2.60246 14.7625 3.04323 16.9783C3.48399 19.1942 4.57194 21.2296 6.1695 22.8272C7.76705 24.4247 9.80246 25.5127 12.0183 25.9534C14.2342 26.3942 16.531 26.168 18.6183 25.3034C20.7056 24.4388 22.4897 22.9747 23.7449 21.0962C25.0001 19.2176 25.67 17.0091 25.67 14.7498C25.6668 11.7212 24.4623 8.81751 22.3207 6.67595C20.1792 4.53439 17.2755 3.32986 14.2469 3.32666ZM14.2469 24.4155C12.3352 24.4155 10.4664 23.8486 8.87688 22.7866C7.28736 21.7245 6.04848 20.2149 5.3169 18.4487C4.58532 16.6825 4.39391 14.7391 4.76687 12.8641C5.13982 10.9891 6.06039 9.26687 7.41217 7.91509C8.76395 6.56332 10.4862 5.64274 12.3612 5.26979C14.2362 4.89684 16.1796 5.08825 17.9458 5.81983C19.712 6.5514 21.2216 7.79028 22.2836 9.3798C23.3457 10.9693 23.9126 12.8381 23.9126 14.7498C23.9097 17.3124 22.8904 19.7692 21.0784 21.5813C19.2663 23.3933 16.8095 24.4126 14.2469 24.4155ZM19.2621 12.3707C19.3438 12.4523 19.4086 12.5492 19.4528 12.6559C19.497 12.7626 19.5198 12.8769 19.5198 12.9924C19.5198 13.1079 19.497 13.2222 19.4528 13.3289C19.4086 13.4356 19.3438 13.5325 19.2621 13.6141L14.8686 18.0076C14.7869 18.0893 14.69 18.1541 14.5834 18.1983C14.4767 18.2425 14.3623 18.2653 14.2469 18.2653C14.1314 18.2653 14.0171 18.2425 13.9104 18.1983C13.8037 18.1541 13.7068 18.0893 13.6252 18.0076L9.23168 13.6141C9.0668 13.4492 8.97417 13.2256 8.97417 12.9924C8.97417 12.7592 9.0668 12.5356 9.23168 12.3707C9.39656 12.2058 9.62018 12.1132 9.85336 12.1132C10.0865 12.1132 10.3102 12.2058 10.475 12.3707L14.2469 16.1436L18.0187 12.3707C18.1003 12.289 18.1972 12.2242 18.3039 12.18C18.4106 12.1358 18.5249 12.113 18.6404 12.113C18.7559 12.113 18.8702 12.1358 18.9769 12.18C19.0836 12.2242 19.1805 12.289 19.2621 12.3707Z" fill="black"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bottom section -->
+                                        <div class="grid grid-cols-[1fr_2px_1fr] gap-4 md:contents">
+                                            <div class="text-center">
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Teams
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-400">—</div>
+                                            </div>
+                                            <div class="bg-gray-200 h-20">&nbsp;</div>
+                                            <div class="text-center">
+                                                <h3 class="text-xl mb-2 text-center w-full font-bold text-gray-900 md:hidden">
+                                                    Enterprise
+                                                </h3>
+                                                <div class="text-3xl font-bold text-gray-400">—</div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flex Plan Section -->
+                        <div class="bg-blue-50 rounded-2xl p-12 mx-auto">
+                            <div class="mb-12">
+                                <h3 class="text-3xl font-bold text-gray-900 mb-3">
+                                    Want to mix and match? Try our <span class="text-blue-600 color-gradient">Flex Plan!</span>
+                                </h3>
+                                <p class="text-xl font-semibold text-gray-600">Select the products to create a custom plan</p>
+                            </div>
+
+                            <!-- Flex Plan Content -->
+                            <div class="flex-plan-grid grid grid-cols-12 gap-8 items-start">
+                                <!-- Left Column - Products -->
+                                <div class="col-span-6 space-y-6">
+                                    <div class="col-span-6 text-left">
+                                        <h4 class="text-3xl font-bold text-gray-900">Product</h4>
+                                    </div>
+                                    <!-- Mileage Row -->
+                                    <div class="flex items-start space-x-4 py-4">
+                                        <input type="checkbox" id="flexMileage" class="product-checkbox mt-1" checked data-product="mileage">
+                                        <label for="flexMileage" class="text-left cursor-pointer flex-1">
+                                            <div class="text-2xl font-bold text-gray-900 mb-1">Mileage</div>
+                                            <div class="text-base text-gray-600">Unlimited automatic mileage tracking and reporting.</div>
+                                        </label>
+                                    </div>
+
+                                    <!-- Expense Row -->
+                                    <div class="flex items-start space-x-4 py-4">
+                                        <input type="checkbox" id="flexExpense" class="product-checkbox mt-1" checked data-product="expense">
+                                        <label for="flexExpense" class="text-left cursor-pointer flex-1">
+                                            <div class="text-2xl font-bold text-gray-900 mb-1">Expense</div>
+                                            <div class="text-base text-gray-600">Unlimited automatic expense tracking and reporting</div>
+                                        </label>
+                                    </div>
+
+                                    <!-- Time Row -->
+                                    <div class="flex items-start space-x-4 py-4">
+                                        <input type="checkbox" id="flexTime" class="product-checkbox mt-1" disabled data-product="time">
+                                        <div class="text-left flex-1">
+                                            <div class="text-2xl font-bold text-gray-400 mb-1 flex items-center">
+                                                Time
+                                                <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm ml-3">Coming Soon</span>
+                                            </div>
+                                            <div class="text-base text-gray-400">Unlimited automatic time tracking and reporting</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Middle Column - Teams Total -->
+                                <div class="col-span-6">
+                                    <div class="grid grid-cols-12 text-center">
+                                        <div class="col-span-6">
+                                            <div class="col-span-3 text-center">
+                                                <h4 class="text-3xl font-bold text-gray-900">Teams</h4>
+                                            </div>
+                                            <div class="flex flex-col justify-start pt-10 px-4 relative">
+                                                <div class="pricing-divider"></div>
+                                                <div class="text-6xl font-bold text-blue-600 leading-none">
+                                                    <sup class="align-super text-3xl -mr-2 text-gray-900">$</sup>
+                                                    <span id="flexTotalTeams" class="color-gradient">6</span>
+                                                </div>
+                                                <div class="text-lg text-gray-600 mt-2">/user/mo</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-span-6">
+                                            <div class="col-span-3 text-center">
+                                                <h4 class="text-3xl font-bold text-gray-900">Enterprise</h4>
+                                            </div>
+                                            <div class="flex flex-col justify-start pt-10 px-4">
+                                                <div class="text-6xl font-bold text-blue-600 leading-none">
+                                                    <sup class="align-super text-3xl -mr-2 text-gray-900">$</sup>
+                                                    <span id="flexTotalEnterprise" class="color-gradient">10</span>
+                                                </div>
+                                                <div class="text-lg text-center text-gray-600 mt-2">/user/mo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enterprise Total and CTA -->
+                                    <div class="col-span-3 text-center">
+                                        <!-- Call to Action positioned at Time row level -->
+                                        <div class="text-right mt-20">
+                                            <p class="text-sm text-blue-600 italic mb-4 text-right">
+                                                <em>Limited Time: <span class="text-blue-600 font-semibold">Save 25% on our Combo Offer with Annual Plans</span> - Ends this June!</em>
+                                            </p>
+                                            <div class="text-right">
+                                                <a href="signup.htm" class="btn">
+                                                    Let's Get Started
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-gray-300">
+            <div class="container mx-auto container-padding py-20">
+                <!-- Main Footer Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-6 gap-12">
+
+                    <!-- Brand Section -->
+                    <div class="lg:col-span-2 min-w-[300px]">
+                        <!-- Logo -->
+                        <div class="mb-6">
+                            <span class="text-2xl font-bold text-white">OdoAlibi</span>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-gray-400 mb-8 max-w-xs leading-relaxed text-sm">
+                            The #1 automatic mileage, expense, and time tracking app suite individuals and businesses.
+                        </p>
+
+                        <!-- Social Icons -->
+                        <div class="flex space-x-4 mb-8">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.098.119.112.223.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- App Store Buttons -->
+                        <div class="flex gap-3">
+                            <!-- App Store Button -->
+                            <button
+                                class="bg-black text-gray-900 px-4 py-4 rounded-2xl transition-colors shadow-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="white">
+                                    <path
+                                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                                </svg>
+                                <div class="text-left text-white">
+                                    <div class="text-xs">Download on the</div>
+                                    <div class="text-sm">App Store</div>
+                                </div>
+                            </button>
+
+                            <!-- Google Play Button -->
+                            <button
+                                class="bg-black text-gray-900 px-4 py-4 rounded-2xl transition-colors shadow-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="white">
+                                    <path
+                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                </svg>
+                                <div class="text-left text-white">
+                                    <div class="text-xs">Get it on</div>
+                                    <div class="text-sm">Google Play</div>
+                                </div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Product Column -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-6 text-lg">Product</h4>
+                        <ul class="space-y-3">
+                            <li><a href="product_b2b.htm" class="text-gray-400 hover:text-white transition-colors text-sm">For Teams/Enterprise</a>
+                            </li>
+                            <li><a href="product_b2c.htm" class="text-gray-400 hover:text-white transition-colors text-sm">For Individuals</a></li>
+                            <li><a href="index.htm#key-features" class="text-gray-400 hover:text-white transition-colors text-sm">Mileage Tracking</a></li>
+                            <li><a href="index.htm#key-features" class="text-gray-400 hover:text-white transition-colors text-sm">Expense Management</a></li>
+                            <li><a href="index.htm#key-features" class="text-gray-400 hover:text-white transition-colors text-sm">Time Tracking</a></li>
+                            <li><a href="index.htm#integrations" class="text-gray-400 hover:text-white transition-colors text-sm">Integrations</a></li>
+                            <li><a href="pricing.htm" class="text-gray-400 hover:text-white transition-colors text-sm">Pricing</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Column -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-6 text-lg">Company</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Press</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal Column -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-6 text-lg">Legal</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">GDPR Compliance</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-6 text-lg">Contact</h4>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:info@odoalibi.ca" class="hover:text-white transition-colors">Info@odoalibi.ca</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-gray-700 mt-16 pt-8 text-center">
+                    <div class="text-gray-500 text-sm">
+                        © 2025 OdoAlibi. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+         // Application State
+         let currentUserType = 'multi';
+         let currentBilling = 'annual';
+
+         const pricing = {
+             single: {
+                 monthly: { premium: 6 },
+                 annual: { premium: 5 }
+             },
+             multi: {
+                 monthly: {
+                     mileage: { teams: 8, enterprise: 12 },
+                     expense: { teams: 4, enterprise: 6 }
+                 },
+                 annual: {
+                     mileage: { teams: 6, enterprise: 10 },
+                     expense: { teams: 3, enterprise: 5 }
+                 }
+             }
+         };
+
+         // Feature Data
+         const features = {
+             mileage: [
+                 { name: 'Unlimited AI-Powered Mileage Tracking', teams: true, enterprise: true },
+                 { name: 'IRS and CRA Compliant Reporting', teams: true, enterprise: true },
+                 { name: 'ADP, QuickBooks and SalesForce Integration', teams: true, enterprise: true },
+                 { name: 'Business Trip Classifications', teams: true, enterprise: true },
+                 { name: 'Client & Project Mileage Tagging', teams: false, enterprise: true },
+                 { name: 'Mileage Approval Workflows', teams: false, enterprise: true },
+                 { name: 'Cost-per-mile Analytics For Each Employee', teams: false, enterprise: true },
+                 { name: 'Cost Center Analytics', teams: false, enterprise: true },
+                 { name: 'Offline Tracking Via Mobile App', teams: false, enterprise: true },
+                 { name: 'Custom Policy Enforcement', teams: false, enterprise: true },
+                 { name: 'Audit-Ready Data Export', teams: false, enterprise: true }
+             ],
+             expense: [
+                 { name: 'Unlimited AI-Powered Expense Tracking', teams: true, enterprise: true },
+                 { name: 'Monthly Expense Analytics', teams: true, enterprise: true },
+                 { name: 'ADP, QuickBooks and SalesForce Integration', teams: true, enterprise: true },
+                 { name: 'Business Expense Categorization', teams: false, enterprise: true },
+                 { name: 'Receipt Capture & OCR', teams: false, enterprise: true },
+                 { name: 'Expense Approval Workflows', teams: false, enterprise: true },
+                 { name: 'Reimbursement Approval Workflow', teams: false, enterprise: true },
+                 { name: 'Cost Center Analytics', teams: false, enterprise: true },
+                 { name: 'Foreign Currency Support', teams: false, enterprise: true },
+                 { name: 'Custom Policy Enforcement', teams: false, enterprise: true },
+                 { name: 'Audit-Ready Data Export', teams: false, enterprise: true }
+             ]
+         };
+
+         // DOM Elements
+         const elements = {
+             singleUserBtn: document.getElementById('singleUserBtn'),
+             multiUserBtn: document.getElementById('multiUserBtn'),
+             userTypeSlider: document.getElementById('userTypeSlider'),
+             monthlyBtn: document.getElementById('monthlyBtn'),
+             annuallyBtn: document.getElementById('annuallyBtn'),
+             billingSlider: document.getElementById('billingSlider'),
+             singleUserView: document.getElementById('singleUserView'),
+             multiUserView: document.getElementById('multiUserView'),
+             multiUserDesc: document.getElementById('multiUserDesc'),
+             premiumPrice: document.getElementById('premiumPrice'),
+             mileageTeamsPrice: document.getElementById('mileageTeamsPrice'),
+             mileageEnterprisePrice: document.getElementById('mileageEnterprisePrice'),
+             expenseTeamsPrice: document.getElementById('expenseTeamsPrice'),
+             expenseEnterprisePrice: document.getElementById('expenseEnterprisePrice'),
+             flexMileage: document.getElementById('flexMileage'),
+             flexExpense: document.getElementById('flexExpense'),
+             flexTotalTeams: document.getElementById('flexTotalTeams'),
+             flexTotalEnterprise: document.getElementById('flexTotalEnterprise'),
+             productToggles: document.querySelectorAll('.product-toggle'),
+             flexCheckboxes: document.querySelectorAll('.product-checkbox:not([disabled])')
+         };
+
+         // Initialize
+         function init() {
+             updateView();
+             updateUserTypeButtons();
+             updateBillingButtons();
+             bindEvents();
+             updateFeatures();
+             restoreScrollPosition();
+         }
+
+         // Event Binding
+         function bindEvents() {
+             elements.singleUserBtn?.addEventListener('click', () => setUserType('single'));
+             elements.multiUserBtn?.addEventListener('click', () => setUserType('multi'));
+             elements.monthlyBtn?.addEventListener('click', () => setBilling('monthly'));
+             elements.annuallyBtn?.addEventListener('click', () => setBilling('annual'));
+
+             elements.productToggles.forEach(toggle => {
+                 toggle.addEventListener('click', handleProductToggle);
+             });
+
+             elements.flexCheckboxes.forEach(checkbox => {
+                 checkbox.addEventListener('change', updateFlexPricing);
+             });
+
+             window.addEventListener('beforeunload', saveScrollPosition);
+         }
+
+         // User Type Management
+         function setUserType(type) {
+             currentUserType = type;
+             updateUserTypeButtons();
+             updateView();
+         }
+
+         function updateUserTypeButtons() {
+             // Remove active class from all user type buttons
+             elements.singleUserBtn?.classList.remove('active');
+             elements.multiUserBtn?.classList.remove('active');
+
+             // Update slider position and active states
+             if (currentUserType === 'single') {
+                 elements.singleUserBtn?.classList.add('active');
+                 elements.userTypeSlider?.classList.remove('multi');
+             } else {
+                 elements.multiUserBtn?.classList.add('active');
+                 elements.userTypeSlider?.classList.add('multi');
+             }
+         }
+
+         // Billing Management
+         function setBilling(type) {
+             currentBilling = type;
+             updateBillingButtons();
+             updatePricing();
+         }
+
+         function updateBillingButtons() {
+             // Remove active class from all billing buttons
+             elements.monthlyBtn?.classList.remove('active');
+             elements.annuallyBtn?.classList.remove('active');
+
+             // Update slider position and active states
+             if (currentBilling === 'monthly') {
+                 elements.monthlyBtn?.classList.add('active');
+                 elements.billingSlider?.classList.remove('annual');
+             } else {
+                 elements.annuallyBtn?.classList.add('active');
+                 elements.billingSlider?.classList.add('annual');
+             }
+         }
+
+         // View Management
+         function updateView() {
+             const isSingle = currentUserType === 'single';
+
+             elements.singleUserView?.classList.toggle('hidden', !isSingle);
+             elements.multiUserView?.classList.toggle('hidden', isSingle);
+             elements.multiUserDesc?.classList.toggle('hidden', isSingle);
+
+             updatePricing();
+         }
+
+         // Pricing Updates
+         function updatePricing() {
+             if (currentUserType === 'single') {
+                 updateSingleUserPricing();
+             } else {
+                 updateMultiUserPricing();
+                 updateFlexPricing();
+             }
+         }
+
+         function updateSingleUserPricing() {
+             const prices = pricing.single[currentBilling];
+             if (elements.premiumPrice) {
+                 elements.premiumPrice.textContent = prices.premium;
+             }
+         }
+
+         function updateMultiUserPricing() {
+             const prices = pricing.multi[currentBilling];
+
+             if (elements.mileageTeamsPrice) elements.mileageTeamsPrice.textContent = prices.mileage.teams;
+             if (elements.mileageEnterprisePrice) elements.mileageEnterprisePrice.textContent = prices.mileage.enterprise;
+             if (elements.expenseTeamsPrice) elements.expenseTeamsPrice.textContent = prices.expense.teams;
+             if (elements.expenseEnterprisePrice) elements.expenseEnterprisePrice.textContent = prices.expense.enterprise;
+         }
+
+         function updateFlexPricing() {
+             if (currentUserType !== 'multi') return;
+
+             const prices = pricing.multi[currentBilling];
+             const mileageChecked = elements.flexMileage?.checked || false;
+             const expenseChecked = elements.flexExpense?.checked || false;
+
+             let teamsTotal = 0;
+             let enterpriseTotal = 0;
+
+             // Add base prices for selected products
+             if (mileageChecked) {
+                 teamsTotal += prices.mileage.teams;
+                 enterpriseTotal += prices.mileage.enterprise;
+             }
+
+             if (expenseChecked) {
+                 teamsTotal += prices.expense.teams;
+                 enterpriseTotal += prices.expense.enterprise;
+             }
+
+             if (mileageChecked && expenseChecked && currentBilling === 'annual') {
+                 teamsTotal = 8;
+                 enterpriseTotal = 12;
+             } else if (mileageChecked && expenseChecked && currentBilling === 'monthly') {
+                 teamsTotal = 12;
+                 enterpriseTotal = 18;
+             }
+
+             if (elements.flexTotalTeams) elements.flexTotalTeams.textContent = teamsTotal;
+             if (elements.flexTotalEnterprise) elements.flexTotalEnterprise.textContent = enterpriseTotal;
+         }
+
+         // Product Toggle Handling
+         function handleProductToggle(event) {
+             const toggle = event.currentTarget;
+             const product = toggle.dataset.product;
+             const content = document.getElementById(`${product}Features`);
+             const icon = toggle.querySelector('.expand-icon');
+
+             if (content && icon) {
+                 const isHidden = content.classList.contains('hidden');
+                 content.classList.toggle('hidden');
+                 icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+             }
+         }
+
+         // Features Management
+         function updateFeatures() {
+             Object.entries(features).forEach(([productType, productFeatures]) => {
+                 const container = document.getElementById(`${productType}FeaturesList`);
+                 if (!container) return;
+
+                 container.innerHTML = '';
+
+                 productFeatures.forEach(feature => {
+                     const featureEl = document.createElement('div');
+                     featureEl.className = 'grid grid-cols-[2fr_1fr_1fr_2px_1fr_40px] gap-8 py-2 items-center border-b border-gray-100';
+
+                     featureEl.innerHTML = `
+                         <div class="text-sm text-gray-700 col-span-2">${feature.name}</div>
+                         <div class="text-center">
+                             ${feature.teams
+                             ? '<svg class="w-5 h-5 text-[#0070F3] mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>'
+                             : '<span class="text-gray-400">—</span>'
+                             }
+                         </div>
+                         <div></div>
+                         <div class="text-center">
+                             ${feature.enterprise
+                             ? '<svg class="w-5 h-5 text-[#0070F3] mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>'
+                             : '<span class="text-gray-400">—</span>'
+                             }
+                         </div>
+                         <div></div>
+                     `;
+
+                     container.appendChild(featureEl);
+                 });
+             });
+         }
+
+         // Scroll Position Management
+         function saveScrollPosition() {
+             try {
+                 sessionStorage.setItem('scrollY', window.scrollY.toString());
+             } catch (e) {
+                 // Ignore storage errors
+             }
+         }
+
+         function restoreScrollPosition() {
+             try {
+                 const y = sessionStorage.getItem('scrollY');
+                 if (y !== null) {
+                     window.scrollTo(0, parseInt(y, 10));
+                 }
+             } catch (e) {
+                 // Ignore storage errors
+             }
+         }
+
+         // Initialize when DOM is ready
+         document.addEventListener('DOMContentLoaded', init);
+        </script>
+    </body>
+</html>
