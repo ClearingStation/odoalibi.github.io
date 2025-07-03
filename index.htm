@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OdoAlibi - The #1 Automatic Mileage Tracking App Suite</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
-    <!--<script>
+    <link rel="stylesheet" href="output.min.css"/>
+    <script>
       (function () {
           // Save scroll position before unload
           window.addEventListener('beforeunload', () => {
@@ -22,7 +22,7 @@
           });
 
       })();
-    </script>-->
+    </script>
   </head>
 
   <body class="bg-white antialiased">
@@ -212,7 +212,7 @@
 
       <!-- Hero Section -->
       <div style="background: linear-gradient(180deg, #FFFFFF 0%, #D2E9FF 100%);">
-        <div class="mx-auto container-padding pt-16 pb-24" >
+        <div class="mx-auto container-padding pt-16 pb-16 md:pb-24" >
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <!-- Left Content -->
             <div class="space-y-8">
@@ -244,7 +244,7 @@
                 </p>
               </div>
 
-              <div class="flex flex-col sm:flex-row gap-3">
+              <div class="flex gap-5 md:gap-3">
                 <a
                   href="signup.htm"
                   class="btn">
@@ -259,7 +259,7 @@
             </div>
 
             <!-- Right Dashboard Mockups -->
-            <div class="relative h-[700px] hidden lg:block">
+            <div class="relative h-[700px] max-w-[650px] hidden lg:block">
               <!-- Credit Card -->
               <div class="absolute top-10 -right-10 w-80 h-48 bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 rounded-3xl card-shadow float-animation">
                 <div class="p-8 text-white h-full flex flex-col justify-between">
@@ -340,10 +340,10 @@
 
       <!-- Integration Section -->
       <div id="integrations" class="bg-white">
-        <div class="max-w-6xl mx-auto container-padding py-24">
+        <div class="max-w-6xl mx-auto container-padding py-12 md:py-24">
           <!-- Header -->
-          <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-3xl font-semibold text-blue-600 tracking-tight mb-4">
+          <div class="text-center mb-10 md:mb-20">
+            <h2 class="text-xl lg:text-4xl md:text-3xl font-semibold text-blue-600 tracking-tight mb-4">
               Effortless Integration, Instant Impact
             </h2>
           </div>
@@ -382,9 +382,9 @@
 
       <!-- How It Works Section -->
       <div class="bg-gray-50">
-        <div class="container mx-auto container-padding py-24">
+        <div class="container mx-auto container-padding py-12 md:py-24">
           <!-- Header -->
-          <div class="text-center mb-20">
+          <div class="text-center mb-10 md:mb-20">
             <!-- Badge -->
             <div
               class="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -481,7 +481,7 @@
           <div class="text-center mt-16">
             <a
               href="demo.htm"
-              class="btn-gradient px-12">
+              class="btn-outlined w-full md:w-auto px-12">
               Book a Demo
             </a>
           </div>
@@ -490,9 +490,9 @@
 
       <!-- Key Features Section -->
       <div id="key-features" class="bg-[#F5FAFF]">
-        <div class="max-w-7xl mx-auto container-padding py-24">
+        <div class="max-w-7xl mx-auto container-padding py-12 md:py-24">
           <!-- Header -->
-          <div class="text-center mb-20">
+          <div class="text-center mb-10 md:mb-20">
             <!-- Badge -->
             <div
               class="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -594,16 +594,18 @@
       <!-- Beyond Phone Apps Section -->
       <div class="bg-gradient-to-b from-blue-50 to-blue-100"
            style="background: linear-gradient(180deg, #FFFFFF 10.86%, #C5E0FF 120.87%);">
-        <div class="container mx-auto container-padding py-24">
+        <div class="container mx-auto container-padding py-12 md:py-24">
           <!-- Header -->
-          <div class="text-center mb-20">
+          <div class="text-center mb-10 md:mb-20">
             <!-- Badge -->
             <div
               class="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <svg class="mr-2" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 13.2747C11.3807 13.2747 12.5 12.1554 12.5 10.7747C12.5 9.39391 11.3807 8.27466 10 8.27466C8.61925 8.27466 7.5 9.39391 7.5 10.7747C7.5 12.1554 8.61925 13.2747 10 13.2747Z" fill="#0070F3"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3.27466C10.4602 3.27466 10.8333 3.64776 10.8333 4.10799V5.0004C13.3881 5.36582 15.4088 7.38658 15.7743 9.94132H16.6667C17.1269 9.94132 17.5 10.3144 17.5 10.7747C17.5 11.2349 17.1269 11.608 16.6667 11.608H15.7743C15.4088 14.1627 13.3881 16.1835 10.8333 16.5489V17.4413C10.8333 17.9016 10.4602 18.2747 10 18.2747C9.53975 18.2747 9.16667 17.9016 9.16667 17.4413V16.5489C6.61192 16.1835 4.59117 14.1627 4.22574 11.608H3.33333C2.8731 11.608 2.5 11.2349 2.5 10.7747C2.5 10.3144 2.8731 9.94132 3.33333 9.94132H4.22574C4.59117 7.38658 6.61192 5.36582 9.16667 5.0004V4.10799C9.16667 3.64776 9.53975 3.27466 10 3.27466ZM5.83333 10.7747C5.83333 8.47347 7.69882 6.60799 10 6.60799C12.3012 6.60799 14.1667 8.47347 14.1667 10.7747C14.1667 13.0758 12.3012 14.9413 10 14.9413C7.69882 14.9413 5.83333 13.0758 5.83333 10.7747Z" fill="#0070F3"/>
-              </svg>
+              <div>
+                <svg class="mr-2" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 13.2747C11.3807 13.2747 12.5 12.1554 12.5 10.7747C12.5 9.39391 11.3807 8.27466 10 8.27466C8.61925 8.27466 7.5 9.39391 7.5 10.7747C7.5 12.1554 8.61925 13.2747 10 13.2747Z" fill="#0070F3"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3.27466C10.4602 3.27466 10.8333 3.64776 10.8333 4.10799V5.0004C13.3881 5.36582 15.4088 7.38658 15.7743 9.94132H16.6667C17.1269 9.94132 17.5 10.3144 17.5 10.7747C17.5 11.2349 17.1269 11.608 16.6667 11.608H15.7743C15.4088 14.1627 13.3881 16.1835 10.8333 16.5489V17.4413C10.8333 17.9016 10.4602 18.2747 10 18.2747C9.53975 18.2747 9.16667 17.9016 9.16667 17.4413V16.5489C6.61192 16.1835 4.59117 14.1627 4.22574 11.608H3.33333C2.8731 11.608 2.5 11.2349 2.5 10.7747C2.5 10.3144 2.8731 9.94132 3.33333 9.94132H4.22574C4.59117 7.38658 6.61192 5.36582 9.16667 5.0004V4.10799C9.16667 3.64776 9.53975 3.27466 10 3.27466ZM5.83333 10.7747C5.83333 8.47347 7.69882 6.60799 10 6.60799C12.3012 6.60799 14.1667 8.47347 14.1667 10.7747C14.1667 13.0758 12.3012 14.9413 10 14.9413C7.69882 14.9413 5.83333 13.0758 5.83333 10.7747Z" fill="#0070F3"/>
+                </svg>
+              </div>
               OdoAlibi: AI-powered mileage tracking and expense management
             </div>
 
@@ -772,10 +774,10 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <div class="learn-more-dropdown">
-              <div class="learn-more-dropdown-content">
-                <div class="grid grid-cols-[1fr_auto_1fr] gap-6">
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center relative">
+            <div class="learn-more-dropdown md:w-auto w-full">
+              <div class="learn-more-dropdown-content md:w-auto max-w-[100%]">
+                <div class="md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6">
                   <div class="learn-more-option hover:bg-[#D3E7FF] rounded-xl p-4 flex flex-col justify-between">
                     <div>
                       <h5 class="font-semibold text-gray-900 mb-2">For Individual Use</h5>
@@ -808,13 +810,13 @@
                 </div>
               </div>
               <button
-                class="btn-gradient px-12">
+                class="btn w-full md:w-auto">
                 Learn More
               </button>
             </div>
             <a
               href="demo.htm"
-              class="btn-outlined">
+              class="btn-outlined w-full md:w-auto">
               Book a Demo
             </a>
           </div>
@@ -828,20 +830,22 @@
           <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-300/40 rounded-full opacity-50"></div>
           <div class="absolute -top-16 -right-16 w-60 h-60 bg-blue-300/80 rounded-full opacity-30"></div>
 
-          <div class="max-w-6xl mx-auto container-padding py-32 relative z-10">
+          <div class="max-w-6xl mx-auto container-padding py-12 md:py-32 relative z-10">
             <!-- Header -->
             <div class="text-center">
               <!-- Badge -->
               <div
                 class="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                <div>
                   <svg class="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13.8535 2.01953C13.7321 1.89667 13.5874 1.79921 13.4279 1.73282C13.2684 1.66642 13.0973 1.63243 12.9245 1.63282H9.32304C9.08679 1.63326 8.86025 1.72684 8.69257 1.89326L1.49286 9.09151C1.2472 9.33768 1.10922 9.67126 1.10922 10.019C1.10922 10.3668 1.2472 10.7004 1.49286 10.9466L4.9206 14.3743C5.16683 14.6201 5.50053 14.7581 5.84843 14.7581C6.19634 14.7581 6.53003 14.6201 6.77626 14.3743L13.973 7.17901C14.1398 7.0116 14.2337 6.78512 14.2344 6.54883V2.94532C14.2354 2.77346 14.2023 2.60311 14.1369 2.44417C14.0715 2.28523 13.9752 2.14089 13.8535 2.01953ZM11.4219 5.38282C11.2364 5.38282 11.0552 5.32783 10.901 5.22482C10.7469 5.1218 10.6267 4.97539 10.5557 4.80408C10.4848 4.63278 10.4662 4.44428 10.5024 4.26242C10.5386 4.08056 10.6278 3.91351 10.759 3.7824C10.8901 3.65129 11.0571 3.562 11.239 3.52583C11.4208 3.48966 11.6093 3.50822 11.7806 3.57918C11.9519 3.65014 12.0984 3.7703 12.2014 3.92447C12.3044 4.07864 12.3594 4.2599 12.3594 4.44532C12.3594 4.69396 12.2606 4.93241 12.0848 5.10823C11.909 5.28404 11.6705 5.38282 11.4219 5.38282Z" fill="#0070F3"/>
                   </svg>
+                </div>
 
                   OdoAlibi Mileage, Expense and Time Tracking
               </div>
 
-              <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8">
+              <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 md:mb-8">
                 Smart Pricing, Made Simple
               </h1>
               <p class="text-xl text-gray-600 max-w-3xl mx-auto font-medium mb-12">
@@ -852,7 +856,7 @@
               <!-- See Pricing Button -->
               <a
                 href="pricing.htm"
-                class="btn-gradient px-12">
+                class="btn-gradient w-full md:w-auto px-12">
                 See Pricing
               </a>
             </div>
