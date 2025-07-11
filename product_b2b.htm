@@ -826,13 +826,12 @@
             </section>
 
 
+
             <section class="py-10 md:py-20 lg:py-24 bg-white">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <!-- Main Content Grid -->
-                    <div class="grid lg:grid-cols-3 md:gap-16 gap-10 items-center">
-                        <!-- Left Side - Content -->
-                        <div>
-                            <!-- Badge -->
+                    <div>
+
+                        <!-- Badge -->
                             <div class="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-8">
                                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -849,6 +848,12 @@
                             <p class="text-xl text-gray-600 mb-12 leading-relaxed">
                                 Ensures audit-ready mileage, expense, and time records with every trip. Our platform is designed to meet IRS and CRA regulatory requirements.
                             </p>
+                    </div>
+
+                    <!-- Main Content Grid -->
+                    <div class="grid lg:grid-cols-2 md:gap-16 gap-10 items-center">
+                        <!-- Left Side - Content -->
+                        <div>
 
                             <!-- Features List -->
                             <div class="space-y-8">
@@ -998,9 +1003,9 @@
 
                     <!-- Roles Grid -->
                     <div class="overflow-x-auto md:overflow-x-visible pb-5 px-2">
-                        <div class="flex gap-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:min-w-0">
+                        <div class="flex gap-6 md:grid md:grid-cols-2 lg:grid-cols-4">
                             <!-- Sales Rep -->
-                            <div style="background-color: #FFFFFF;" class="min-w-[250px] p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                            <div style="background-color: #FFFFFF;" class="min-w-[250px] md:min-w-0 p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                                 <div class="flex flex-col">
                                     <!-- Icon -->
                                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
@@ -1059,7 +1064,7 @@
                             </div>
 
                             <!-- Manager -->
-                            <div style="background-color: #FFFFFF;" class="min-w-[250px] p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                            <div style="background-color: #FFFFFF;" class="min-w-[250px] md:min-w-0 p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                                 <div class="flex flex-col">
                                     <!-- Icon -->
                                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
@@ -1117,7 +1122,7 @@
                             </div>
 
                             <!-- Executive -->
-                            <div style="background-color: #FFFFFF;" class="min-w-[250px] p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                            <div style="background-color: #FFFFFF;" class="min-w-[250px] md:min-w-0 p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                                 <div class="flex flex-col">
                                     <!-- Icon -->
                                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
@@ -1173,7 +1178,7 @@
                             </div>
 
                             <!-- CFO / Accountant -->
-                            <div style="background-color: #FFFFFF;" class="min-w-[250px] p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                            <div style="background-color: #FFFFFF;" class="min-w-[250px] md:min-w-0 p-8 rounded-2xl shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                                 <div class="flex flex-col">
                                     <!-- Icon -->
                                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
@@ -1236,12 +1241,14 @@
 
                         </div>
                     </div>
-                    <button class="md:hidden btn-outlined mt-3 w-full flex! items-center justify-center gap-3">
+                    <div class="md:hidden">
+                        <button class="md:hidden btn-outlined mt-3 w-full flex! items-center justify-center gap-3">
                         Swipe
-                        <svg style="display: inline" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.7806 12.8504L14.0306 19.6004C13.8899 19.7411 13.699 19.8202 13.5 19.8202C13.301 19.8202 13.1101 19.7411 12.9694 19.6004C12.8286 19.4596 12.7496 19.2688 12.7496 19.0698C12.7496 18.8707 12.8286 18.6799 12.9694 18.5391L18.4397 13.0698H3.75C3.55109 13.0698 3.36032 12.9907 3.21967 12.8501C3.07902 12.7094 3 12.5187 3 12.3198C3 12.1208 3.07902 11.9301 3.21967 11.7894C3.36032 11.6488 3.55109 11.5698 3.75 11.5698H18.4397L12.9694 6.10038C12.8286 5.95965 12.7496 5.76878 12.7496 5.56975C12.7496 5.37073 12.8286 5.17986 12.9694 5.03913C13.1101 4.8984 13.301 4.81934 13.5 4.81934C13.699 4.81934 13.8899 4.8984 14.0306 5.03913L20.7806 11.7891C20.8504 11.8588 20.9057 11.9415 20.9434 12.0325C20.9812 12.1236 21.0006 12.2212 21.0006 12.3198C21.0006 12.4183 20.9812 12.5159 20.9434 12.607C20.9057 12.698 20.8504 12.7807 20.7806 12.8504Z" fill="#0070F3"/>
-                        </svg>
-                    </button>
+                            <svg style="display: inline" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.7806 12.8504L14.0306 19.6004C13.8899 19.7411 13.699 19.8202 13.5 19.8202C13.301 19.8202 13.1101 19.7411 12.9694 19.6004C12.8286 19.4596 12.7496 19.2688 12.7496 19.0698C12.7496 18.8707 12.8286 18.6799 12.9694 18.5391L18.4397 13.0698H3.75C3.55109 13.0698 3.36032 12.9907 3.21967 12.8501C3.07902 12.7094 3 12.5187 3 12.3198C3 12.1208 3.07902 11.9301 3.21967 11.7894C3.36032 11.6488 3.55109 11.5698 3.75 11.5698H18.4397L12.9694 6.10038C12.8286 5.95965 12.7496 5.76878 12.7496 5.56975C12.7496 5.37073 12.8286 5.17986 12.9694 5.03913C13.1101 4.8984 13.301 4.81934 13.5 4.81934C13.699 4.81934 13.8899 4.8984 14.0306 5.03913L20.7806 11.7891C20.8504 11.8588 20.9057 11.9415 20.9434 12.0325C20.9812 12.1236 21.0006 12.2212 21.0006 12.3198C21.0006 12.4183 20.9812 12.5159 20.9434 12.607C20.9057 12.698 20.8504 12.7807 20.7806 12.8504Z" fill="#0070F3"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -1516,12 +1523,15 @@
                             </div>
                         </div>
                     </div>
-                    <button class="lg:hidden btn-outlined mt-3 w-full flex items-center justify-center gap-3">
+
+                    <div class="lg:hidden">
+                        <button class="btn-outlined mt-3 w-full flex items-center justify-center gap-3">
                         Swipe
-                        <svg style="display: inline" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.7806 12.8504L14.0306 19.6004C13.8899 19.7411 13.699 19.8202 13.5 19.8202C13.301 19.8202 13.1101 19.7411 12.9694 19.6004C12.8286 19.4596 12.7496 19.2688 12.7496 19.0698C12.7496 18.8707 12.8286 18.6799 12.9694 18.5391L18.4397 13.0698H3.75C3.55109 13.0698 3.36032 12.9907 3.21967 12.8501C3.07902 12.7094 3 12.5187 3 12.3198C3 12.1208 3.07902 11.9301 3.21967 11.7894C3.36032 11.6488 3.55109 11.5698 3.75 11.5698H18.4397L12.9694 6.10038C12.8286 5.95965 12.7496 5.76878 12.7496 5.56975C12.7496 5.37073 12.8286 5.17986 12.9694 5.03913C13.1101 4.8984 13.301 4.81934 13.5 4.81934C13.699 4.81934 13.8899 4.8984 14.0306 5.03913L20.7806 11.7891C20.8504 11.8588 20.9057 11.9415 20.9434 12.0325C20.9812 12.1236 21.0006 12.2212 21.0006 12.3198C21.0006 12.4183 20.9812 12.5159 20.9434 12.607C20.9057 12.698 20.8504 12.7807 20.7806 12.8504Z" fill="#0070F3"/>
-                        </svg>
-                    </button>
+                            <svg style="display: inline" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.7806 12.8504L14.0306 19.6004C13.8899 19.7411 13.699 19.8202 13.5 19.8202C13.301 19.8202 13.1101 19.7411 12.9694 19.6004C12.8286 19.4596 12.7496 19.2688 12.7496 19.0698C12.7496 18.8707 12.8286 18.6799 12.9694 18.5391L18.4397 13.0698H3.75C3.55109 13.0698 3.36032 12.9907 3.21967 12.8501C3.07902 12.7094 3 12.5187 3 12.3198C3 12.1208 3.07902 11.9301 3.21967 11.7894C3.36032 11.6488 3.55109 11.5698 3.75 11.5698H18.4397L12.9694 6.10038C12.8286 5.95965 12.7496 5.76878 12.7496 5.56975C12.7496 5.37073 12.8286 5.17986 12.9694 5.03913C13.1101 4.8984 13.301 4.81934 13.5 4.81934C13.699 4.81934 13.8899 4.8984 14.0306 5.03913L20.7806 11.7891C20.8504 11.8588 20.9057 11.9415 20.9434 12.0325C20.9812 12.1236 21.0006 12.2212 21.0006 12.3198C21.0006 12.4183 20.9812 12.5159 20.9434 12.607C20.9057 12.698 20.8504 12.7807 20.7806 12.8504Z" fill="#0070F3"/>
+                            </svg>
+                        </button>
+                    </div>
 
                     <!-- CTA Buttons -->
                     <div class="flex text-center gap-10 gap-5 mt-16 hidden justify-center lg:flex">
